@@ -38,3 +38,10 @@
    -fx-text-fill: #1351CB;
     -fx-font-weight: 600;
 }
+.count-box{
+    -fx-padding: 24px 95px 24px 24px;
+    -fx-border-color: #E8E8E8;
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+}
