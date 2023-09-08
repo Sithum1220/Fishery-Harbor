@@ -1,0 +1,23 @@
+.main-window {
+    -fx-background-color: #F6F9FF;
+}
+
+.left-window {
+    -fx-background-color: white;
+    -fx-border-color: #E8E8E8;
+
+}
+
+.top-window {
+    -fx-background-color: white;
+    -fx-pref-width: 1523px;
+    -fx-pref-height: 98px;
+    -fx-padding: 24px;
+    -fx-border-color: #E8E8E8;
+
+}
+.top-window-line{
+    -fx-pref-width: 50px;
+    -fx-pref-height: 0px;
+    -fx-background-color: #1351CB;
+}

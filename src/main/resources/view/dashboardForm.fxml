@@ -1,14 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.fisheryharbour.controller.DashBoardFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="951.0" prefWidth="1745.0" styleClass="main-window" stylesheets="@../style/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.DashBoardFormController">
+   <children>
+      <AnchorPane prefHeight="951.0" prefWidth="222.0" styleClass="left-window">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="11.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Group-688.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="23.0" layoutY="185.0" prefHeight="484.0" prefWidth="174.0" spacing="32.0">
+               <children>
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="selected-navigate-btn" text=" ">
+                     <graphic>
+                        <GridPane prefHeight="48.0" prefWidth="174.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/icon/category.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="btn-selected-text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                     <graphic>
+                        <GridPane prefHeight="48.0" prefWidth="174.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/icon/profile-2user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="text" text="Employee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                     <graphic>
+                        <GridPane prefHeight="48.0" prefWidth="174.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/icon/truck-fast.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="text" text="Supplier" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                     <graphic>
+                        <GridPane prefHeight="48.0" prefWidth="174.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/icon/user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="text" text="Owner" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                     <graphic>
+                        <GridPane prefHeight="48.0" prefWidth="174.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/icon/box.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="text" text="Stock" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                     <graphic>
+                        <GridPane prefHeight="48.0" prefWidth="174.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/icon/chart.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="text" text="Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <JFXButton layoutX="23.0" layoutY="862.0" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+               <graphic>
+                  <GridPane prefHeight="48.0" prefWidth="174.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@../img/icon/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="text" text="Log Out" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="221.0" prefHeight="98.0" prefWidth="336.0" styleClass="top-window">
+         <children>
+            <Text fill="#151619" layoutX="1441.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12:29" wrappingWidth="41.2939453125">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#151619" layoutX="1486.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PM">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#3d3e3e" layoutX="1434.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Sep 02, 2023" />
+            <Line endX="-100.0" layoutX="142.0" layoutY="89.0" startX="-100.0" startY="-50.0" stroke="#1351cb" strokeWidth="2.0" />
+            <Text fill="#151619" layoutX="59.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back" wrappingWidth="114.2939453125">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#3d3e3e" layoutX="59.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Manager" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="176.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/byeeeee.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
