@@ -225,7 +225,7 @@
             </ImageView>
             <VBox layoutX="23.0" layoutY="185.0" prefHeight="484.0" prefWidth="174.0" spacing="32.0">
                <children>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="selected-navigate-btn" text=" ">
+                  <JFXButton fx:id="btnDashboard" onAction="#dashboardOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                           <columnConstraints>
@@ -238,17 +238,17 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/category.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="btn-selected-text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnDashboardText" styleClass="btn-selected-text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnEmployee" onAction="#employeeOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
