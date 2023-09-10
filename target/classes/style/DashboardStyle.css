@@ -5,12 +5,11 @@
 .left-window {
     -fx-background-color: white;
     -fx-border-color: #E8E8E8;
-
 }
 
 .top-window {
     -fx-background-color: white;
-    -fx-pref-width: 1523px;
+    -fx-pref-width: 1313px;
     -fx-pref-height: 98px;
     -fx-padding: 24px;
     -fx-border-color: #E8E8E8;
@@ -20,4 +19,43 @@
     -fx-pref-width: 50px;
     -fx-pref-height: 0px;
     -fx-background-color: #1351CB;
+}
+.text{
+    -fx-font-weight: 500;
+    -fx-font-size: 16px;
+    -fx-text-fill: #A3A3A3;
+}
+.navigate-btn{
+    -fx-padding: 12px;
+    -fx-background-radius: 12px;
+}
+.selected-navigate-btn{
+    -fx-padding: 12px;
+    -fx-background-color: #EDF3FF;
+    -fx-background-radius: 12px;
+}
+.btn-selected-text{
+   -fx-text-fill: #1351CB;
+    -fx-font-weight: 600;
+}
+.count-box{
+    
+    -fx-border-color: #E8E8E8;
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+}
+.count-icon-pane{
+    -fx-background-color: #EDF3FF;
+    -fx-background-radius: 20px;
+}
+.count-box-text{
+    -fx-text-fill: #1351CB;
+    -fx-font-weight: bold;
+}
+.count-box-sub-text{
+    -fx-font-weight: 500;
+    -fx-font-size: 13px;
+    -fx-text-fill: #A3A3A3;
+    -fx-font-family: SansSerif;
 }
