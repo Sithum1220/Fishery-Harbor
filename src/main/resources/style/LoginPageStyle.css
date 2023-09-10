@@ -20,7 +20,12 @@
 .minimize-img:hover{
     -fx-effect: dropshadow( gaussian , #7fc97d,5,0.5,0,0);
 }
-.count-box-text{
-    -fx-text-fill: black;
+.back-btn{
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #1351CB;
+    -fx-padding: 12px 16px;
+    -fx-font-family: "SansSerif";
     -fx-font-weight: bold;
 }
