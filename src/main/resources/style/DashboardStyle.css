@@ -52,6 +52,7 @@
 .count-box-text{
     -fx-text-fill: #1351CB;
     -fx-font-weight: bold;
+    -fx-font-size: 16px;
 }
 .count-box-sub-text{
     -fx-font-weight: 500;
