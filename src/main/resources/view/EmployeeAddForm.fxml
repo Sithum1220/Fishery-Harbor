@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="558.0" prefWidth="627.0" stylesheets="@../style/EmployeeFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.EmployeeAddFormController">
+<AnchorPane prefHeight="558.0" prefWidth="627.0" style="-fx-background-color: white;" stylesheets="@../style/EmployeeFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.EmployeeAddFormController">
    <children>
       <Text layoutX="136.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Employee" wrappingWidth="168.91357421875">
          <font>
@@ -31,14 +31,54 @@
          </image>
       </ImageView>
       <Line endX="400.0" layoutX="173.0" layoutY="123.0" startX="-118.0" stroke="#e8e8e8" />
-      <JFXButton layoutX="63.0" layoutY="152.0" prefHeight="42.0" prefWidth="169.0" style="-fx-background-color: #1351CB; -fx-background-radius: 12px;" text=" " textFill="WHITE">
+      <JFXButton layoutX="48.0" layoutY="152.0" prefHeight="42.0" prefWidth="169.0" style="-fx-background-color: #1351CB; -fx-background-radius: 12px;" text=" " textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
-         </font></JFXButton>
-      <JFXButton layoutX="245.0" layoutY="152.0" prefHeight="42.0" prefWidth="138.0" style="-fx-background-position: 32;" styleClass="add-btn" text=" ">
+         </font>
+         <graphic>
+            <GridPane prefHeight="42.0" prefWidth="169.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="3.0" prefWidth="18.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="151.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="As a employee" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </graphic></JFXButton>
+      <JFXButton layoutX="230.0" layoutY="152.0" onAction="#btnAsAAdminOnAction" prefHeight="42.0" prefWidth="138.0" style="-fx-background-position: 32;" styleClass="add-btn" text=" ">
          <font>
             <Font name="SansSerif Regular" size="16.0" />
-         </font></JFXButton>
+         </font>
+         <graphic>
+            <GridPane prefHeight="42.0" prefWidth="138.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="3.0" prefWidth="16.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="122.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="As a admin" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </graphic></JFXButton>
       <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="First Name" styleClass="addtext-field" unFocusColor="WHITE" />
       <JFXTextField focusColor="WHITE" layoutX="319.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="Last Name" styleClass="addtext-field" unFocusColor="#ffffffe0" />
       <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
@@ -50,83 +90,51 @@
       <JFXButton layoutX="48.0" layoutY="456.0" prefHeight="54.0" prefWidth="259.0" styleClass="add-btn" text=" " textFill="#3d3e3e">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
-         </font></JFXButton>
+         </font>
+         <graphic>
+            <GridPane prefHeight="54.0" prefWidth="259.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="3.0" prefWidth="82.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="177.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </graphic></JFXButton>
       <JFXButton layoutX="320.0" layoutY="456.0" onAction="#btnEmployeeAddOnAction" prefHeight="54.0" prefWidth="259.0" style="-fx-background-color: #1351CB;" styleClass="add-btn" text=" " textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
-         </font></JFXButton>
+         </font>
+         <graphic>
+            <GridPane prefHeight="54.0" prefWidth="259.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="3.0" prefWidth="101.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="158.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </graphic></JFXButton>
       <JFXTextField focusColor="WHITE" layoutX="439.0" layoutY="392.0" prefHeight="42.0" prefWidth="140.0" promptText="City" styleClass="addtext-field" unFocusColor="WHITE" />
-      <GridPane layoutX="63.0" layoutY="152.0" prefHeight="42.0" prefWidth="169.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="3.0" prefWidth="27.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="142.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="As a employee" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font name="SansSerif Bold" size="16.0" />
-               </font>
-            </Text>
-         </children>
-      </GridPane>
-      <GridPane layoutX="246.0" layoutY="152.0" prefHeight="42.0" prefWidth="138.0">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="3.0" prefWidth="26.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="112.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="As a admin" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font name="SansSerif Regular" size="16.0" />
-               </font>
-            </Text>
-         </children>
-      </GridPane>
-      <GridPane layoutX="320.0" layoutY="456.0" prefHeight="54.0" prefWidth="259.0">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="3.0" prefWidth="115.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="144.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font name="SansSerif Bold" size="16.0" />
-               </font>
-            </Text>
-         </children>
-      </GridPane>
-      <GridPane layoutX="50.0" layoutY="456.0" prefHeight="54.0" prefWidth="259.0">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="3.0" prefWidth="101.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="158.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font name="SansSerif Bold" size="16.0" />
-               </font>
-            </Text>
-         </children>
-      </GridPane>
    </children>
 </AnchorPane>

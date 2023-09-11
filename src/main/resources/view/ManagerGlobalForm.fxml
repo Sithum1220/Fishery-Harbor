@@ -240,6 +240,6 @@
             <Image url="@../img/Frame-127.png" />
          </image>
       </ImageView>
-      <Pane fx:id="crudPane" layoutX="454.0" layoutY="151.0" prefHeight="558.0" prefWidth="627.0" style="-fx-background-color: white; -fx-background-radius: 16px;" visible="false" />
+      <Pane fx:id="crudPane" layoutX="454.0" layoutY="151.0" prefHeight="618.0" prefWidth="627.0" style="-fx-background-radius: 16px;" visible="false" />
    </children>
 </AnchorPane>
