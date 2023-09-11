@@ -16,11 +16,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="860.0" prefWidth="1533.0" styleClass="main-window" stylesheets="@../style/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.ManagerDashBoardFormController">
+<AnchorPane prefHeight="860.0" prefWidth="1533.0" styleClass="main-window" stylesheets="@../style/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.AdminDashboardFormController">
    <children>
       <Pane layoutX="221.0" layoutY="97.0" prefHeight="763.0" prefWidth="1313.0">
          <children>
-            <HBox layoutX="44.0" layoutY="38.0" prefHeight="144.0" prefWidth="1269.0" spacing="45.0">
+            <HBox layoutX="44.0" layoutY="38.0" prefHeight="144.0" prefWidth="1269.0" spacing="25.0">
                <children>
                   <AnchorPane prefHeight="144.0" prefWidth="276.0" styleClass="count-box">
                      <children>
@@ -33,7 +33,7 @@
                               </ImageView>
                            </children>
                         </Pane>
-                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="25">
+                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="100">
                            <font>
                               <Font name="SansSerif Bold" size="51.0" />
                            </font>
@@ -51,17 +51,17 @@
                            <children>
                               <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/icon/user-tick.png" />
+                                    <Image url="@../img/icon/box-2.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </Pane>
-                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="25">
+                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="14">
                            <font>
                               <Font name="SansSerif Bold" size="51.0" />
                            </font>
                         </Text>
-                        <Text fill="#a3a3a3" layoutX="108.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Today Attendance">
+                        <Text fill="#a3a3a3" layoutX="108.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Today Orders">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -74,40 +74,40 @@
                            <children>
                               <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/icon/user-tick.png" />
+                                    <Image url="@../img/icon/fellow-manage-recruiter-svgrepo-com-1.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </Pane>
-                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="25">
+                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="18">
                            <font>
                               <Font name="SansSerif Bold" size="51.0" />
                            </font>
                         </Text>
-                        <Text fill="#a3a3a3" layoutX="108.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Today Attendance">
+                        <Text fill="#a3a3a3" layoutX="108.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Daily Departed Boats">
                            <font>
                               <Font size="12.0" />
                            </font>
                         </Text>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="140.0" prefWidth="276.0" styleClass="count-box">
+                  <AnchorPane prefHeight="144.0" prefWidth="341.0" styleClass="count-box">
                      <children>
                         <Pane layoutX="14.0" layoutY="36.0" prefHeight="73.0" prefWidth="73.0" styleClass="count-icon-pane">
                            <children>
                               <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/icon/user-tick.png" />
+                                    <Image url="@../img/icon/task-square.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </Pane>
-                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="25">
+                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="30000L">
                            <font>
                               <Font name="SansSerif Bold" size="51.0" />
                            </font>
                         </Text>
-                        <Text fill="#a3a3a3" layoutX="109.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Today Attendance">
+                        <Text fill="#a3a3a3" layoutX="109.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Available Diesel Stock">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -145,7 +145,7 @@
                   </Text>
                   <AnchorPane layoutX="35.0" layoutY="149.0" prefHeight="42.0" prefWidth="200.0" styleClass="count-box">
                      <children>
-                        <Text fill="#048abf" layoutX="35.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16000L">
+                        <Text fill="#048abf" layoutX="35.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8000L">
                            <font>
                               <Font name="SansSerif Bold" size="22.0" />
                            </font>
@@ -160,7 +160,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="35.0" layoutY="215.0" prefHeight="42.0" prefWidth="200.0" styleClass="count-box">
                      <children>
-                        <Text fill="#05dbf2" layoutX="35.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16000L">
+                        <Text fill="#05dbf2" layoutX="35.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6000L">
                            <font>
                               <Font name="SansSerif Bold" size="22.0" />
                            </font>
@@ -182,14 +182,34 @@
             </AnchorPane>
             <AnchorPane layoutX="752.0" layoutY="256.0" prefHeight="429.0" prefWidth="532.0" styleClass="count-box">
                <children>
-                  <Text layoutX="31.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Attendence">
+                  <Text layoutX="31.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat Manage">
                      <font>
                         <Font name="SansSerif Regular" size="25.0" />
                      </font>
                   </Text>
+                  <AnchorPane layoutX="246.0" layoutY="24.0" prefHeight="34.0" prefWidth="117.0" styleClass="count-box">
+                     <children>
+                        <Text fill="#a3a3a3" layoutX="42.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Circle fill="#1351cb" layoutX="17.0" layoutY="17.0" radius="6.0" stroke="#1351cb" strokeType="INSIDE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="376.0" layoutY="24.0" prefHeight="34.0" prefWidth="117.0" styleClass="count-box">
+                     <children>
+                        <Text fill="#a3a3a3" layoutX="42.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Circle fill="#5bb2ff" layoutX="17.0" layoutY="17.0" radius="6.0" stroke="#5bb2ff" strokeType="INSIDE" />
+                     </children>
+                  </AnchorPane>
                   <ImageView fitHeight="322.0" fitWidth="467.0" layoutX="33.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/managerBarChart.png" />
+                        <Image url="@../img/chart.png" />
                      </image>
                   </ImageView>
                </children>
@@ -205,30 +225,7 @@
             </ImageView>
             <VBox layoutX="23.0" layoutY="185.0" prefHeight="484.0" prefWidth="174.0" spacing="32.0">
                <children>
-                  <JFXButton fx:id="btnDashboard" onAction="#dashboardOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
-                     <graphic>
-                        <GridPane prefHeight="48.0" prefWidth="174.0">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <ImageView fx:id="btnImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-                                 <image>
-                                    <Image url="@../img/icon/category.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="btnDashboardText" styleClass="btn-selected-text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton fx:id="btnEmployee" onAction="#employeeOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="selected-navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -243,10 +240,10 @@
                            <children>
                               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
-                                    <Image url="@../img/icon/profile-2user.png" />
+                                    <Image url="@../img/icon/category.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Employee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label styleClass="btn-selected-text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -266,10 +263,33 @@
                            <children>
                               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
-                                    <Image url="@../img/icon/truck-fast.png" />
+                                    <Image url="@../img/icon/attendence.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Supplier" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label styleClass="text" text="Attendence" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                     <graphic>
+                        <GridPane prefHeight="48.0" prefWidth="174.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/icon/boat.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="text" text="Boat Manage" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -292,7 +312,30 @@
                                     <Image url="@../img/icon/user.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Owner" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label styleClass="text" text="Rent" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                     <graphic>
+                        <GridPane prefHeight="48.0" prefWidth="174.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/icon/task-square2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="text" text="Order" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -316,29 +359,6 @@
                                  </image>
                               </ImageView>
                               <Label styleClass="text" text="Stock" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
-                     <graphic>
-                        <GridPane prefHeight="48.0" prefWidth="174.0">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.17729187011719" minWidth="10.0" prefWidth="42.631080627441406" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.3689193725586" minWidth="10.0" prefWidth="131.3689193725586" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-                                 <image>
-                                    <Image url="@../img/icon/chart.png" />
-                                 </image>
-                              </ImageView>
-                              <Label styleClass="text" text="Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -389,7 +409,7 @@
                   <Font name="SansSerif Bold" size="16.0" />
                </font>
             </Text>
-            <Text fill="#3d3e3e" layoutX="61.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Manager" />
+            <Text fill="#3d3e3e" layoutX="61.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Admin" />
             <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="177.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icon/byeeeee.png" />
