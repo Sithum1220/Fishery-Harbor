@@ -13,7 +13,7 @@
     -fx-border-color: #E8E8E8;
     -fx-border-radius: 12px;
 }
-.text-field{
+.addtext-field{
     -fx-border-color: #E8E8E8;
     -fx-border-radius: 12;
     -fx-prompt-text-fill: #727374;
@@ -21,4 +21,7 @@
     -fx-font-style: normal;
     -fx-padding: 12px 16px;
     -fx-font-family: "SansSerif";
+}
+.scroll-pane{
+    -fx-background-color: white;
 }
