@@ -40,6 +40,17 @@ public class ManagerGlobalFormController implements Initializable {
     public ImageView btnLogoutImg;
     public Label btnLogoutText;
     public JFXButton btnLogout;
+    public ImageView popupPane;
+    public Pane crudPane;
+
+    private static ManagerGlobalFormController controller;
+    public ManagerGlobalFormController(){
+        controller = this;
+    }
+
+    public static ManagerGlobalFormController getInstance(){
+        return controller;
+    }
 
     public void dashboardOnAction(ActionEvent actionEvent) {
         btnSelected(btnDashboard,btnDashboardText,btnDashboardImg,"category.png");
@@ -86,6 +97,12 @@ public class ManagerGlobalFormController implements Initializable {
         btnUnselected(btnOwner,btnOwnerText,btnOwnerImg,"user.png");
         btnUnselected(btnStock,btnStockText,btnStockImg,"box.png");
         btnUnselected(btnReport,btnReportText,btnReportImg,"chart.png");
+
+        try {
+            Navigation.switchPaging(pagingPane,"EmployeeManageForm.fxml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void btnSupplierOnAction(ActionEvent actionEvent) {
