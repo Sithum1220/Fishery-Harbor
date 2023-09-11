@@ -5,13 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
 
-class Navigation {
+public class Navigation {
     private static Stage stage;
     private static Scene scene;
     private static Parent parent;
@@ -61,5 +62,12 @@ class Navigation {
         Node node = (Node) mouseEvent.getSource();
         stage = (Stage) node.getScene().getWindow();
         stage.close();
+    }
+
+    public static void switchPaging(Pane pane, String path) throws IOException {
+        pane.getChildren().clear();
+        FXMLLoader loader = new FXMLLoader(Navigation.class.getResource("/view/"+path));
+        Parent root = loader.load();
+        pane.getChildren().add(root);
     }
 }

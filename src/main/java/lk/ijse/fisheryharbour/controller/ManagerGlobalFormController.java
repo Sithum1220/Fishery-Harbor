@@ -6,11 +6,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+import lk.ijse.fisheryharbour.utill.Navigation;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ManagerDashBoardFormController implements Initializable {
+public class ManagerGlobalFormController implements Initializable {
 
 
     public JFXButton btnDashboard;
@@ -28,6 +31,7 @@ public class ManagerDashBoardFormController implements Initializable {
     public ImageView btnStockImg;
     public Label btnStockText;
     public JFXButton btnReport;
+    public Pane pagingPane;
 
 
     public void dashboardOnAction(ActionEvent actionEvent) {
@@ -39,6 +43,11 @@ public class ManagerDashBoardFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnSelected(btnDashboard,btnDashboardText,btnDashboardImg,"category.png");
+        try {
+            Navigation.switchPaging(pagingPane,"ManagerdashboardForm.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
