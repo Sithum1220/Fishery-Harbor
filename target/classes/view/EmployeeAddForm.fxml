@@ -79,14 +79,14 @@
                </children>
             </GridPane>
          </graphic></JFXButton>
-      <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="First Name" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="319.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="Last Name" styleClass="addtext-field" unFocusColor="#ffffffe0" />
-      <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="319.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Email" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="328.0" prefHeight="42.0" prefWidth="260.0" promptText="NIC" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXComboBox focusColor="WHITE" layoutX="319.0" layoutY="328.0" prefHeight="42.0" prefWidth="260.0" promptText="Role" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="392.0" prefHeight="42.0" prefWidth="120.0" promptText="House_No" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="179.0" layoutY="392.0" prefHeight="42.0" prefWidth="249.0" promptText="Street" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtFirstName" focusColor="WHITE" layoutX="48.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="First Name" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtLastName" focusColor="WHITE" layoutX="319.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="Last Name" styleClass="addtext-field" unFocusColor="#ffffffe0" />
+      <JFXTextField fx:id="txtMobile" focusColor="WHITE" layoutX="48.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="319.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Email" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtNic" focusColor="WHITE" layoutX="48.0" layoutY="328.0" prefHeight="42.0" prefWidth="260.0" promptText="NIC" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbRole" focusColor="WHITE" layoutX="319.0" layoutY="328.0" prefHeight="42.0" prefWidth="260.0" promptText="Role" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtHouseNo" focusColor="WHITE" layoutX="48.0" layoutY="392.0" prefHeight="42.0" prefWidth="120.0" promptText="House_No" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtStreet" focusColor="WHITE" layoutX="179.0" layoutY="392.0" prefHeight="42.0" prefWidth="249.0" promptText="Street" styleClass="addtext-field" unFocusColor="WHITE" />
       <JFXButton layoutX="48.0" layoutY="456.0" prefHeight="54.0" prefWidth="259.0" styleClass="add-btn" text=" " textFill="#3d3e3e">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
@@ -135,6 +135,6 @@
                </children>
             </GridPane>
          </graphic></JFXButton>
-      <JFXTextField focusColor="WHITE" layoutX="439.0" layoutY="392.0" prefHeight="42.0" prefWidth="140.0" promptText="City" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtCity" focusColor="WHITE" layoutX="439.0" layoutY="392.0" prefHeight="42.0" prefWidth="140.0" promptText="City" styleClass="addtext-field" unFocusColor="WHITE" />
    </children>
 </AnchorPane>
