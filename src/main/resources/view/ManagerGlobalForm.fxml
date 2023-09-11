@@ -108,7 +108,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnOwnerImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/user.png" />
                                  </image>
@@ -154,19 +154,19 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnReportImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/chart.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnReportText" styleClass="text" text="Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
                </children>
             </VBox>
-            <JFXButton layoutX="23.0" layoutY="773.0" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+            <JFXButton fx:id="btnLogout" layoutX="23.0" layoutY="773.0" onAction="#btnLogoutOnAction" onMouseEntered="#btnLogoutOnMouseEntered" onMouseExited="#btnLogoutOnMouseExit" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                <graphic>
                   <GridPane prefHeight="48.0" prefWidth="174.0">
                      <columnConstraints>
@@ -179,12 +179,12 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                        <ImageView fx:id="btnLogoutImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                            <image>
                               <Image url="@../img/icon/logout.png" />
                            </image>
                         </ImageView>
-                        <Label styleClass="text" text="Log Out" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="btnLogoutText" styleClass="text" text="Log Out" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </graphic>
