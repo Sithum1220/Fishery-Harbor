@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="860.0" prefWidth="1533.0" styleClass="main-window" stylesheets="@../style/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.ManagerGlobalFormController">
+<AnchorPane prefHeight="862.0" prefWidth="1536.0" styleClass="main-window" stylesheets="@../style/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.ManagerGlobalFormController">
    <children>
       <Pane fx:id="pagingPane" layoutX="221.0" layoutY="97.0" prefHeight="763.0" prefWidth="1313.0" stylesheets="@../style/EmployeeFormStyle.css">
          <children>
@@ -235,11 +235,11 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fx:id="popupPane" fitHeight="863.0" fitWidth="1535.0" pickOnBounds="true" visible="false">
+      <ImageView fx:id="popupPane" fitHeight="862.0" fitWidth="1536.0" pickOnBounds="true">
          <image>
             <Image url="@../img/Frame-127.png" />
          </image>
       </ImageView>
-      <Pane fx:id="crudPane" layoutX="454.0" layoutY="151.0" prefHeight="558.0" prefWidth="627.0" style="-fx-background-color: white; -fx-background-radius: 16px;" visible="false" />
+      <Pane fx:id="crudPane" layoutX="454.0" layoutY="151.0" prefHeight="558.0" prefWidth="627.0" style="-fx-background-color: white; -fx-background-radius: 16px;" />
    </children>
 </AnchorPane>
