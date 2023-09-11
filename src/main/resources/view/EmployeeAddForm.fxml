@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.fisheryharbour.controller.EmployeeAddFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="558.0" prefWidth="627.0" stylesheets="@../style/EmployeeFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.EmployeeAddFormController">
+   <children>
+      <Text layoutX="136.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Employee" wrappingWidth="168.91357421875">
+         <font>
+            <Font name="SansSerif Bold" size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="60.0" layoutX="48.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/addEmployee.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="547.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/close-btn.png" />
+         </image>
+      </ImageView>
+      <Line endX="400.0" layoutX="173.0" layoutY="123.0" startX="-100.0" />
+      <JFXButton layoutX="63.0" layoutY="192.0" text="As a Employee" />
+      <JFXButton layoutX="231.0" layoutY="192.0" text="As a Admin" />
+      <JFXTextField focusColor="WHITE" layoutX="59.0" layoutY="253.0" promptText="First Name" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="323.0" layoutY="253.0" promptText="Last Name" unFocusColor="#ffffffe0" />
+      <JFXTextField focusColor="WHITE" layoutX="59.0" layoutY="313.0" promptText="Mobile" stylesheets="@../style/EmployeeFormStyle.css" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="323.0" layoutY="313.0" promptText="Email" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="59.0" layoutY="368.0" promptText="NIC" unFocusColor="WHITE" />
+      <JFXComboBox focusColor="WHITE" layoutX="354.0" layoutY="368.0" promptText="Role" styleClass="text-field" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="31.0" layoutY="443.0" promptText="House_No" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="236.0" layoutY="443.0" promptText="Street" unFocusColor="WHITE" />
+      <JFXButton layoutX="91.0" layoutY="506.0" text="Cancel" />
+      <JFXButton layoutX="378.0" layoutY="507.0" text="Add" />
+      <JFXTextField focusColor="WHITE" layoutX="418.0" layoutY="443.0" promptText="City" unFocusColor="WHITE" />
+   </children>
 </AnchorPane>
