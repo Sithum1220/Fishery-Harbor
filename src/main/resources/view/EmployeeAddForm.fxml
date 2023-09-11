@@ -28,18 +28,18 @@
          </image>
       </ImageView>
       <Line endX="400.0" layoutX="173.0" layoutY="123.0" startX="-100.0" />
-      <JFXButton layoutX="63.0" layoutY="192.0" text="As a Employee" />
-      <JFXButton layoutX="231.0" layoutY="192.0" text="As a Admin" />
-      <JFXTextField focusColor="WHITE" layoutX="59.0" layoutY="253.0" promptText="First Name" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="323.0" layoutY="253.0" promptText="Last Name" unFocusColor="#ffffffe0" />
-      <JFXTextField focusColor="WHITE" layoutX="59.0" layoutY="313.0" promptText="Mobile" stylesheets="@../style/EmployeeFormStyle.css" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="323.0" layoutY="313.0" promptText="Email" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="59.0" layoutY="368.0" promptText="NIC" unFocusColor="WHITE" />
-      <JFXComboBox focusColor="WHITE" layoutX="354.0" layoutY="368.0" promptText="Role" styleClass="text-field" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="31.0" layoutY="443.0" promptText="House_No" unFocusColor="WHITE" />
-      <JFXTextField focusColor="WHITE" layoutX="236.0" layoutY="443.0" promptText="Street" unFocusColor="WHITE" />
-      <JFXButton layoutX="91.0" layoutY="506.0" text="Cancel" />
-      <JFXButton layoutX="378.0" layoutY="507.0" text="Add" />
-      <JFXTextField focusColor="WHITE" layoutX="418.0" layoutY="443.0" promptText="City" unFocusColor="WHITE" />
+      <JFXButton layoutX="48.0" layoutY="152.0" prefHeight="38.0" prefWidth="169.0" style="-fx-background-color: #1351CB;" text="As a Employee" textFill="WHITE" />
+      <JFXButton layoutX="229.0" layoutY="154.0" prefHeight="38.0" prefWidth="138.0" style="-fx-border-radius: 32; -fx-border-color: #727374;" text="As a Admin" />
+      <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="First Name" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="319.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="Last Name" styleClass="addtext-field" unFocusColor="#ffffffe0" />
+      <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="319.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Email" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="328.0" prefHeight="42.0" prefWidth="260.0" promptText="NIC" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXComboBox focusColor="WHITE" layoutX="319.0" layoutY="328.0" prefHeight="42.0" prefWidth="260.0" promptText="Role" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="48.0" layoutY="382.0" prefHeight="42.0" prefWidth="120.0" promptText="House_No" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField focusColor="WHITE" layoutX="179.0" layoutY="382.0" prefHeight="42.0" prefWidth="249.0" promptText="Street" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXButton layoutX="48.0" layoutY="456.0" prefHeight="54.0" prefWidth="259.0" text="Cancel" />
+      <JFXButton layoutX="320.0" layoutY="456.0" prefHeight="54.0" prefWidth="259.0" text="Add" />
+      <JFXTextField focusColor="WHITE" layoutX="439.0" layoutY="382.0" prefHeight="42.0" prefWidth="140.0" promptText="City" styleClass="addtext-field" unFocusColor="WHITE" />
    </children>
 </AnchorPane>
