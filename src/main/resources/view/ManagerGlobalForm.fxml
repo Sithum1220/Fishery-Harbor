@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -28,7 +29,7 @@
             </Text>
             <AnchorPane layoutX="42.0" layoutY="147.0" prefHeight="572.0" prefWidth="1225.0" styleClass="table-view">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="29.0" layoutY="14.0" prefHeight="48.0" prefWidth="1165.0" spacing="185.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="29.0" layoutY="12.0" prefHeight="48.0" prefWidth="1165.0" spacing="185.0">
                      <children>
                         <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                            <font>
@@ -62,6 +63,13 @@
                         </Text>
                      </children>
                   </HBox>
+                  <ScrollPane layoutX="29.0" layoutY="69.0" prefHeight="484.0" prefWidth="1186.0">
+                     <content>
+                        <VBox prefHeight="483.0" prefWidth="1167.0" styleClass="scroll-pane" />
+                     </content>
+                  </ScrollPane>
+                  <Line endX="581.0" layoutX="612.0" layoutY="60.0" startX="-583.0" stroke="#e8e8e8" />
+                  <AnchorPane layoutX="1197.0" layoutY="70.0" prefHeight="484.0" prefWidth="16.0" style="-fx-background-color: white;" />
                </children></AnchorPane>
             <AnchorPane layoutX="967.0" layoutY="46.0" prefHeight="46.0" prefWidth="300.0" styleClass="table-view">
                <children>

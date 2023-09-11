@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="48.0" prefWidth="1165.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.EmployeeDetailsBarFormController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1165.0" spacing="10.0" style="-fx-background-color: white;">
+         <children>
+            <Text fx:id="id" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="185.0">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="name" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="213.578125">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="role" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" wrappingWidth="206.671875">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="email" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="211.6875">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="mobile" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile" wrappingWidth="209.6640625">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#updateOnMouseClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/action-btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#deleteOnMouseClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/action-delete-btn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#detailsOnMouseClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/action-btn-details.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
