@@ -218,17 +218,17 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <ImageView fx:id="btnImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnDashboardImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
-                                    <Image url="@../img/icon/category.png" />
+                                    <Image url="@../img/icon/category-2.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="btnDashboardText" styleClass="btn-selected-text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnDashboardText" styleClass="text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="btnEmployee" onAction="#employeeOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
+                  <JFXButton fx:id="btnEmployee" onAction="#btnEmployeeOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -241,17 +241,17 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnEmployeeImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/profile-2user.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Employee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnEmployeeText" styleClass="text" text="Employee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnSupplier" onAction="#btnSupplierOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -264,17 +264,17 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnSupplierImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/truck-fast.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Supplier" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnSupplierText" styleClass="text" text="Supplier" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnOwner" onAction="#btnOwnerOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -292,12 +292,12 @@
                                     <Image url="@../img/icon/user.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Owner" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnOwnerText" styleClass="text" text="Owner" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnStock" onAction="#btnStockOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -310,17 +310,17 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnStockImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/box.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Stock" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnStockText" styleClass="text" text="Stock" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnReport" onAction="#btnReportOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>

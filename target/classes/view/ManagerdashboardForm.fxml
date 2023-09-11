@@ -20,7 +20,7 @@
    <children>
       <Pane layoutX="221.0" layoutY="97.0" prefHeight="763.0" prefWidth="1313.0">
          <children>
-            <HBox layoutX="44.0" layoutY="38.0" prefHeight="144.0" prefWidth="1269.0" spacing="45.0">
+            <HBox layoutX="44.0" layoutY="38.0" prefHeight="144.0" prefWidth="1269.0" spacing="25.0">
                <children>
                   <AnchorPane prefHeight="144.0" prefWidth="276.0" styleClass="count-box">
                      <children>
@@ -33,7 +33,7 @@
                               </ImageView>
                            </children>
                         </Pane>
-                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="25">
+                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="100">
                            <font>
                               <Font name="SansSerif Bold" size="51.0" />
                            </font>
@@ -51,7 +51,7 @@
                            <children>
                               <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/icon/user-tick.png" />
+                                    <Image url="@../img/icon/task-square.png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -61,7 +61,7 @@
                               <Font name="SansSerif Bold" size="51.0" />
                            </font>
                         </Text>
-                        <Text fill="#a3a3a3" layoutX="108.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Today Attendance">
+                        <Text fill="#a3a3a3" layoutX="108.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Today Orders">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -74,17 +74,17 @@
                            <children>
                               <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/icon/user-tick.png" />
+                                    <Image url="@../img/icon/boat.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </Pane>
-                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="25">
+                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="1104">
                            <font>
                               <Font name="SansSerif Bold" size="51.0" />
                            </font>
                         </Text>
-                        <Text fill="#a3a3a3" layoutX="108.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Today Attendance">
+                        <Text fill="#a3a3a3" layoutX="108.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Registered Boats">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -97,17 +97,17 @@
                            <children>
                               <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../img/icon/user-tick.png" />
+                                    <Image url="@../img/icon/box-2.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </Pane>
-                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="25">
+                        <Text fill="#1351cb" layoutX="111.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-text" text="30000L">
                            <font>
                               <Font name="SansSerif Bold" size="51.0" />
                            </font>
                         </Text>
-                        <Text fill="#a3a3a3" layoutX="109.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Today Attendance">
+                        <Text fill="#a3a3a3" layoutX="109.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="count-box-sub-text" text="Available Diesel Stock">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -182,34 +182,14 @@
             </AnchorPane>
             <AnchorPane layoutX="752.0" layoutY="256.0" prefHeight="429.0" prefWidth="532.0" styleClass="count-box">
                <children>
-                  <Text layoutX="31.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boate Manage">
+                  <Text layoutX="31.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Attendence">
                      <font>
                         <Font name="SansSerif Regular" size="25.0" />
                      </font>
                   </Text>
-                  <AnchorPane layoutX="246.0" layoutY="24.0" prefHeight="34.0" prefWidth="117.0" styleClass="count-box">
-                     <children>
-                        <Text fill="#a3a3a3" layoutX="42.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Circle fill="#1351cb" layoutX="17.0" layoutY="17.0" radius="6.0" stroke="#1351cb" strokeType="INSIDE" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="376.0" layoutY="24.0" prefHeight="34.0" prefWidth="117.0" styleClass="count-box">
-                     <children>
-                        <Text fill="#a3a3a3" layoutX="42.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Circle fill="#5bb2ff" layoutX="17.0" layoutY="17.0" radius="6.0" stroke="#5bb2ff" strokeType="INSIDE" />
-                     </children>
-                  </AnchorPane>
                   <ImageView fitHeight="322.0" fitWidth="467.0" layoutX="33.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/chart.png" />
+                        <Image url="@../img/managerBarChart.png" />
                      </image>
                   </ImageView>
                </children>
@@ -238,17 +218,17 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <ImageView fx:id="btnImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnDashboardImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
-                                    <Image url="@../img/icon/category.png" />
+                                    <Image url="@../img/icon/category-2.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="btnDashboardText" styleClass="btn-selected-text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnDashboardText" styleClass="text" text="Dashboard" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="btnEmployee" onAction="#employeeOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
+                  <JFXButton fx:id="btnEmployee" onAction="#btnEmployeeOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -261,17 +241,17 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnEmployeeImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/profile-2user.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Employee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnEmployeeText" styleClass="text" text="Employee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnSupplier" onAction="#btnSupplierOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -284,17 +264,17 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnSupplierImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/truck-fast.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Supplier" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnSupplierText" styleClass="text" text="Supplier" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnOwner" onAction="#btnOwnerOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -312,12 +292,12 @@
                                     <Image url="@../img/icon/user.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Owner" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnOwnerText" styleClass="text" text="Owner" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnStock" onAction="#btnStockOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -330,17 +310,17 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="btnStockImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../img/icon/box.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="text" text="Stock" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="btnStockText" styleClass="text" text="Stock" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnReport" onAction="#btnReportOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
