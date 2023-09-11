@@ -235,7 +235,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fx:id="popupPane" fitHeight="863.0" fitWidth="1535.0" pickOnBounds="true">
+      <ImageView fx:id="popupPane" fitHeight="863.0" fitWidth="1535.0" pickOnBounds="true" visible="false">
          <image>
             <Image url="@../img/Frame-127.png" />
          </image>
