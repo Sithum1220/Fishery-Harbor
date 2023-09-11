@@ -1,0 +1,15 @@
+.table-view{
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-color: #E8E8E8;
+    -fx-border-radius: 16px;
+}
+.search-bar{
+    -fx-prompt-text-fill: #727374;
+}
+.add-btn{
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-border-color: #E8E8E8;
+    -fx-border-radius: 12px;
+}
