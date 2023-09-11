@@ -62,13 +62,13 @@
                         </Text>
                      </children>
                   </HBox>
-                  <ScrollPane layoutX="29.0" layoutY="69.0" prefHeight="484.0" prefWidth="1186.0">
+                  <ScrollPane layoutX="29.0" layoutY="69.0" prefHeight="484.0" prefWidth="1162.0">
                      <content>
-                        <VBox prefHeight="483.0" prefWidth="1168.0" styleClass="scroll-pane" />
+                        <VBox prefHeight="483.0" prefWidth="1142.0" styleClass="scroll-pane" />
                      </content>
                   </ScrollPane>
                   <Line endX="581.0" layoutX="612.0" layoutY="60.0" startX="-588.0" stroke="#e8e8e8" />
-                  <AnchorPane layoutX="1197.0" layoutY="70.0" prefHeight="484.0" prefWidth="16.0" style="-fx-background-color: white;" />
+                  <AnchorPane layoutX="1172.0" layoutY="68.0" prefHeight="484.0" prefWidth="19.0" style="-fx-background-color: white;" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="967.0" layoutY="46.0" prefHeight="46.0" prefWidth="300.0" styleClass="table-view">
