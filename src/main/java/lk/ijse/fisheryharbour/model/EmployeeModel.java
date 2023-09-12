@@ -34,4 +34,24 @@ public class EmployeeModel {
                 employeeDTO.getStreet(),
                 employeeDTO.getCity());
     }
+
+    public EmployeeDTO getData(String id) throws SQLException, ClassNotFoundException {
+        ResultSet set = SQLUtill.execute("SELECT * FROM employee where employee_Id=?",id);
+
+        EmployeeDTO employeeDTO = new EmployeeDTO();
+
+        if (set.next()){
+            employeeDTO.setEmployee_Id(set.getString(1));
+            employeeDTO.setEmail(set.getString(2));
+            employeeDTO.setFirst_Name(set.getString(3));
+            employeeDTO.setLast_Name(set.getString(4));
+            employeeDTO.setContact_No(set.getString(5));
+            employeeDTO.setNic(set.getString(6));
+            employeeDTO.setRole(set.getString(9));
+            employeeDTO.setHouse_No(set.getString(10));
+            employeeDTO.setStreet(set.getString(11));
+            employeeDTO.setCity(set.getString(12));
+        }
+        return employeeDTO;
+    }
 }

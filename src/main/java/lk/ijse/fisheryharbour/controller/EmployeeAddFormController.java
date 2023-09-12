@@ -8,6 +8,7 @@ import javafx.scene.input.MouseEvent;
 import lk.ijse.fisheryharbour.dto.EmployeeDTO;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
+import lk.ijse.fisheryharbour.utill.NewId;
 
 import java.io.IOException;
 import java.net.URL;
@@ -40,8 +41,9 @@ public class EmployeeAddFormController implements Initializable {
         ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
         ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
 
+        ArrayList<String> list = employeeModel.getAllEmployeeId();
         EmployeeDTO employeeDTO = new EmployeeDTO();
-        employeeDTO.setEmployee_Id(genarateNewId());
+        employeeDTO.setEmployee_Id(NewId.newId(list,NewId.GetType.EMPLOYEE));
         employeeDTO.setCity(txtCity.getText());
         employeeDTO.setContact_No(txtMobile.getText());
         employeeDTO.setEmail(txtEmail.getText());
@@ -60,25 +62,25 @@ public class EmployeeAddFormController implements Initializable {
         Navigation.switchPaging(ManagerGlobalFormController.getInstance().crudPane, "AdminAddForm.fxml");
     }
 
-    private String genarateNewId(){
-        try {
-            ArrayList<String> id = employeeModel.getAllEmployeeId();
-
-            String lastId = null;
-
-            for (int i = 0; i < id.size(); i++) {
-                lastId = id.get(i);
-            }
-
-            String[] split = lastId.split("E-0");
-            int idIndex = Integer.parseInt(split[1]);
-            idIndex++;
-            return "E-0"+idIndex;
-
-        } catch (Exception e) {
-            return "E-01";
-        }
-    }
+//    private String genarateNewId(){
+//        try {
+//            ArrayList<String> id = employeeModel.getAllEmployeeId();
+//
+//            String lastId = null;
+//
+//            for (int i = 0; i < id.size(); i++) {
+//                lastId = id.get(i);
+//            }
+//
+//            String[] split = lastId.split("E-0");
+//            int idIndex = Integer.parseInt(split[1]);
+//            idIndex++;
+//            return "E-0"+idIndex;
+//
+//        } catch (Exception e) {
+//            return "E-01";
+//        }
+//    }
     private String getRole() {
         return String.valueOf(cmbRole.getSelectionModel().getSelectedItem());
     }
