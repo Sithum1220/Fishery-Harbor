@@ -1,5 +1,6 @@
 package lk.ijse.fisheryharbour.controller;
 
+<<<<<<< Updated upstream
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -18,4 +19,7 @@ public class NewPasswordFormController {
 
     public void minimizeOnMouseClick(MouseEvent mouseEvent) {
     }
+=======
+public class NewPasswordFormController {
+>>>>>>> Stashed changes
 }
