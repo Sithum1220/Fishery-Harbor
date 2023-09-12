@@ -22,12 +22,12 @@
             <Image url="@../img/frame.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="btnBack" layoutX="114.0" layoutY="354.0" onAction="#backBtnOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="back-btn" text="BACK" textFill="#1351cb">
+      <JFXButton layoutX="114.0" layoutY="354.0" onAction="#backBtnOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="back-btn" text="BACK" textFill="#1351cb">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="907.0" layoutY="3.0" onMouseClicked="#closeOnMouseClick" opacity="0.78" pickOnBounds="true" preserveRatio="true" styleClass="close-img">
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="907.0" layoutY="3.0" opacity="0.78" pickOnBounds="true" preserveRatio="true" styleClass="close-img">
          <image>
             <Image url="@../img/icon/icons8-close-48.png" />
          </image>
@@ -51,7 +51,7 @@
             <JFXTextField fx:id="txtOtp4" focusColor="WHITE" layoutX="94.0" layoutY="10.0" prefHeight="42.0" prefWidth="42.0" styleClass="add-login-text" unFocusColor="WHITE" />
          </children>
       </HBox>
-      <JFXButton fx:id="btnVerify" layoutX="251.0" layoutY="354.0" onAction="#verifyBtnOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="login-btn" text="VERIFY" textFill="WHITE">
+      <JFXButton layoutX="251.0" layoutY="354.0" onAction="#btnVerifyOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="login-btn" text="VERIFY" textFill="WHITE">
          <font>
             <Font name="Apple Braille Pinpoint 6 Dot" size="13.0" />
          </font>
