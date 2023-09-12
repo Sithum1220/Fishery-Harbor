@@ -5,12 +5,12 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
 
-public class FrogotPasswordFormController {
+public class NewPasswordFormController {
+    public JFXTextField txtNewPassword;
+    public JFXTextField txtConfirmPassword;
+    public JFXButton btnResetPassword;
 
-    public JFXTextField txtUserName;
-    public JFXButton btnReset;
-
-    public void resetBtnOnAction(ActionEvent actionEvent) {
+    public void resetPasswordBtnOnAction(ActionEvent actionEvent) {
     }
 
     public void closeOnMouseClick(MouseEvent mouseEvent) {

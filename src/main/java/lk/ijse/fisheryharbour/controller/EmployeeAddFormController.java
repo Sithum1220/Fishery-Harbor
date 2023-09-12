@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import lk.ijse.fisheryharbour.dto.EmployeeDTO;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
@@ -54,7 +55,14 @@ public class EmployeeAddFormController implements Initializable {
         employeeDTO.setRole(getRole());
         employeeDTO.setStreet(txtStreet.getText());
 
-        employeeModel.save(employeeDTO);
+        boolean save = employeeModel.save(employeeDTO);
+
+        if (save){
+            new Alert(Alert.AlertType.CONFIRMATION,"Successfully Added !!").showAndWait();
+            EmployeeManageFormController.getInstance().getAllId();
+        }else {
+            new Alert(Alert.AlertType.CONFIRMATION,"Error. Please Try Again !!").showAndWait();
+        }
     }
 
 
@@ -62,25 +70,6 @@ public class EmployeeAddFormController implements Initializable {
         Navigation.switchPaging(ManagerGlobalFormController.getInstance().crudPane, "AdminAddForm.fxml");
     }
 
-//    private String genarateNewId(){
-//        try {
-//            ArrayList<String> id = employeeModel.getAllEmployeeId();
-//
-//            String lastId = null;
-//
-//            for (int i = 0; i < id.size(); i++) {
-//                lastId = id.get(i);
-//            }
-//
-//            String[] split = lastId.split("E-0");
-//            int idIndex = Integer.parseInt(split[1]);
-//            idIndex++;
-//            return "E-0"+idIndex;
-//
-//        } catch (Exception e) {
-//            return "E-01";
-//        }
-//    }
     private String getRole() {
         return String.valueOf(cmbRole.getSelectionModel().getSelectedItem());
     }

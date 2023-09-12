@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="572.0" prefWidth="929.0" stylesheets="@../style/LoginPageStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.UserVerifyFormController">
+   <style>-fx-background-color: white;</style>
+   <children>
+      <ImageView fitHeight="132.0" fitWidth="166.0" layoutX="163.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Frame-128.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="573.0" fitWidth="462.0" layoutX="473.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/frame.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="114.0" layoutY="354.0" onAction="#backBtnOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="back-btn" text="BACK" textFill="#1351cb">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="907.0" layoutY="3.0" opacity="0.78" pickOnBounds="true" preserveRatio="true" styleClass="close-img">
+         <image>
+            <Image url="@../img/icon/icons8-close-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="877.0" layoutY="4.0" onMouseClicked="#minimizeOnMouseClick" opacity="0.78" pickOnBounds="true" preserveRatio="true" styleClass="minimize-img">
+         <image>
+            <Image url="@../img/icon/icons8-minimize-50.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <HBox layoutX="155.0" layoutY="294.0" prefHeight="42.0" prefWidth="185.0" spacing="5.0">
+         <children>
+            <JFXTextField fx:id="txtOtp1" focusColor="WHITE" prefHeight="42.0" prefWidth="42.0" styleClass="add-login-text" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txtOtp2" focusColor="WHITE" layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="42.0" styleClass="add-login-text" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txtOtp3" focusColor="WHITE" layoutX="52.0" layoutY="10.0" prefHeight="42.0" prefWidth="42.0" styleClass="add-login-text" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txtOtp4" focusColor="WHITE" layoutX="94.0" layoutY="10.0" prefHeight="42.0" prefWidth="42.0" styleClass="add-login-text" unFocusColor="WHITE" />
+         </children>
+      </HBox>
+      <JFXButton layoutX="251.0" layoutY="354.0" onAction="#btnVerifyOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="login-btn" text="VERIFY" textFill="WHITE">
+         <font>
+            <Font name="Apple Braille Pinpoint 6 Dot" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
