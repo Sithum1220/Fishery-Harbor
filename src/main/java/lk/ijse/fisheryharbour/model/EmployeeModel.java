@@ -13,7 +13,7 @@ public class EmployeeModel {
         ResultSet resultSet = SQLUtill.execute("SELECT employee_Id FROM employee ORDER BY LENGTH(employee_Id),employee_Id");
         ArrayList<String> list = new ArrayList<>();
 
-        while (resultSet.next()){
+        while (resultSet.next()) {
             list.add(resultSet.getString(1));
         }
         return list;
@@ -36,11 +36,11 @@ public class EmployeeModel {
     }
 
     public EmployeeDTO getData(String id) throws SQLException, ClassNotFoundException {
-        ResultSet set = SQLUtill.execute("SELECT * FROM employee where employee_Id=?",id);
+        ResultSet set = SQLUtill.execute("SELECT * FROM employee where employee_Id=?", id);
 
         EmployeeDTO employeeDTO = new EmployeeDTO();
 
-        if (set.next()){
+        if (set.next()) {
             employeeDTO.setEmployee_Id(set.getString(1));
             employeeDTO.setEmail(set.getString(2));
             employeeDTO.setFirst_Name(set.getString(3));
@@ -53,5 +53,30 @@ public class EmployeeModel {
             employeeDTO.setCity(set.getString(12));
         }
         return employeeDTO;
+    }
+
+    public boolean update(EmployeeDTO employeeDTO) throws SQLException, ClassNotFoundException {
+        return SQLUtill.execute("UPDATE  employee SET " +
+                        "email=?," +
+                        "first_Name=?," +
+                        "last_Name=? ," +
+                        "contact_No=? ," +
+                        "nic=? ," +
+                        "role=?," +
+                        "house_No=?," +
+                        "street=?," +
+                        "city=?" +
+                        "WHERE employee_Id=?",
+                employeeDTO.getEmail(),
+                employeeDTO.getFirst_Name(),
+                employeeDTO.getLast_Name(),
+                employeeDTO.getContact_No(),
+                employeeDTO.getNic(),
+                employeeDTO.getRole(),
+                employeeDTO.getHouse_No(),
+                employeeDTO.getStreet(),
+                employeeDTO.getCity(),
+                employeeDTO.getEmployee_Id()
+        );
     }
 }

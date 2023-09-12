@@ -38,9 +38,6 @@ public class EmployeeAddFormController implements Initializable {
     }
 
     public void btnEmployeeAddOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
 
         ArrayList<String> list = employeeModel.getAllEmployeeId();
         EmployeeDTO employeeDTO = new EmployeeDTO();
@@ -60,6 +57,9 @@ public class EmployeeAddFormController implements Initializable {
         if (save){
             new Alert(Alert.AlertType.CONFIRMATION,"Successfully Added !!").showAndWait();
             EmployeeManageFormController.getInstance().getAllId();
+            ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
+            ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
+            ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
         }else {
             new Alert(Alert.AlertType.CONFIRMATION,"Error. Please Try Again !!").showAndWait();
         }

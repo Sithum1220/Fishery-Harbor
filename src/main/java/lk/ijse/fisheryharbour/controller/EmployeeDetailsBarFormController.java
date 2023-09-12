@@ -4,7 +4,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.dto.EmployeeDTO;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
+import lk.ijse.fisheryharbour.utill.Navigation;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class EmployeeDetailsBarFormController {
@@ -15,7 +17,12 @@ public class EmployeeDetailsBarFormController {
     public Text mobile;
 
     EmployeeModel employeeModel = new EmployeeModel();
-    public void updateOnMouseClick(MouseEvent event) {
+    public void updateOnMouseClick(MouseEvent event) throws IOException {
+        EmployeeUpdateFormController.getId(id.getText());
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(true);
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(true);
+        Navigation.switchPaging(ManagerGlobalFormController.getInstance().crudPane, "EmployeeUpdateForm.fxml");
+
     }
 
     public void deleteOnMouseClick(MouseEvent event) {
