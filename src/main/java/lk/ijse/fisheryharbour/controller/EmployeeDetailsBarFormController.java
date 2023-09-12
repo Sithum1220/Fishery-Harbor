@@ -25,7 +25,11 @@ public class EmployeeDetailsBarFormController {
 
     }
 
-    public void deleteOnMouseClick(MouseEvent event) {
+    public void deleteOnMouseClick(MouseEvent event) throws IOException {
+        ConfirmationPopUpController.setId(id.getText());
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(true);
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(true);
+        Navigation.switchPaging(ManagerGlobalFormController.getInstance().crudPane, "ConfirmationPopUp.fxml");
     }
 
     public void detailsOnMouseClick(MouseEvent event) {

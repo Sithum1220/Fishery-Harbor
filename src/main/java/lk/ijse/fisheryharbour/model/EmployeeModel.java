@@ -79,4 +79,9 @@ public class EmployeeModel {
                 employeeDTO.getEmployee_Id()
         );
     }
+
+    public boolean delete(String id) throws SQLException, ClassNotFoundException {
+        return SQLUtill.execute("DELETE FROM employee WHERE employee_Id=?", id);
+
+    }
 }

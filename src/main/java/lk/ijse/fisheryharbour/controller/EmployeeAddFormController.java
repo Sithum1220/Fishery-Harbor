@@ -87,4 +87,5 @@ public class EmployeeAddFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setdataInComboBox();
     }
+
 }
