@@ -25,9 +25,6 @@
     -fx-font-size: 16px;
     -fx-text-fill: #A3A3A3;
 }
-.navigate-btn{
-    -fx-background-radius: 12px;
-}
 .selected-navigate-btn{
 
     -fx-background-color: #EDF3FF;
@@ -57,4 +54,10 @@
     -fx-font-size: 13px;
     -fx-text-fill: #A3A3A3;
     -fx-font-family: SansSerif;
+}
+.globle-btn{
+    -fx-background-radius: 12px;
+}
+.globle-btn:hover{
+    -fx-background-color: #F9F9F9;
 }

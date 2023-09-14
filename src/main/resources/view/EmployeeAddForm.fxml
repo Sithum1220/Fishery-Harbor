@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -25,7 +26,7 @@
             <Image url="@../img/addEmployee.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="526.0" layoutY="54.0" onMouseClicked="#closeOnMouseClick" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="closeImg" fitHeight="48.0" fitWidth="48.0" layoutX="526.0" layoutY="54.0" onMouseClicked="#closeOnMouseClick" onMouseEntered="#closeOnMouseEnterd" onMouseExited="#closeOnMouseExit" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/close-btn.png" />
          </image>
@@ -55,7 +56,7 @@
                </children>
             </GridPane>
          </graphic></JFXButton>
-      <JFXButton layoutX="230.0" layoutY="152.0" onAction="#btnAsAAdminOnAction" prefHeight="42.0" prefWidth="138.0" style="-fx-background-position: 32;" styleClass="add-btn" text=" ">
+      <JFXButton layoutX="230.0" layoutY="152.0" onAction="#btnAsAAdminOnAction" onMouseEntered="#asAdminOnMouseEnterd" onMouseExited="#asAdminOnMouseExit" prefHeight="42.0" prefWidth="138.0" style="-fx-background-position: 32;" styleClass="btn-cancel" text=" ">
          <font>
             <Font name="SansSerif Regular" size="16.0" />
          </font>
@@ -71,14 +72,22 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="As a admin" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Text fx:id="txtasAdmin" strokeType="OUTSIDE" strokeWidth="0.0" text="As a admin" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtasBlueAdmin" fill="#1351cb" strokeType="OUTSIDE" strokeWidth="0.0" text="As a admin" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="SansSerif Regular" size="16.0" />
                      </font>
                   </Text>
                </children>
             </GridPane>
-         </graphic></JFXButton>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
       <JFXTextField fx:id="txtFirstName" focusColor="WHITE" layoutX="48.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="First Name" styleClass="addtext-field" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtLastName" focusColor="WHITE" layoutX="319.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="Last Name" styleClass="addtext-field" unFocusColor="#ffffffe0" />
       <JFXTextField fx:id="txtMobile" focusColor="WHITE" layoutX="48.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
@@ -87,7 +96,7 @@
       <JFXComboBox fx:id="cmbRole" focusColor="WHITE" layoutX="319.0" layoutY="328.0" prefHeight="42.0" prefWidth="260.0" promptText="Role" styleClass="addtext-field" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtHouseNo" focusColor="WHITE" layoutX="48.0" layoutY="392.0" prefHeight="42.0" prefWidth="120.0" promptText="House_No" styleClass="addtext-field" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtStreet" focusColor="WHITE" layoutX="179.0" layoutY="392.0" prefHeight="42.0" prefWidth="249.0" promptText="Street" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXButton layoutX="48.0" layoutY="456.0" prefHeight="54.0" prefWidth="259.0" styleClass="add-btn" text=" " textFill="#3d3e3e">
+      <JFXButton layoutX="48.0" layoutY="456.0" onMouseEntered="#btnCancelOnMouseEnterd" onMouseExited="#btnCancelOnMouseExit" prefHeight="54.0" prefWidth="259.0" styleClass="btn-cancel" text=" " textFill="#3d3e3e">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
@@ -103,15 +112,23 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Text fx:id="txtCancel" fill="#3d3e3e" strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtBlueCancel" fill="#1351cb" strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="SansSerif Bold" size="16.0" />
                      </font>
                   </Text>
                </children>
             </GridPane>
-         </graphic></JFXButton>
-      <JFXButton layoutX="320.0" layoutY="456.0" onAction="#btnEmployeeAddOnAction" prefHeight="54.0" prefWidth="259.0" style="-fx-background-color: #1351CB;" styleClass="add-btn" text=" " textFill="WHITE">
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton layoutX="320.0" layoutY="456.0" onAction="#btnEmployeeAddOnAction" prefHeight="54.0" prefWidth="259.0" styleClass="employee-add-btn" text=" " textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
@@ -134,7 +151,10 @@
                   </Text>
                </children>
             </GridPane>
-         </graphic></JFXButton>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
       <JFXTextField fx:id="txtCity" focusColor="WHITE" layoutX="439.0" layoutY="392.0" prefHeight="42.0" prefWidth="140.0" promptText="City" styleClass="addtext-field" unFocusColor="WHITE" />
    </children>
 </AnchorPane>

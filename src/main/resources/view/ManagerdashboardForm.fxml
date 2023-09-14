@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -85,7 +86,7 @@
                         </Text>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="140.0" prefWidth="276.0" styleClass="count-box">
+                  <AnchorPane prefHeight="144.0" prefWidth="337.0" styleClass="count-box">
                      <children>
                         <Pane layoutX="14.0" layoutY="36.0" prefHeight="73.0" prefWidth="73.0" styleClass="count-icon-pane">
                            <children>
@@ -171,6 +172,9 @@
                      <font>
                         <Font name="SansSerif Bold" size="13.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                </children>
             </AnchorPane>

@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -43,7 +44,7 @@
             </ImageView>
             <VBox layoutX="23.0" layoutY="185.0" prefHeight="484.0" prefWidth="174.0" spacing="32.0">
                <children>
-                  <JFXButton fx:id="btnDashboard" onAction="#dashboardOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
+                  <JFXButton fx:id="btnDashboard" onAction="#dashboardOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="globle-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                           <columnConstraints>
@@ -65,8 +66,11 @@
                            </children>
                         </GridPane>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="btnEmployee" onAction="#btnEmployeeOnAction" prefHeight="48.0" prefWidth="174.0" text=" ">
+                  <JFXButton fx:id="btnEmployee" onAction="#btnEmployeeOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="globle-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -88,8 +92,11 @@
                            </children>
                         </GridPane>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="btnSupplier" onAction="#btnSupplierOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnSupplier" onAction="#btnSupplierOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="globle-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -111,8 +118,11 @@
                            </children>
                         </GridPane>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="btnOwner" onAction="#btnOwnerOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnOwner" onAction="#btnOwnerOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="globle-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -134,8 +144,11 @@
                            </children>
                         </GridPane>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="btnStock" onAction="#btnStockOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnStock" onAction="#btnStockOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="globle-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -157,8 +170,11 @@
                            </children>
                         </GridPane>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="btnReport" onAction="#btnReportOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="navigate-btn" text=" ">
+                  <JFXButton fx:id="btnReport" onAction="#btnReportOnAction" prefHeight="48.0" prefWidth="174.0" styleClass="globle-btn" text=" ">
                      <graphic>
                         <GridPane prefHeight="48.0" prefWidth="174.0">
                            <columnConstraints>
@@ -180,6 +196,9 @@
                            </children>
                         </GridPane>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                </children>
             </VBox>
@@ -205,6 +224,9 @@
                      </children>
                   </GridPane>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
          </children>
       </AnchorPane>

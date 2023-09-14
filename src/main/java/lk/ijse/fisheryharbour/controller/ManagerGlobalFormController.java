@@ -52,13 +52,15 @@ public class ManagerGlobalFormController implements Initializable {
         return controller;
     }
 
-    public void dashboardOnAction(ActionEvent actionEvent) {
+    public void dashboardOnAction(ActionEvent actionEvent) throws IOException {
         btnSelected(btnDashboard,btnDashboardText,btnDashboardImg,"category.png");
         btnUnselected(btnEmployee,btnEmployeeText,btnEmployeeImg,"profile-2user.png");
         btnUnselected(btnSupplier,btnSupplierText,btnSupplierImg,"truck-fast.png");
         btnUnselected(btnOwner,btnOwnerText,btnOwnerImg,"user.png");
         btnUnselected(btnStock,btnStockText,btnStockImg,"box.png");
         btnUnselected(btnReport,btnReportText,btnReportImg,"chart.png");
+
+        Navigation.switchPaging(pagingPane,"ManagerdashboardForm.fxml");
     }
 
 

@@ -5,7 +5,10 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.dto.EmployeeDTO;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
@@ -28,6 +31,11 @@ public class EmployeeAddFormController implements Initializable {
     public JFXComboBox cmbRole;
     public JFXTextField txtHouseNo;
     public JFXTextField txtStreet;
+    public Text txtCancel;
+    public ImageView closeImg;
+    public Text txtBlueCancel;
+    public Text txtasAdmin;
+    public Text txtasBlueAdmin;
 
     EmployeeModel employeeModel = new EmployeeModel();
 
@@ -41,7 +49,7 @@ public class EmployeeAddFormController implements Initializable {
 
         ArrayList<String> list = employeeModel.getAllEmployeeId();
         EmployeeDTO employeeDTO = new EmployeeDTO();
-        employeeDTO.setEmployee_Id(NewId.newId(list,NewId.GetType.EMPLOYEE));
+        employeeDTO.setEmployee_Id(NewId.newId(list, NewId.GetType.EMPLOYEE));
         employeeDTO.setCity(txtCity.getText());
         employeeDTO.setContact_No(txtMobile.getText());
         employeeDTO.setEmail(txtEmail.getText());
@@ -54,14 +62,14 @@ public class EmployeeAddFormController implements Initializable {
 
         boolean save = employeeModel.save(employeeDTO);
 
-        if (save){
-            new Alert(Alert.AlertType.CONFIRMATION,"Successfully Added !!").showAndWait();
+        if (save) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Successfully Added !!").showAndWait();
             EmployeeManageFormController.getInstance().getAllId();
             ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
             ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
             ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
-        }else {
-            new Alert(Alert.AlertType.CONFIRMATION,"Error. Please Try Again !!").showAndWait();
+        } else {
+            new Alert(Alert.AlertType.CONFIRMATION, "Error. Please Try Again !!").showAndWait();
         }
     }
 
@@ -73,6 +81,7 @@ public class EmployeeAddFormController implements Initializable {
     private String getRole() {
         return String.valueOf(cmbRole.getSelectionModel().getSelectedItem());
     }
+
     private void setdataInComboBox() {
         ArrayList<String> roles = new ArrayList<>();
         roles.add("Security");
@@ -86,6 +95,34 @@ public class EmployeeAddFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setdataInComboBox();
+    }
+
+    public void btnCancelOnMouseEnterd(MouseEvent event) {
+        txtCancel.setVisible(false);
+        txtBlueCancel.setVisible(true);
+    }
+
+    public void btnCancelOnMouseExit(MouseEvent event) {
+        txtCancel.setVisible(true);
+        txtBlueCancel.setVisible(false);
+    }
+
+    public void closeOnMouseEnterd(MouseEvent event) {
+        closeImg.setImage(new Image("img/PropertyHover.jpg"));
+    }
+
+    public void closeOnMouseExit(MouseEvent event) {
+        closeImg.setImage(new Image("img/close-btn.png"));
+    }
+
+    public void asAdminOnMouseEnterd(MouseEvent event) {
+        txtasAdmin.setVisible(false);
+        txtasBlueAdmin.setVisible(true);
+    }
+
+    public void asAdminOnMouseExit(MouseEvent event) {
+        txtasBlueAdmin.setVisible(true);
+        txtasBlueAdmin.setVisible(false);
     }
 
 }
