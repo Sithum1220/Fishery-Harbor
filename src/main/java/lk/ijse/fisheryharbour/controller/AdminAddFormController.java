@@ -4,13 +4,12 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import lk.ijse.fisheryharbour.dto.EmployeeDTO;
+import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
-import lk.ijse.fisheryharbour.utill.NewId;
 
 import java.io.IOException;
 import java.net.URL;
@@ -30,11 +29,25 @@ public class AdminAddFormController implements Initializable {
     public JFXTextField txtUserName;
     public JFXTextField txtPassword;
     public JFXTextField txtEmail;
-
+    public Text asEmployee;
+    public Text asBlueEmployee;
+    public ImageView closeImg;
+    public Text txtCancel;
+    public Text txtBlueCancel;
     EmployeeModel employeeModel = new EmployeeModel();
+    private static AdminAddFormController controller;
 
+    public AdminAddFormController(){
+        controller = this;
+    }
+
+    public static AdminAddFormController getInstance(){
+        return controller;
+    }
     public void closeOnMouseClick(MouseEvent event) {
-        Navigation.exit();
+        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
     }
 
     public void btnAsAEmployeeOnAction(ActionEvent actionEvent) throws IOException {
@@ -42,58 +55,15 @@ public class AdminAddFormController implements Initializable {
     }
 
     public void btnEmployeeAddOnAction(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
-
-        EmployeeDTO employeeDTO = new EmployeeDTO();
-
-        ArrayList<String> list = employeeModel.getAllEmployeeId();
-        employeeDTO.setEmployee_Id(NewId.newId(list,NewId.GetType.EMPLOYEE));
-        employeeDTO.setCity(txtCity.getText());
-        employeeDTO.setContact_No(txtMobile.getText());
-        employeeDTO.setEmail(txtEmail.getText());
-        employeeDTO.setNic(txtNic.getText());
-        employeeDTO.setFirst_Name(txtFirstName.getText());
-        employeeDTO.setLast_Name(txtLastName.getText());
-        employeeDTO.setHouse_No(txtHouseNo.getText());
-        employeeDTO.setRole(getRole());
-        employeeDTO.setStreet(txtStreet.getText());
-        employeeDTO.setPassword(txtPassword.getText());
-        employeeDTO.setUser_Name(txtUserName.getText());
-
-        boolean save = employeeModel.save(employeeDTO);
-
-        if (save){
-            new Alert(Alert.AlertType.CONFIRMATION,"Successfully Added !!").showAndWait();
-            EmployeeManageFormController.getInstance().getAllId();
-        }else {
-            new Alert(Alert.AlertType.CONFIRMATION,"Error. Please Try Again !!").showAndWait();
-        }
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(true);
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(true);
+        Navigation.switchPaging(ManagerGlobalFormController.getInstance().crudPane, "FileChooserPopupForm.fxml");
+        FileChooserPopupFormController.getInstance().adminAddPane.setVisible(true);
     }
-
-//    private String genarateNewId(){
-//        try {
-//            ArrayList<String> id = employeeModel.getAllEmployeeId();
-//
-//            String lastId = null;
-//
-//            for (int i = 0; i < id.size(); i++) {
-//                lastId = id.get(i);
-//            }
-//
-//            String[] split = lastId.split("E-0");
-//            int idIndex = Integer.parseInt(split[1]);
-//            idIndex++;
-//            return "E-0"+idIndex;
-//
-//        } catch (Exception e) {
-//            return "E-01";
-//        }
-//    }
-    private String getRole() {
+    public String getRole() {
         return String.valueOf(cmbRole.getSelectionModel().getSelectedItem());
     }
+
     private void setdataInComboBox() {
         ArrayList<String> roles = new ArrayList<>();
         roles.add("Manager");
@@ -104,5 +74,33 @@ public class AdminAddFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setdataInComboBox();
+    }
+
+    public void asAEmployeeOnMouseEnterd(MouseEvent event) {
+        asEmployee.setVisible(false);
+        asBlueEmployee.setVisible(true);
+    }
+
+    public void asAEmployeeOnMouseExit(MouseEvent event) {
+        asEmployee.setVisible(true);
+        asBlueEmployee.setVisible(false);
+    }
+
+    public void closeOnMouseEnterd(MouseEvent event) {
+        closeImg.setImage(new Image("img/PropertyHover.jpg"));
+    }
+
+    public void closeOnMouseExit(MouseEvent event) {
+        closeImg.setImage(new Image("img/close-btn.png"));
+    }
+
+    public void btnCancelOnMouseEnterd(MouseEvent event) {
+        txtCancel.setVisible(false);
+        txtBlueCancel.setVisible(true);
+    }
+
+    public void btnCancelOnMouseExit(MouseEvent event) {
+        txtCancel.setVisible(true);
+        txtBlueCancel.setVisible(false);
     }
 }
