@@ -81,12 +81,13 @@ public class FileChooserPopupFormController implements Initializable {
 
         DirectoryChooser chooser = new DirectoryChooser();
         chooser.setTitle("Select Directory");
-        chooser.setInitialDirectory(new File("/Users"));
+        chooser.setInitialDirectory(new File("/"));
         Stage stage = (Stage) txtPath.getScene().getWindow();
         File file = chooser.showDialog(stage);
         txtPath.setText(String.valueOf(file));
 
         path = txtPath.getText()+"/"+id+".jpg";
+
     }
 
     public void adminAddPaneOnMouseClick(MouseEvent event) throws SQLException, ClassNotFoundException, WriterException, IOException {
