@@ -85,15 +85,12 @@ public class FileChooserPopupFormController implements Initializable {
         Stage stage = (Stage) txtPath.getScene().getWindow();
         File file = chooser.showDialog(stage);
         txtPath.setText(String.valueOf(file));
-
         path = txtPath.getText()+"/"+id+".jpg";
 
     }
 
     public void adminAddPaneOnMouseClick(MouseEvent event) throws SQLException, ClassNotFoundException, WriterException, IOException {
         EmployeeDTO employeeDTO = new EmployeeDTO();
-
-
 
         employeeDTO.setEmployee_Id(id);
         employeeDTO.setCity(AdminAddFormController.getInstance().txtCity.getText());
