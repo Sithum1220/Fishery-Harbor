@@ -31,22 +31,22 @@
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="mobile" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile" wrappingWidth="191.2198486328125">
+            <Text fx:id="mobile" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile" wrappingWidth="182.2198486328125">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <ImageView fx:id="updateImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#updateOnMouseClick" onMouseEntered="#updateOnMouseEntered" onMouseExited="#updateOnMouseExited" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="updateImg" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#updateOnMouseClick" onMouseEntered="#updateOnMouseEntered" onMouseExited="#updateOnMouseExited" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icon/action-btn.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="deleteImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#deleteOnMouseClick" onMouseEntered="#deleteOnMouseEntered" onMouseExited="#deleteOnMouseExited" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="deleteImg" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#deleteOnMouseClick" onMouseEntered="#deleteOnMouseEntered" onMouseExited="#deleteOnMouseExited" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icon/action-delete-btn.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="viewImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#detailsOnMouseClick" onMouseEntered="#viewOnMouseEntered" onMouseExited="#viewOnMouseExited" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="viewImg" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#detailsOnMouseClick" onMouseEntered="#viewOnMouseEntered" onMouseExited="#viewOnMouseExited" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icon/action-btn-details.png" />
                </image>
