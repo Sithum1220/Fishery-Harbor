@@ -4,7 +4,6 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -19,6 +18,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class EmployeeUpdateFormController implements Initializable {
+    private static String id;
     public JFXTextField txtFirstName;
     public JFXTextField txtLastName;
     public JFXTextField txtMobile;
@@ -28,12 +28,16 @@ public class EmployeeUpdateFormController implements Initializable {
     public JFXTextField txtHouseNo;
     public JFXTextField txtStreet;
     public JFXTextField txtCity;
-    private static  String id;
     public Text txtCancel;
     public Text txtBlueCancel;
     public ImageView closeImg;
 
     EmployeeModel employeeModel = new EmployeeModel();
+
+    public static void getId(String id) {
+        EmployeeUpdateFormController.id = id;
+    }
+
     public void btnAsAAdminOnAction(ActionEvent actionEvent) {
     }
 
@@ -53,34 +57,19 @@ public class EmployeeUpdateFormController implements Initializable {
 
         boolean update = employeeModel.update(employeeDTO);
 
-        if (update){
-            new Alert(Alert.AlertType.CONFIRMATION,"Successfully Update !!").showAndWait();
-            EmployeeManageFormController.getInstance().getAllId();
-            ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-            ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-            ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
-        }else {
-            new Alert(Alert.AlertType.CONFIRMATION,"Error. Please Try Again !!").showAndWait();
-        }
-
-
+        EmployeeManageFormController.getInstance().getAllId();
+        Navigation.closePane();
     }
 
     public void closeOnMouseClick(MouseEvent mouseEvent) {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+        Navigation.closePane();
     }
 
-    public static void getId(String id){
-        EmployeeUpdateFormController.id = id;
-    }
-
-    public void setData(){
+    public void setData() {
         EmployeeDTO employeeDTO = null;
         try {
             System.out.println(id);
-             employeeDTO = employeeModel.getData(id);
+            employeeDTO = employeeModel.getData(id);
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -94,14 +83,17 @@ public class EmployeeUpdateFormController implements Initializable {
         txtFirstName.setText(employeeDTO.getFirst_Name());
         txtLastName.setText(employeeDTO.getLast_Name());
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setData();
         setdataInComboBox();
     }
+
     private String getRole() {
         return String.valueOf(cmbRole.getSelectionModel().getSelectedItem());
     }
+
     private void setdataInComboBox() {
         ArrayList<String> roles = new ArrayList<>();
         roles.add("Manager");
@@ -123,9 +115,7 @@ public class EmployeeUpdateFormController implements Initializable {
     }
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+        Navigation.closePane();
     }
 
     public void btnCancelOnMouseEntered(MouseEvent mouseEvent) {

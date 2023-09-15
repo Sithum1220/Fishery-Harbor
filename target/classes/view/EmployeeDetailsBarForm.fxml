@@ -46,7 +46,7 @@
                   <Image url="@../img/icon/action-delete-btn.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#detailsOnMouseClick" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="viewImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#detailsOnMouseClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icon/action-btn-details.png" />
                </image>

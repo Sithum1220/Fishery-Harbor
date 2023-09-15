@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import lk.ijse.fisheryharbour.controller.ManagerGlobalFormController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -69,5 +70,17 @@ public class Navigation {
         FXMLLoader loader = new FXMLLoader(Navigation.class.getResource("/view/"+path));
         Parent root = loader.load();
         pane.getChildren().add(root);
+    }
+
+    public static void closePane(){
+        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+    }
+
+    public static void popupPane(String path) throws IOException {
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(true);
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(true);
+        switchPaging(ManagerGlobalFormController.getInstance().crudPane, path);
     }
 }

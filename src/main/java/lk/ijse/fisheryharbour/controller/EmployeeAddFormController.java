@@ -8,17 +8,16 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import lk.ijse.fisheryharbour.model.EmployeeModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class EmployeeAddFormController implements Initializable {
 
+    private static EmployeeAddFormController controller;
     public JFXTextField txtCity;
     public JFXTextField txtFirstName;
     public JFXTextField txtLastName;
@@ -33,25 +32,21 @@ public class EmployeeAddFormController implements Initializable {
     public Text txtBlueCancel;
     public Text txtasAdmin;
     public Text txtasBlueAdmin;
-    private static EmployeeAddFormController controller;
 
-    public EmployeeAddFormController(){
+    public EmployeeAddFormController() {
         controller = this;
     }
 
-    public static EmployeeAddFormController getInstance(){
+    public static EmployeeAddFormController getInstance() {
         return controller;
     }
+
     public void closeOnMouseClick(MouseEvent event) {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+        Navigation.closePane();
     }
 
     public void btnEmployeeAddOnAction(ActionEvent actionEvent) throws IOException {
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(true);
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(true);
-        Navigation.switchPaging(ManagerGlobalFormController.getInstance().crudPane, "FileChooserPopupForm.fxml");
+        Navigation.popupPane("FileChooserPopupForm.fxml");
 
     }
 
@@ -109,8 +104,6 @@ public class EmployeeAddFormController implements Initializable {
 
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+       Navigation.closePane();
     }
 }

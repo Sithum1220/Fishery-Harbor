@@ -45,9 +45,7 @@ public class AdminAddFormController implements Initializable {
         return controller;
     }
     public void closeOnMouseClick(MouseEvent event) {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+       Navigation.closePane();
     }
 
     public void btnAsAEmployeeOnAction(ActionEvent actionEvent) throws IOException {
@@ -55,9 +53,7 @@ public class AdminAddFormController implements Initializable {
     }
 
     public void btnEmployeeAddOnAction(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(true);
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(true);
-        Navigation.switchPaging(ManagerGlobalFormController.getInstance().crudPane, "FileChooserPopupForm.fxml");
+        Navigation.popupPane("FileChooserPopupForm.fxml");
         FileChooserPopupFormController.getInstance().adminAddPane.setVisible(true);
     }
     public String getRole() {
@@ -105,8 +101,6 @@ public class AdminAddFormController implements Initializable {
     }
 
     public void btnCancelOnMouseClicked(MouseEvent mouseEvent) {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+      Navigation.closePane();
     }
 }

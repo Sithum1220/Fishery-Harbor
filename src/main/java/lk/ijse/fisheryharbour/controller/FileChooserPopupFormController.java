@@ -5,9 +5,9 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -17,6 +17,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import lk.ijse.fisheryharbour.dto.EmployeeDTO;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
+import lk.ijse.fisheryharbour.utill.Navigation;
 import lk.ijse.fisheryharbour.utill.NewId;
 
 import java.io.File;
@@ -36,10 +37,12 @@ public class FileChooserPopupFormController implements Initializable {
     public Text txtBlueCancel;
     public Text txtChoose;
     public Text txtBlueChoose;
+    public JFXButton btnSave;
     EmployeeModel employeeModel = new EmployeeModel();
 
     private String path;
     private String id;
+
     public FileChooserPopupFormController() {
         controller = this;
     }
@@ -49,15 +52,13 @@ public class FileChooserPopupFormController implements Initializable {
     }
 
     public void closeOnMouseClick(MouseEvent event) {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+        Navigation.closePane();
+
     }
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
-        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+        Navigation.closePane();
+
     }
 
     public void btnConfirmOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException, WriterException, IOException {
@@ -75,19 +76,13 @@ public class FileChooserPopupFormController implements Initializable {
 
         boolean save = employeeModel.save(employeeDTO);
 
-        if (save) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Successfully Added !!").showAndWait();
-            EmployeeManageFormController.getInstance().getAllId();
+        EmployeeManageFormController.getInstance().getAllId();
 
-            BitMatrix bitMatrix = new MultiFormatWriter().encode(id, BarcodeFormat.QR_CODE,500,500);
-            MatrixToImageWriter.writeToPath(bitMatrix,"jpg", Paths.get(path));
+        BitMatrix bitMatrix = new MultiFormatWriter().encode(id, BarcodeFormat.QR_CODE, 500, 500);
+        MatrixToImageWriter.writeToPath(bitMatrix, "jpg", Paths.get(path));
 
-            ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-            ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-            ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
-        } else {
-            new Alert(Alert.AlertType.CONFIRMATION, "Error. Please Try Again !!").showAndWait();
-        }
+        Navigation.closePane();
+
     }
 
     public void btnChooseOnAction(ActionEvent actionEvent) {
@@ -98,8 +93,16 @@ public class FileChooserPopupFormController implements Initializable {
         Stage stage = (Stage) txtPath.getScene().getWindow();
         File file = chooser.showDialog(stage);
         txtPath.setText(String.valueOf(file));
-        path = txtPath.getText()+"/"+id+".jpg";
+        path = txtPath.getText() + "/" + id + ".jpg";
 
+        if (txtPath.getText().equals("") || txtPath.getText().equals("null")) {
+            btnSave.setDisable(true);
+            adminAddPane.setDisable(true);
+            txtPath.setText(" ");
+        } else {
+            btnSave.setDisable(false);
+            adminAddPane.setDisable(false);
+        }
     }
 
     public void adminAddPaneOnMouseClick(MouseEvent event) throws SQLException, ClassNotFoundException, WriterException, IOException {
@@ -120,19 +123,13 @@ public class FileChooserPopupFormController implements Initializable {
 
         boolean save = employeeModel.save(employeeDTO);
 
-        if (save) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Successfully Added !!").showAndWait();
-            EmployeeManageFormController.getInstance().getAllId();
+        EmployeeManageFormController.getInstance().getAllId();
 
-            BitMatrix bitMatrix = new MultiFormatWriter().encode(id, BarcodeFormat.QR_CODE,500,500);
-            MatrixToImageWriter.writeToPath(bitMatrix,"jpg", Paths.get(path));
+        BitMatrix bitMatrix = new MultiFormatWriter().encode(id, BarcodeFormat.QR_CODE, 500, 500);
+        MatrixToImageWriter.writeToPath(bitMatrix, "jpg", Paths.get(path));
 
-            ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
-            ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
-            ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
-        } else {
-            new Alert(Alert.AlertType.CONFIRMATION, "Error. Please Try Again !!").showAndWait();
-        }
+        Navigation.closePane();
+
     }
 
     @Override
@@ -144,6 +141,9 @@ public class FileChooserPopupFormController implements Initializable {
             throw new RuntimeException(e);
         }
         id = NewId.newId(list, NewId.GetType.EMPLOYEE);
+
+        btnSave.setDisable(true);
+        adminAddPane.setDisable(true);
     }
 
     public void closeOnMouseEntered(MouseEvent mouseEvent) {
@@ -172,5 +172,14 @@ public class FileChooserPopupFormController implements Initializable {
     public void btnChooseOnMouseExited(MouseEvent mouseEvent) {
         txtChoose.setVisible(true);
         txtBlueChoose.setVisible(false);
+    }
+
+    public void adminAddPaneMouseEnterd(MouseEvent event) {
+        btnSave.setStyle("-fx-background-color: #2F75FF;");
+    }
+
+    public void adminAddPaneMouseExit(MouseEvent event) {
+        btnSave.setStyle("-fx-background-color: #1351CB;");
+
     }
 }

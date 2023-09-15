@@ -17,24 +17,23 @@ import java.util.ResourceBundle;
 
 public class EmployeeManageFormController implements Initializable {
 
+    private static EmployeeManageFormController controller;
     public VBox vBox;
     EmployeeModel employeeModel = new EmployeeModel();
-    private static EmployeeManageFormController controller;
 
-    public EmployeeManageFormController(){
+    public EmployeeManageFormController() {
         controller = this;
     }
 
-    public static EmployeeManageFormController getInstance(){
+    public static EmployeeManageFormController getInstance() {
         return controller;
     }
+
     public void btnEmployeeAddOnAction(ActionEvent actionEvent) throws IOException {
-        ManagerGlobalFormController.getInstance().popupPane.setVisible(true);
-        ManagerGlobalFormController.getInstance().crudPane.setVisible(true);
-        Navigation.switchPaging(ManagerGlobalFormController.getInstance().crudPane, "EmployeeAddForm.fxml");
+        Navigation.popupPane("EmployeeAddForm.fxml");
     }
 
-    public void getAllId()  {
+    public void getAllId() {
         ArrayList<String> list = null;
         try {
             list = employeeModel.getAllEmployeeId();
