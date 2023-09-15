@@ -3,6 +3,7 @@ package lk.ijse.fisheryharbour.controller;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -36,10 +37,11 @@ public class EmployeeDetailsViewFormController implements Initializable {
     }
 
     public void closeOnMouseEnterd(MouseEvent event) {
+        closeImg.setImage(new Image("img/PropertyHover.jpg"));
     }
 
     public void closeOnMouseExit(MouseEvent event) {
-
+        closeImg.setImage(new Image("img/close-btn.png"));
     }
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
@@ -47,9 +49,13 @@ public class EmployeeDetailsViewFormController implements Initializable {
     }
 
     public void btnCancelOnMouseEnterd(MouseEvent event) {
+        txtCancel.setVisible(false);
+        txtBlueCancel.setVisible(true);
     }
 
     public void btnCancelOnMouseExit(MouseEvent event) {
+        txtCancel.setVisible(true);
+        txtBlueCancel.setVisible(false);
 
     }
 

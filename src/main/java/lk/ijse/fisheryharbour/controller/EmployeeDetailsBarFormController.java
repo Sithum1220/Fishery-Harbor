@@ -1,5 +1,6 @@
 package lk.ijse.fisheryharbour.controller;
 
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -17,6 +18,8 @@ public class EmployeeDetailsBarFormController {
     public Text email;
     public Text mobile;
     public ImageView viewImg;
+    public ImageView updateImg;
+    public ImageView deleteImg;
 
     EmployeeModel employeeModel = new EmployeeModel();
 
@@ -48,5 +51,29 @@ public class EmployeeDetailsBarFormController {
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void deleteOnMouseEntered(MouseEvent mouseEvent) {
+        deleteImg.setImage(new Image("img/icon/delete-red.png"));
+    }
+
+    public void deleteOnMouseExited(MouseEvent mouseEvent) {
+        deleteImg.setImage(new Image("img/icon/action-delete-btn.png"));
+    }
+
+    public void viewOnMouseEntered(MouseEvent mouseEvent) {
+        viewImg.setImage(new Image("img/icon/Frame-23.jpg"));
+    }
+
+    public void viewOnMouseExited(MouseEvent mouseEvent) {
+        viewImg.setImage(new Image("img/icon/action-btn-details.png"));
+    }
+
+    public void updateOnMouseEntered(MouseEvent mouseEvent) {
+        updateImg.setImage(new Image("img/icon/update-blue.png"));
+    }
+
+    public void updateOnMouseExited(MouseEvent mouseEvent) {
+        updateImg.setImage(new Image("img/icon/action-btn.png"));
     }
 }
