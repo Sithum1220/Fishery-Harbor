@@ -8,6 +8,8 @@ import com.google.zxing.common.BitMatrix;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
@@ -29,6 +31,11 @@ public class FileChooserPopupFormController implements Initializable {
     private static FileChooserPopupFormController controller;
     public Text txtPath;
     public Pane adminAddPane;
+    public ImageView closeImg;
+    public Text txtCancel;
+    public Text txtBlueCancel;
+    public Text txtChoose;
+    public Text txtBlueChoose;
     EmployeeModel employeeModel = new EmployeeModel();
 
     private String path;
@@ -42,9 +49,15 @@ public class FileChooserPopupFormController implements Initializable {
     }
 
     public void closeOnMouseClick(MouseEvent event) {
+        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
     }
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
+        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
     }
 
     public void btnConfirmOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException, WriterException, IOException {
@@ -131,5 +144,33 @@ public class FileChooserPopupFormController implements Initializable {
             throw new RuntimeException(e);
         }
         id = NewId.newId(list, NewId.GetType.EMPLOYEE);
+    }
+
+    public void closeOnMouseEntered(MouseEvent mouseEvent) {
+        closeImg.setImage(new Image("img/PropertyHover.jpg"));
+    }
+
+    public void closeOnMouseExited(MouseEvent mouseEvent) {
+        closeImg.setImage(new Image("img/close-btn.png"));
+    }
+
+    public void btnCancelOnMouseEntered(MouseEvent mouseEvent) {
+        txtCancel.setVisible(false);
+        txtBlueCancel.setVisible(true);
+    }
+
+    public void btnCancelOnMouseExited(MouseEvent mouseEvent) {
+        txtCancel.setVisible(true);
+        txtBlueCancel.setVisible(false);
+    }
+
+    public void btnChooseOnMouseEntered(MouseEvent mouseEvent) {
+        txtChoose.setVisible(false);
+        txtBlueChoose.setVisible(true);
+    }
+
+    public void btnChooseOnMouseExited(MouseEvent mouseEvent) {
+        txtChoose.setVisible(true);
+        txtBlueChoose.setVisible(false);
     }
 }

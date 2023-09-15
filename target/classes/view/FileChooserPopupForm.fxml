@@ -24,13 +24,13 @@
             <Image url="@../img/file.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="456.0" layoutY="42.0" onMouseClicked="#closeOnMouseClick" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="closeImg" fitHeight="48.0" fitWidth="48.0" layoutX="456.0" layoutY="42.0" onMouseClicked="#closeOnMouseClick" onMouseEntered="#closeOnMouseEntered" onMouseExited="#closeOnMouseExited" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/close-btn.png" />
          </image>
       </ImageView>
       <Line endX="330.0" layoutX="173.0" layoutY="123.0" startX="-118.0" stroke="#e8e8e8" />
-      <JFXButton layoutX="53.0" layoutY="261.0" onAction="#btnCancelOnAction" prefHeight="54.0" prefWidth="212.0" styleClass="add-btn" text=" " textFill="#3d3e3e">
+      <JFXButton layoutX="53.0" layoutY="261.0" onAction="#btnCancelOnAction" onMouseEntered="#btnCancelOnMouseEntered" onMouseExited="#btnCancelOnMouseExited" prefHeight="54.0" prefWidth="212.0" styleClass="btn-cancel" text=" " textFill="#3d3e3e">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
@@ -46,7 +46,12 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Text fx:id="txtCancel" strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtBlueCancel" fill="#1351cb" strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="SansSerif Bold" size="16.0" />
                      </font>
@@ -55,7 +60,7 @@
             </GridPane>
          </graphic>
       </JFXButton>
-      <JFXButton layoutX="285.0" layoutY="261.0" onAction="#btnConfirmOnAction" prefHeight="54.0" prefWidth="212.0" style="-fx-background-color: #1351CB;" styleClass="add-btn" text=" " textFill="WHITE">
+      <JFXButton layoutX="285.0" layoutY="261.0" onAction="#btnConfirmOnAction" prefHeight="54.0" prefWidth="212.0" styleClass="employee-add-btn" text=" " textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
@@ -85,7 +90,7 @@
             <Font name="SansSerif Regular" size="16.0" />
          </font>
       </Text>
-      <JFXButton layoutX="195.0" layoutY="149.0" onAction="#btnChooseOnAction" prefHeight="36.0" prefWidth="161.0" styleClass="add-btn" text=" " textFill="#3d3e3e">
+      <JFXButton layoutX="195.0" layoutY="149.0" onAction="#btnChooseOnAction" onMouseEntered="#btnChooseOnMouseEntered" onMouseExited="#btnChooseOnMouseExited" prefHeight="36.0" prefWidth="161.0" styleClass="btn-cancel" text=" " textFill="#3d3e3e">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
@@ -101,7 +106,12 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Text fx:id="txtChoose" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtBlueChoose" fill="#1351cb" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="SansSerif Bold" size="16.0" />
                      </font>

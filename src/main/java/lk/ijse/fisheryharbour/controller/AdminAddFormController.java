@@ -103,4 +103,10 @@ public class AdminAddFormController implements Initializable {
         txtCancel.setVisible(true);
         txtBlueCancel.setVisible(false);
     }
+
+    public void btnCancelOnMouseClicked(MouseEvent mouseEvent) {
+        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+    }
 }

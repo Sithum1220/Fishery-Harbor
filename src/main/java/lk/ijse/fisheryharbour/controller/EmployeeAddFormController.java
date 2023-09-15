@@ -107,4 +107,10 @@ public class EmployeeAddFormController implements Initializable {
         txtasBlueAdmin.setVisible(false);
     }
 
+
+    public void btnCancelOnAction(ActionEvent actionEvent) {
+        ManagerGlobalFormController.getInstance().crudPane.getChildren().clear();
+        ManagerGlobalFormController.getInstance().crudPane.setVisible(false);
+        ManagerGlobalFormController.getInstance().popupPane.setVisible(false);
+    }
 }
