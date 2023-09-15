@@ -84,4 +84,14 @@ public class EmployeeModel {
         return SQLUtill.execute("DELETE FROM employee WHERE employee_Id=?", id);
 
     }
+
+    public String checkUsernameAndPassword(String userName, String password) throws SQLException, ClassNotFoundException {
+        ResultSet set = SQLUtill.execute("SELECT role FROM employee WHERE user_name=? AND password=?", userName, password);
+
+        if (set.next()) {
+            return set.getString(1);
+        } else {
+            return "No";
+        }
+    }
 }

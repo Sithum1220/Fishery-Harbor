@@ -23,8 +23,8 @@
          </image>
       </ImageView>
       <JFXTextField fx:id="txtUserName" focusColor="WHITE" layoutX="99.0" layoutY="273.0" prefHeight="42.0" prefWidth="267.0" promptText="User Name" styleClass="add-login-text" unFocusColor="WHITE" />
-      <JFXPasswordField focusColor="WHITE" layoutX="99.0" layoutY="326.0" prefHeight="42.0" prefWidth="267.0" promptText="Password" styleClass="add-login-text" unFocusColor="WHITE" />
-      <JFXButton layoutX="99.0" layoutY="411.0" prefHeight="42.0" prefWidth="267.0" styleClass="login-btn" text="LOG IN" textFill="WHITE">
+      <JFXPasswordField fx:id="txtPassword" focusColor="WHITE" layoutX="99.0" layoutY="326.0" prefHeight="42.0" prefWidth="267.0" promptText="Password" styleClass="add-login-text" unFocusColor="WHITE" />
+      <JFXButton layoutX="99.0" layoutY="411.0" onAction="#btnLoginOnAction" prefHeight="42.0" prefWidth="267.0" styleClass="login-btn" text="LOG IN" textFill="WHITE">
          <font>
             <Font name="Apple Braille Pinpoint 6 Dot" size="13.0" />
          </font></JFXButton>

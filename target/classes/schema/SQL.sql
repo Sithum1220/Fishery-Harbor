@@ -5,7 +5,7 @@ USE fishery_Harbour_Management;
 
 CREATE TABLE employee(
                          employee_Id VARCHAR(20) PRIMARY KEY,
-                         email VARCHAR(20) UNIQUE NOT NULL,
+                         email VARCHAR(100) UNIQUE NOT NULL,
                          first_Name VARCHAR(20) NOT NULL,
                          last_Name VARCHAR(20) NOT NULL,
                          contact_No VARCHAR(30) UNIQUE NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE attendance(
 
 CREATE TABLE owner(
                       owner_Id VARCHAR(20) PRIMARY KEY,
-                      email VARCHAR(20) UNIQUE NOT NULL,
+                      email VARCHAR(100) UNIQUE NOT NULL,
                       first_Name VARCHAR(20) NOT NULL,
                       last_Name VARCHAR(20) NOT NULL,
                       owner_Role VARCHAR(20) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE owner(
 CREATE TABLE rent(
                      rent_Id VARCHAR(20) PRIMARY KEY,
                      rent_Type VARCHAR(20) NOT NULL,
-                     fee  VARCHAR(20) NOT NULL,
+                     fee  DECIMAL NOT NULL,
                      date DATE NOT NULL,
                      time TIME NOT NULL,
                      owner_Id VARCHAR(20),
@@ -66,9 +66,9 @@ CREATE TABLE boat(
 CREATE TABLE tax(
                     tax_Id VARCHAR(6) PRIMARY KEY,
                     date DATE NOT NULL,
-                    fee VARCHAR(10) NOT NULL,
+                    fee DECIMAL NOT NULL,
                     tax_Type VARCHAR(10) NOT NULL,
-                    time VARCHAR(10) NOT NULL,
+                    time TIME NOT NULL,
                     boat_Id VARCHAR(20),
                     FOREIGN KEY(boat_Id) REFERENCES boat (boat_Id ) on Delete Cascade on Update Cascade
 );
@@ -82,7 +82,7 @@ CREATE TABLE boat_Employee(
                               first_Name VARCHAR(30) NOT NULL,
                               Last_Name VARCHAR(30) NOT NULL,
                               house_No VARCHAR(20),
-                              street VARCHAR(20) NOT NULL,
+                              street VARCHAR(30) NOT NULL,
                               city VARCHAR(20) NOT NULL,
                               boat_Id VARCHAR(20),
                               FOREIGN KEY(boat_Id) REFERENCES boat (boat_Id ) on Delete Cascade on Update Cascade
@@ -94,8 +94,8 @@ CREATE TABLE boat_Journey(
                              boat_Manage_Id VARCHAR(20) PRIMARY KEY,
                              departure_Date DATE NOT NULL,
                              arrival_Date DATE NOT NULL,
-                             departure_Time VARCHAR(30) NOT NULL,
-                             arrival_Time VARCHAR(30) NOT NULL,
+                             departure_Time TIME NOT NULL,
+                             arrival_Time TIME NOT NULL,
                              boat_Id VARCHAR(20),
                              FOREIGN KEY(boat_Id) REFERENCES boat (boat_Id ) on Delete Cascade on Update Cascade
 );
@@ -106,7 +106,7 @@ CREATE TABLE `order`(
                         item_Type VARCHAR(20) NOT NULL,
                         date DATE NOT NULL,
                         time TIME NOT NULL,
-                        ordered_Qty VARCHAR(20) NOT NULL,
+                        ordered_Qty INT NOT NULL,
                         owner_Id VARCHAR(20),
                         FOREIGN KEY(owner_Id) REFERENCES owner (owner_Id ) on Delete Cascade on Update Cascade
 );
@@ -152,9 +152,9 @@ CREATE TABLE supplier_Order_Detail(
 CREATE TABLE supplier(
                          supplier_Id VARCHAR(20) PRIMARY KEY,
                          company_Name VARCHAR(20) NOT NULL,
-                         company_Email VARCHAR(20) UNIQUE NOT NULL,
+                         company_Email VARCHAR(100) UNIQUE NOT NULL,
                          contact_No VARCHAR(20) UNIQUE NOT NULL,
-                         location VARCHAR(20) NOT NULL
+                         location VARCHAR(50) NOT NULL
 );
 
 
