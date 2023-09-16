@@ -57,7 +57,7 @@
             </GridPane>
          </graphic>
       </JFXButton>
-      <JFXTextField fx:id="txtFirstName" focusColor="WHITE" layoutX="55.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="First Name" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtFirstName" focusColor="WHITE" layoutX="48.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="First Name" styleClass="addtext-field" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtLastName" focusColor="WHITE" layoutX="319.0" layoutY="220.0" prefHeight="42.0" prefWidth="260.0" promptText="Last Name" styleClass="addtext-field" unFocusColor="#ffffffe0" />
       <JFXTextField fx:id="txtMobile" focusColor="WHITE" layoutX="48.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="319.0" layoutY="274.0" prefHeight="42.0" prefWidth="260.0" promptText="Email" styleClass="addtext-field" unFocusColor="WHITE" />
