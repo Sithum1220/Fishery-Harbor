@@ -10,12 +10,12 @@ import lk.ijse.fisheryharbour.utill.Navigation;
 
 public class SupplierAddFormController {
     public ImageView closeImg;
-    public JFXTextField txtFirstName;
-    public JFXTextField txtLastName;
     public JFXTextField txtMobile;
     public JFXTextField txtEmail;
     public Text txtCancel;
     public Text txtBlueCancel;
+    public JFXTextField txtCompanyName;
+    public JFXTextField txtLocation;
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
         Navigation.closePane();
