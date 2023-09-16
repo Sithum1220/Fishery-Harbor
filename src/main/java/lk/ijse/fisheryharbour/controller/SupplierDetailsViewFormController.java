@@ -8,14 +8,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
-public class SupplierAddFormController {
+public class SupplierDetailsViewFormController {
     public ImageView closeImg;
+    public JFXTextField txtName;
     public JFXTextField txtMobile;
     public JFXTextField txtEmail;
     public Text txtCancel;
     public Text txtBlueCancel;
-    public JFXTextField txtCompanyName;
-    public JFXTextField txtLocation;
+    public JFXTextField txtAddress;
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
         Navigation.closePane();
@@ -41,9 +41,5 @@ public class SupplierAddFormController {
 
     public void closeOnMouseExit(MouseEvent mouseEvent) {
         closeImg.setImage(new Image("img/close-btn.png"));
-    }
-
-    public void btnSupplierAddOnAction(ActionEvent actionEvent) {
-
     }
 }
