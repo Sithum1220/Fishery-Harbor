@@ -114,6 +114,7 @@ public class ManagerGlobalFormController implements Initializable {
         btnUnselected(btnOwner,btnOwnerText,btnOwnerImg,"user.png");
         btnUnselected(btnStock,btnStockText,btnStockImg,"box.png");
         btnUnselected(btnReport,btnReportText,btnReportImg,"chart.png");
+
     }
 
     public void btnOwnerOnAction(ActionEvent actionEvent) {
