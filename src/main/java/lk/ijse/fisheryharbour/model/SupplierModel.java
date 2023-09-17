@@ -42,4 +42,25 @@ public class SupplierModel {
         }
         return supplierDTO;
     }
+
+
+    public boolean update(SupplierDTO supplierDTO) throws SQLException, ClassNotFoundException {
+        return SQLUtill.execute("UPDATE  supplier SET " +
+                        "company_Name=?," +
+                        "company_Email=?," +
+                        "contact_No=? ," +
+                        "location=? " +
+                        "WHERE supplier_Id=?",
+                supplierDTO.getCompany_name(),
+                supplierDTO.getCompany_email(),
+                supplierDTO.getCompany_no(),
+                supplierDTO.getCompany_location(),
+                supplierDTO.getSupplier_id()
+        );
+    }
+
+    public boolean delete(String id) throws SQLException, ClassNotFoundException {
+        return SQLUtill.execute("DELETE FROM supplier WHERE supplier_Id=?", id);
+
+    }
 }

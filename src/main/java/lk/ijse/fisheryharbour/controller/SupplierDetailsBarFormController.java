@@ -22,7 +22,7 @@ public class SupplierDetailsBarFormController {
     public ImageView viewImg;
 
     public void updateOnMouseClick(MouseEvent mouseEvent) throws IOException {
-        EmployeeUpdateFormController.getId(id.getText());
+        SupplierUpdateFormController.setId(id.getText());
         Navigation.popupPane("SupplierUpdateForm.fxml");
     }
 
@@ -48,7 +48,6 @@ public class SupplierDetailsBarFormController {
     }
 
     public void detailsOnMouseClick(MouseEvent mouseEvent) throws IOException {
-        EmployeeDetailsViewFormController.setId(id.getText());
         Navigation.popupPane("SupplierDetailsViewForm.fxml");
     }
 

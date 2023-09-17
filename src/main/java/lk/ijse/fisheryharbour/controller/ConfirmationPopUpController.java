@@ -6,6 +6,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
+import lk.ijse.fisheryharbour.model.SupplierModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
 import java.sql.SQLException;
@@ -17,22 +18,25 @@ public class ConfirmationPopUpController {
     public Text txtBlueCancel;
     public ImageView closeImg;
     EmployeeModel employeeModel = new EmployeeModel();
+    SupplierModel supplierModel = new SupplierModel();
 
     public static void setId(String id) {
         ConfirmationPopUpController.id = id;
     }
 
     public void closeOnMouseClick(MouseEvent event) {
-      Navigation.closePane();
+        Navigation.closePane();
     }
 
     public void btnConfirmOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         if (id.startsWith("E")) {
             boolean delete = employeeModel.delete(id);
             EmployeeManageFormController.getInstance().getAllId();
-            Navigation.closePane();
+        } else if (id.startsWith("S")) {
+            boolean delete = supplierModel.delete(id);
+            SupplierManageFormController.getInstance().allSupplierId();
         }
-
+        Navigation.closePane();
     }
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
