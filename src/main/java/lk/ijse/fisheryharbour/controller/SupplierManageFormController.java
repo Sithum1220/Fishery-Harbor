@@ -32,6 +32,7 @@ public class SupplierManageFormController implements Initializable {
     }
 
     public void allSupplierId() throws SQLException, ClassNotFoundException {
+        vBox.getChildren().clear();
         SupplierModel supplierModel = new SupplierModel();
         ArrayList<String> list = supplierModel.getAllSupplierId();
 
@@ -47,11 +48,7 @@ public class SupplierManageFormController implements Initializable {
             SupplierDetailsBarFormController controller = loader.getController();
             controller.setData(id);
             vBox.getChildren().add(root);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }

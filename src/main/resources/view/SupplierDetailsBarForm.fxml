@@ -11,27 +11,27 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1115.0" spacing="10.0" style="-fx-background-color: white;">
          <children>
-            <Text fx:id="id" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="178.8519287109375">
+            <Text fx:id="id" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="155.8519287109375">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="CompanyName" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Company name" wrappingWidth="202.81900024414062">
+            <Text fx:id="CompanyName" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Company name" wrappingWidth="262.8190002441406">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="Location" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" wrappingWidth="195.9127197265625">
+            <Text fx:id="Location" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" wrappingWidth="217.9127197265625">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="email" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="204.00238037109375">
+            <Text fx:id="email" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="182.00238037109375">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="mobile" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile" wrappingWidth="182.2198486328125">
+            <Text fx:id="mobile" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile" wrappingWidth="155.2198486328125">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>

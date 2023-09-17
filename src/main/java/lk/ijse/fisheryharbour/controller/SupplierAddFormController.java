@@ -62,6 +62,7 @@ public class SupplierAddFormController {
         supplierDto.setCompany_location(txtLocation.getText());
 
         boolean save = supplierModel.save(supplierDto);
+        SupplierManageFormController.getInstance().allSupplierId();
         Navigation.closePane();
     }
 }

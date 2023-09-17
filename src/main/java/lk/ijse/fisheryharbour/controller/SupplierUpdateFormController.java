@@ -27,9 +27,6 @@ public class SupplierUpdateFormController {
         Navigation.closePane();
     }
 
-    public void closeOnMouseClick(MouseEvent mouseEvent) {
-    }
-
     public void btnSupplierUpdateOnAction(ActionEvent actionEvent) {
     }
 
@@ -51,12 +48,4 @@ public class SupplierUpdateFormController {
         closeImg.setImage(new Image("img/PropertyHover.jpg"));
     }
 
-    public void btnCancelOnMouseEnterd(MouseEvent mouseEvent) {
-    }
-
-    public void btnCancelOnMouseExit(MouseEvent mouseEvent) {
-    }
-
-    public void closeOnMouseEnterd(MouseEvent mouseEvent) {
-    }
 }
