@@ -56,7 +56,7 @@
                         <Font name="SansSerif Bold" size="16.0" />
                      </font>
                   </Text>
-                  <Text fx:id="txtBlueCancel" fill="#1351cb" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="btn-cancel" text="CANCEL" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Text fx:id="txtCancel1" fill="#1351cb" strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="SansSerif Bold" size="16.0" />
                      </font>
