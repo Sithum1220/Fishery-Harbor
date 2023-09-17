@@ -1,5 +1,4 @@
 package lk.ijse.fisheryharbour.controller;
-
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.image.Image;
@@ -7,6 +6,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.utill.Navigation;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 public class SupplierUpdateFormController {
     public ImageView closeImg;
@@ -23,6 +25,9 @@ public class SupplierUpdateFormController {
 
     public void closeOnMouseClick(MouseEvent mouseEvent) {
         Navigation.closePane();
+    }
+
+    public void closeOnMouseClick(MouseEvent mouseEvent) {
     }
 
     public void btnSupplierUpdateOnAction(ActionEvent actionEvent) {
@@ -44,5 +49,14 @@ public class SupplierUpdateFormController {
 
     public void closeOnMouseEnterd(MouseEvent mouseEvent) {
         closeImg.setImage(new Image("img/PropertyHover.jpg"));
+    }
+
+    public void btnCancelOnMouseEnterd(MouseEvent mouseEvent) {
+    }
+
+    public void btnCancelOnMouseExit(MouseEvent mouseEvent) {
+    }
+
+    public void closeOnMouseEnterd(MouseEvent mouseEvent) {
     }
 }

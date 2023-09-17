@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://localhost:3306/fishery_Harbour_Management</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="fishery_Harbour_Management@localhost [2]" uuid="a8cbba01-c400-44af-962c-363522962d50">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/fishery_Harbour_Management</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

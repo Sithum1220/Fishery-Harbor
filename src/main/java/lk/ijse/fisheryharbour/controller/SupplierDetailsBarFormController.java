@@ -4,9 +4,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import lk.ijse.fisheryharbour.dto.SupplierDTO;
+import lk.ijse.fisheryharbour.model.SupplierModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class SupplierDetailsBarFormController {
     public Text id;
@@ -55,5 +58,16 @@ public class SupplierDetailsBarFormController {
 
     public void viewOnMouseExited(MouseEvent mouseEvent) {
         viewImg.setImage(new Image("img/icon/action-btn-details.png"));
+    }
+
+    public void setData(String id) throws SQLException, ClassNotFoundException {
+        SupplierModel supplierModel = new SupplierModel();
+        SupplierDTO supplierDTO = supplierModel.getData(id);
+
+        this.id.setText(supplierDTO.getSupplier_id());
+        CompanyName.setText(supplierDTO.getCompany_name());
+        email.setText(supplierDTO.getCompany_email());
+        mobile.setText(supplierDTO.getCompany_no());
+        Location.setText(supplierDTO.getCompany_location());
     }
 }
