@@ -22,6 +22,7 @@ public class SupplierAddFormController {
     public Text txtBlueCancel;
     public JFXTextField txtCompanyName;
     public JFXTextField txtLocation;
+    public Text txtCancel1;
 
     SupplierModel supplierModel = new SupplierModel();
 
