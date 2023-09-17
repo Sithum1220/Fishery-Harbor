@@ -1,4 +1,6 @@
 package lk.ijse.fisheryharbour.controller;
+
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.image.Image;
@@ -6,31 +8,31 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.utill.Navigation;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 
-public class SupplierUpdateFormController {
+public class OwnerUpdateFormController {
     public ImageView closeImg;
-    public Text txtBlueCancel;
-    public Text txtCancel;
-    public JFXTextField txtCompanyName;
-    public JFXTextField txtLocation;
+    public JFXTextField txtFirstName;
+    public JFXTextField txtLastName;
     public JFXTextField txtMobile;
     public JFXTextField txtEmail;
-
-    public void closeOnMouseExit(MouseEvent mouseEvent) {
-        closeImg.setImage(new Image("img/close-btn.png"));
-    }
+    public JFXTextField txtNic;
+    public JFXComboBox cmbRole;
+    public JFXTextField txtHouseNo;
+    public JFXTextField txtStreet;
+    public Text txtCancel;
+    public Text txtBlueCancel;
+    public JFXTextField txtCity;
 
     public void closeOnMouseClick(MouseEvent mouseEvent) {
         Navigation.closePane();
     }
 
-    public void closeOnMouseClick(MouseEvent mouseEvent) {
+    public void closeOnMouseEnterd(MouseEvent mouseEvent) {
+        closeImg.setImage(new Image("img/PropertyHover.jpg"));
     }
 
-    public void btnSupplierUpdateOnAction(ActionEvent actionEvent) {
+    public void closeOnMouseExit(MouseEvent mouseEvent) {
+        closeImg.setImage(new Image("img/close-btn.png"));
     }
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
@@ -47,16 +49,6 @@ public class SupplierUpdateFormController {
         txtBlueCancel.setVisible(false);
     }
 
-    public void closeOnMouseEnterd(MouseEvent mouseEvent) {
-        closeImg.setImage(new Image("img/PropertyHover.jpg"));
-    }
-
-    public void btnCancelOnMouseEnterd(MouseEvent mouseEvent) {
-    }
-
-    public void btnCancelOnMouseExit(MouseEvent mouseEvent) {
-    }
-
-    public void closeOnMouseEnterd(MouseEvent mouseEvent) {
+    public void btnOwnerUpdateOnAction(ActionEvent actionEvent) {
     }
 }
