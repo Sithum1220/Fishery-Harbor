@@ -22,7 +22,7 @@
       </Text>
       <ImageView fitHeight="150.0" fitWidth="60.0" layoutX="48.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/addEmployee.png" />
+            <Image url="@../img/icon/addStockImg.png" />
          </image>
       </ImageView>
       <ImageView fx:id="closeImg" fitHeight="48.0" fitWidth="48.0" layoutX="526.0" layoutY="54.0" onMouseClicked="#closeOnMouseClick" onMouseEntered="#closeOnMouseEnterd" onMouseExited="#closeOnMouseExit" pickOnBounds="true" preserveRatio="true">
