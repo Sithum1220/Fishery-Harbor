@@ -28,7 +28,7 @@
             </Text>
             <AnchorPane layoutX="50.0" layoutY="147.0" prefHeight="572.0" prefWidth="1213.0" styleClass="table-view">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="31.0" layoutY="12.0" prefHeight="48.0" prefWidth="1170.0" spacing="221.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="33.0" layoutY="12.0" prefHeight="48.0" prefWidth="1170.0" spacing="200.0">
                      <children>
                         <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                            <font>
