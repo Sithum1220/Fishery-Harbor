@@ -17,35 +17,40 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="764.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.StockManageFormController">
+<AnchorPane prefHeight="764.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.AttendanceFormController">
    <children>
       <Pane prefHeight="764.0" prefWidth="1314.0" stylesheets="@../style/EmployeeFormStyle.css">
          <children>
-            <Text layoutX="42.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock details">
+            <Text layoutX="42.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendence Details ">
                <font>
                   <Font name="SansSerif Bold" size="25.0" />
                </font>
             </Text>
             <AnchorPane layoutX="50.0" layoutY="147.0" prefHeight="572.0" prefWidth="1213.0" styleClass="table-view">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="33.0" layoutY="12.0" prefHeight="48.0" prefWidth="1170.0" spacing="200.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="32.0" layoutY="12.0" prefHeight="48.0" prefWidth="1113.0" spacing="175.0">
                      <children>
                         <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
                         </Text>
-                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Product">
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
                         </Text>
-                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price">
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Role">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
                         </Text>
-                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
@@ -80,7 +85,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <JFXButton fx:id="btnAddStock" layoutX="754.0" layoutY="46.0" onAction="#btnStockAddOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
+            <JFXButton fx:id="btnEnterID" layoutX="754.0" layoutY="46.0" onAction="#btnEnterIdAddOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
                <graphic>
                   <GridPane prefHeight="46.0" prefWidth="179.0">
                      <columnConstraints>
@@ -93,7 +98,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Stock" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter ID" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font name="SansSerif Regular" size="16.0" />
                            </font>
