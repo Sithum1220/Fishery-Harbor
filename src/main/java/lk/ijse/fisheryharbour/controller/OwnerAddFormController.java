@@ -3,6 +3,7 @@ package lk.ijse.fisheryharbour.controller;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -12,10 +13,12 @@ import lk.ijse.fisheryharbour.model.OwnerModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 import lk.ijse.fisheryharbour.utill.NewId;
 
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class OwnerAddFormController {
+public class OwnerAddFormController implements Initializable {
     public ImageView closeImg;
     public JFXTextField txtFirstName;
     public JFXTextField txtLastName;
@@ -84,5 +87,10 @@ public class OwnerAddFormController {
 
     public void closeOnMouseExit(MouseEvent mouseEvent) {
         closeImg.setImage(new Image("img/close-btn.png"));
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setdataInComboBox();
     }
 }
