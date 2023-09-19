@@ -1,25 +1,22 @@
 package lk.ijse.fisheryharbour.controller;
 
-import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
-public class BoatEmployeeAddFormController {
+public class BoatEmployeeDetailsViewController {
     public ImageView closeImg;
-    public JFXTextField txtFirstName;
-    public JFXTextField txtLastName;
-    public JFXTextField txtNIC;
+    public JFXTextField txtName;
     public JFXTextField txtMobile;
-    public JFXComboBox cmbRole;
-    public JFXTextField txtHouseNo;
-    public JFXTextField txtStreet;
-    public JFXTextField txtCity;
-    public JFXTextField txtBoaID;
+    public JFXTextField txtEmail;
+    public JFXTextField txtNic;
     public Text txtCancel;
     public Text txtBlueCancel;
+    public JFXTextField txtRole;
+    public JFXTextField txtBoatID;
+    public JFXTextField txtAddress;
 
     public void closeOnMouseClick(MouseEvent mouseEvent) {
     }
@@ -37,8 +34,5 @@ public class BoatEmployeeAddFormController {
     }
 
     public void btnCancelOnMouseExit(MouseEvent mouseEvent) {
-    }
-
-    public void btnEmployeeAddOnAction(ActionEvent actionEvent) {
     }
 }
