@@ -41,7 +41,7 @@ public class OwnerManageFormController {
 
     private void loadDataTable(String id) {
         try {
-            FXMLLoader loader = new FXMLLoader(OwnerManageFormController.class.getResource("/view/SupplierDetailsBarForm.fxml"));
+            FXMLLoader loader = new FXMLLoader(OwnerManageFormController.class.getResource("/view/OwnerBarDetailsForm.fxml"));
             Parent root = loader.load();
             SupplierDetailsBarFormController controller = loader.getController();
             controller.setData(id);
