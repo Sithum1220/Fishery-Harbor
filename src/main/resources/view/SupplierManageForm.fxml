@@ -65,7 +65,7 @@
                   </HBox>
                   <ScrollPane layoutX="40.0" layoutY="69.0" prefHeight="476.0" prefWidth="1141.0" style="-fx-background-color: white;">
                      <content>
-                        <VBox fx:id="vBox" prefHeight="475.0" prefWidth="1122.0" styleClass="scroll-pane" />
+                        <VBox fx:id="vBox" prefHeight="475.0" prefWidth="1121.0" styleClass="scroll-pane" />
                      </content>
                   </ScrollPane>
                   <Line endX="581.0" layoutX="611.0" layoutY="60.0" startX="-588.0" stroke="#e8e8e8" />

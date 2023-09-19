@@ -31,12 +31,24 @@ public class NewId {
                     return "S-01";
                 }
 
+            case OWNER:
+                try {
+                    String[] split = lastId.split("O-0");
+                    int idNum = Integer.parseInt(split[1]);
+                    idNum++;
+                    return "O-0" + idNum;
+                } catch (Exception e) {
+                    return "O-01";
+                }
+
             default:
                 return null;
         }
+
+
     }
 
     public enum GetType {
-        EMPLOYEE, SUPPLIER
+        EMPLOYEE, SUPPLIER, OWNER
     }
 }

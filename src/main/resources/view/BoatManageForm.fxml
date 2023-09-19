@@ -81,7 +81,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <JFXButton layoutX="754.0" layoutY="46.0" onAction="#btnOwnerAddOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
+            <JFXButton layoutX="754.0" layoutY="46.0" onAction="#btnBoatAddOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
                <graphic>
                   <GridPane prefHeight="46.0" prefWidth="179.0">
                      <columnConstraints>
@@ -114,7 +114,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton layoutX="46.0" layoutY="46.0" onAction="#btnOwnerDetailsOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
+            <JFXButton layoutX="46.0" layoutY="46.0" onAction="#btnOwnerDetailsOnAction" prefHeight="46.0" prefWidth="179.0" style="-fx-background-radius: 12; -fx-background-color: #FFFFFF; -fx-border-color: #E8E8E8; -fx-border-radius: 12;" text=" ">
                <graphic>
                   <GridPane prefHeight="46.0" prefWidth="179.0">
                      <columnConstraints>
@@ -142,12 +142,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton layoutX="237.0" layoutY="46.0" prefHeight="46.0" prefWidth="179.0" styleClass="employee-add-btn" text=" ">
+            <JFXButton layoutX="237.0" layoutY="46.0" prefHeight="46.0" prefWidth="179.0" style="-fx-background-color: #1351CB; -fx-background-radius: 12;" text=" ">
                <graphic>
                   <GridPane prefHeight="46.0" prefWidth="179.0">
                      <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="5.0" prefWidth="19.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="145.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="5.0" prefWidth="26.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="138.0" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -155,7 +155,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat Details" wrappingWidth="93.265625" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat Details" wrappingWidth="92.265625" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font name="SansSerif Regular" size="16.0" />
                            </font>

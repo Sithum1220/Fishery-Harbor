@@ -43,6 +43,7 @@ public class ManagerGlobalFormController implements Initializable {
     public ImageView popupPane;
     public Pane crudPane;
 
+
     public ManagerGlobalFormController() {
         controller = this;
     }
@@ -118,13 +119,15 @@ public class ManagerGlobalFormController implements Initializable {
         Navigation.switchPaging(pagingPane, "SupplierManageForm.fxml");
     }
 
-    public void btnOwnerOnAction(ActionEvent actionEvent) {
+    public void btnOwnerOnAction(ActionEvent actionEvent) throws IOException {
         btnSelected(btnOwner, btnOwnerText, btnOwnerImg, "user2.png");
         btnUnselected(btnEmployee, btnEmployeeText, btnEmployeeImg, "profile-2user.png");
         btnUnselected(btnDashboard, btnDashboardText, btnDashboardImg, "category-2.png");
         btnUnselected(btnSupplier, btnSupplierText, btnSupplierImg, "truck-fast.png");
         btnUnselected(btnStock, btnStockText, btnStockImg, "box.png");
         btnUnselected(btnReport, btnReportText, btnReportImg, "chart.png");
+
+        Navigation.switchPaging(pagingPane, "OwnerManageForm.fxml");
     }
 
     public void btnStockOnAction(ActionEvent actionEvent) {
