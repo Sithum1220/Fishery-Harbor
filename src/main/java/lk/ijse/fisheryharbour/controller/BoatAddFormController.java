@@ -3,33 +3,84 @@ package lk.ijse.fisheryharbour.controller;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import lk.ijse.fisheryharbour.dto.BoatDTO;
+import lk.ijse.fisheryharbour.model.BoatModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
-public class BoatAddFormController {
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
+public class BoatAddFormController implements Initializable {
     public ImageView closeImg;
-    public JFXTextField txtFirstName;
-    public JFXTextField txtLastName;
-    public JFXTextField txtMobile;
-    public JFXComboBox cmbRole;
     public Text txtCancel;
     public Text txtBlueCancel;
+    public JFXTextField txtOwnerId;
+    public JFXTextField txtBoatId;
+    public JFXTextField txtBoatName;
+    public JFXComboBox cmbBoatType;
+
+    BoatModel boatModel = new BoatModel();
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
         Navigation.closePane();
     }
 
     public void btnCancelOnMouseEnterd(MouseEvent mouseEvent) {
-        closeImg.setImage(new Image("img/PropertyHover.jpg"));
+        txtCancel.setVisible(false);
+        txtBlueCancel.setVisible(true);
     }
 
     public void btnCancelOnMouseExit(MouseEvent mouseEvent) {
+        txtCancel.setVisible(true);
+        txtBlueCancel.setVisible(false);
+    }
+
+    public void btnBoatAddOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        BoatDTO boatDTO = new BoatDTO();
+        ArrayList<String> list = boatModel.getAllBoatId();
+
+        boatDTO.setBoat_Id(txtBoatId.getText());
+        boatDTO.setBoat_name(txtBoatName.getText());
+        boatDTO.setOwner_Id(txtOwnerId.getText());
+        boatDTO.setBoat_Type(getRole());
+
+        boolean save = boatModel.save(boatDTO);
+        BoatManageFormController.getInstance().allBoatId();
+        Navigation.closePane();
+    }
+
+    public String getRole() {
+        return String.valueOf(cmbBoatType.getSelectionModel().getSelectedItem());
+    }
+
+    public void setdataInComboBox() {
+        ArrayList<String> roles = new ArrayList<>();
+        roles.add("6 Tanks");
+        roles.add("4 Tanks");
+        cmbBoatType.getItems().addAll(roles);
+    }
+
+    public void closeOnMouseClick(MouseEvent mouseEvent) {
+        Navigation.closePane();
+    }
+
+    public void closeOnMouseEnterd(MouseEvent mouseEvent) {
+        closeImg.setImage(new Image("img/PropertyHover.jpg"));
+    }
+
+    public void closeOnMouseExit(MouseEvent mouseEvent) {
         closeImg.setImage(new Image("img/close-btn.png"));
     }
 
-    public void btnBoatAddOnAction(ActionEvent actionEvent) {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setdataInComboBox();
     }
 }

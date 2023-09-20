@@ -130,22 +130,26 @@ public class ManagerGlobalFormController implements Initializable {
         Navigation.switchPaging(pagingPane, "OwnerManageForm.fxml");
     }
 
-    public void btnStockOnAction(ActionEvent actionEvent) {
+    public void btnStockOnAction(ActionEvent actionEvent) throws IOException {
         btnSelected(btnStock, btnStockText, btnStockImg, "box-2.png");
         btnUnselected(btnEmployee, btnEmployeeText, btnEmployeeImg, "profile-2user.png");
         btnUnselected(btnDashboard, btnDashboardText, btnDashboardImg, "category-2.png");
         btnUnselected(btnSupplier, btnSupplierText, btnSupplierImg, "truck-fast.png");
         btnUnselected(btnOwner, btnOwnerText, btnOwnerImg, "user.png");
         btnUnselected(btnReport, btnReportText, btnReportImg, "chart.png");
+
+        Navigation.switchPaging(pagingPane, "StockManageForm.fxml");
     }
 
-    public void btnReportOnAction(ActionEvent actionEvent) {
+    public void btnReportOnAction(ActionEvent actionEvent) throws IOException {
         btnSelected(btnReport, btnReportText, btnReportImg, "report.png");
         btnUnselected(btnEmployee, btnEmployeeText, btnEmployeeImg, "profile-2user.png");
         btnUnselected(btnDashboard, btnDashboardText, btnDashboardImg, "category-2.png");
         btnUnselected(btnSupplier, btnSupplierText, btnSupplierImg, "truck-fast.png");
         btnUnselected(btnOwner, btnOwnerText, btnOwnerImg, "user.png");
         btnUnselected(btnStock, btnStockText, btnStockImg, "box.png");
+
+        Navigation.switchPaging(pagingPane, "ReportRentManagementForm.fxml");
     }
 
     void logoutBtnSelected(JFXButton button, Label label, ImageView imageView, String path) {
