@@ -81,7 +81,6 @@ public class Demo {
     }
 
     public static void imgTranfer() {
-        while (true) {
             String adbCommand = "adb pull /storage/30A6-324B/DCIM/Camera/B001.jpg D:\\Solution99";
             boolean imageFound = false;
 
@@ -108,7 +107,6 @@ public class Demo {
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();
             }
-        }
     }
 
     public static void imgOcr(){
