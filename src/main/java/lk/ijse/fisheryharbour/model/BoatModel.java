@@ -26,4 +26,18 @@ public class BoatModel {
                 boatDTO.getBoat_Type(),
                 boatDTO.getOwner_Id());
     }
+
+    public BoatDTO getData(String id) throws SQLException, ClassNotFoundException {
+        ResultSet set = SQLUtill.execute("SELECT * FROM boat where boat_Id=?", id);
+
+        BoatDTO boatDTO = new BoatDTO();
+
+        if (set.next()) {
+            boatDTO.setBoat_Id(set.getString(1));
+            boatDTO.setBoat_name(set.getString(2));
+            boatDTO.setOwner_Id(set.getString(4));
+            boatDTO.setBoat_Type(set.getString(3));
+        }
+        return boatDTO;
+    }
 }
