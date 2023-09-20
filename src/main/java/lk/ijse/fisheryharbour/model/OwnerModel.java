@@ -48,11 +48,11 @@ public class OwnerModel {
             ownerDTO.setLast_Name(set.getString(4));
             ownerDTO.setOwner_Role(set.getString(5));
             ownerDTO.setContact_No(set.getString(6));
-            ownerDTO.setNic(set.getString(9));
-            ownerDTO.setHouse_No(set.getString(10));
-            ownerDTO.setStreet(set.getString(11));
-            ownerDTO.setCity(set.getString(12));
-            ownerDTO.setTime(set.getString(12));
+            ownerDTO.setNic(set.getString(7));
+            ownerDTO.setHouse_No(set.getString(8));
+            ownerDTO.setStreet(set.getString(9));
+            ownerDTO.setCity(set.getString(10));
+            ownerDTO.setTime(set.getString(11));
             ownerDTO.setDate(set.getString(12));
         }
         return ownerDTO;
@@ -84,5 +84,10 @@ public class OwnerModel {
                 ownerDTO.getDate(),
                 ownerDTO.getOwner_Id()
         );
+    }
+
+    public boolean delete(String id) throws SQLException, ClassNotFoundException {
+        return SQLUtill.execute("DELETE FROM owner WHERE owner_Id=?", id);
+
     }
 }

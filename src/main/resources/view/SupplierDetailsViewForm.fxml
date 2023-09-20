@@ -31,9 +31,9 @@
          </image>
       </ImageView>
       <Line endX="400.0" layoutX="173.0" layoutY="123.0" startX="-118.0" stroke="#e8e8e8" />
-      <JFXTextField fx:id="txtName" focusColor="WHITE" layoutX="154.0" layoutY="144.0" prefHeight="46.0" prefWidth="418.0" promptText="Company name" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtMobile" focusColor="WHITE" layoutX="155.0" layoutY="204.0" prefHeight="46.0" prefWidth="418.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="155.0" layoutY="265.0" prefHeight="46.0" prefWidth="418.0" promptText="Email" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtCompanyName" focusColor="WHITE" layoutX="154.0" layoutY="144.0" prefHeight="46.0" prefWidth="418.0" promptText="Company name" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtCompanyMobile" focusColor="WHITE" layoutX="155.0" layoutY="204.0" prefHeight="46.0" prefWidth="418.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtCompanyEmail" focusColor="WHITE" layoutX="155.0" layoutY="265.0" prefHeight="46.0" prefWidth="418.0" promptText="Email" styleClass="addtext-field" unFocusColor="WHITE" />
       <JFXButton layoutX="53.0" layoutY="393.0" onAction="#btnCancelOnAction" onMouseEntered="#btnCancelOnMouseEnterd" onMouseExited="#btnCancelOnMouseExit" prefHeight="54.0" prefWidth="519.0" styleClass="btn-cancel" text=" " textFill="#3d3e3e">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
@@ -82,7 +82,7 @@
             <Font name="SansSerif Bold" size="19.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="txtAddress" focusColor="WHITE" layoutX="155.0" layoutY="327.0" prefHeight="46.0" prefWidth="418.0" promptText="Address" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtCompanyAddress" focusColor="WHITE" layoutX="155.0" layoutY="327.0" prefHeight="46.0" prefWidth="418.0" promptText="Address" styleClass="addtext-field" unFocusColor="WHITE" />
       <Text fill="#727374" layoutX="57.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
          <font>
             <Font name="SansSerif Bold" size="19.0" />

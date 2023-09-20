@@ -17,6 +17,7 @@ import lk.ijse.fisheryharbour.utill.Navigation;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class OwnerUpdateFormController implements Initializable {
@@ -62,6 +63,35 @@ public class OwnerUpdateFormController implements Initializable {
         Navigation.closePane();
     }
 
+    public void setData() {
+        OwnerDTO ownerDTO = null;
+        try {
+            System.out.println(id);
+            ownerDTO = ownerModel.getData(id);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        txtFirstName.setText(ownerDTO.getFirst_Name());
+        txtLastName.setText(ownerDTO.getLast_Name());
+        txtMobile.setText(ownerDTO.getContact_No());
+        txtEmail.setText(ownerDTO.getEmail());
+        txtNic.setText(ownerDTO.getNic());
+        cmbRole.setValue(ownerDTO.getOwner_Role());
+        txtHouseNo.setText(ownerDTO.getHouse_No());
+        txtStreet.setText(ownerDTO.getStreet());
+        txtCity.setText(ownerDTO.getCity());
+    }
+
+    private void setdataInComboBox() {
+        ArrayList<String> roles = new ArrayList<>();
+        roles.add("Boat Owner");
+        roles.add("Canteen Owner");
+        roles.add("Market Owner");
+        roles.add("Ice-Mill Owner");
+        cmbRole.getItems().addAll(roles);
+    }
+
     public void closeOnMouseClick(MouseEvent mouseEvent) {
         Navigation.closePane();
     }
@@ -94,6 +124,7 @@ public class OwnerUpdateFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        setData();
+        setdataInComboBox();
     }
 }

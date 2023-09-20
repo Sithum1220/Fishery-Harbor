@@ -13,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="558.0" prefWidth="627.0" style="-fx-background-color: white;" stylesheets="@../style/EmployeeFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.BoatJourneyDetailsViewFormController">
+<AnchorPane prefHeight="487.0" prefWidth="627.0" style="-fx-background-color: white;" stylesheets="@../style/EmployeeFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.RentDetailsViewFormController">
    <children>
-      <Text layoutX="136.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat Journey Details" wrappingWidth="168.91357421875">
+      <Text layoutX="136.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Details" wrappingWidth="168.91357421875">
          <font>
             <Font name="SansSerif Bold" size="20.0" />
          </font>
@@ -31,11 +31,11 @@
          </image>
       </ImageView>
       <Line endX="400.0" layoutX="173.0" layoutY="123.0" startX="-118.0" stroke="#e8e8e8" />
-      <JFXTextField fx:id="txtBoatID" focusColor="WHITE" layoutX="154.0" layoutY="144.0" prefHeight="46.0" prefWidth="418.0" promptText="Boat ID" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtArrivalDate" focusColor="WHITE" layoutX="155.0" layoutY="204.0" prefHeight="46.0" prefWidth="418.0" promptText="Arrival Date" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtArrivalTime" focusColor="WHITE" layoutX="155.0" layoutY="265.0" prefHeight="46.0" prefWidth="418.0" promptText="Arrival Time" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtDepartureDate" focusColor="WHITE" layoutX="154.0" layoutY="327.0" prefHeight="46.0" prefWidth="418.0" promptText="DepartureDate" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXButton layoutX="54.0" layoutY="462.0" onAction="#btnCancelOnAction" onMouseEntered="#btnCancelOnMouseEnterd" onMouseExited="#btnCancelOnMouseExit" prefHeight="54.0" prefWidth="519.0" styleClass="btn-cancel" text=" " textFill="#3d3e3e">
+      <JFXTextField fx:id="txtOwnerID" focusColor="WHITE" layoutX="154.0" layoutY="144.0" prefHeight="46.0" prefWidth="418.0" promptText="Owner ID" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtRentType" focusColor="WHITE" layoutX="155.0" layoutY="204.0" prefHeight="46.0" prefWidth="418.0" promptText="Rent Type" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtFee" focusColor="WHITE" layoutX="155.0" layoutY="265.0" prefHeight="46.0" prefWidth="418.0" promptText="Fee" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtDate" focusColor="WHITE" layoutX="154.0" layoutY="327.0" prefHeight="46.0" prefWidth="418.0" promptText="Date" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXButton layoutX="54.0" layoutY="399.0" onAction="#btnCancelOnAction" onMouseEntered="#btnCancelOnMouseEnterd" onMouseExited="#btnCancelOnMouseExit" prefHeight="54.0" prefWidth="519.0" styleClass="btn-cancel" text=" " textFill="#3d3e3e">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
@@ -68,28 +68,22 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Text fill="#727374" layoutX="56.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat ID">
+      <Text fill="#727374" layoutX="56.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner ID">
          <font>
             <Font name="SansSerif Bold" size="19.0" />
          </font>
       </Text>
-      <Text fill="#727374" layoutX="56.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ArrivalDate">
+      <Text fill="#727374" layoutX="56.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Type">
          <font>
             <Font name="SansSerif Bold" size="19.0" />
          </font>
       </Text>
-      <Text fill="#727374" layoutX="56.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ArrivalTime">
+      <Text fill="#727374" layoutX="56.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fee">
          <font>
             <Font name="SansSerif Bold" size="19.0" />
          </font>
       </Text>
-      <Text fill="#727374" layoutX="56.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DepartureDate">
-         <font>
-            <Font name="SansSerif Bold" size="19.0" />
-         </font>
-      </Text>
-      <JFXTextField fx:id="txtDepartureTime" focusColor="WHITE" layoutX="155.0" layoutY="388.0" prefHeight="46.0" prefWidth="418.0" promptText="DepartureTime" styleClass="addtext-field" unFocusColor="WHITE" />
-      <Text fill="#727374" layoutX="56.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DepartureTime">
+      <Text fill="#727374" layoutX="56.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
          <font>
             <Font name="SansSerif Bold" size="19.0" />
          </font>

@@ -6,8 +6,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
+import lk.ijse.fisheryharbour.model.OwnerModel;
 import lk.ijse.fisheryharbour.model.SupplierModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
+import lk.ijse.fisheryharbour.utill.SQLUtill;
 
 import java.sql.SQLException;
 
@@ -19,6 +21,8 @@ public class ConfirmationPopUpController {
     public ImageView closeImg;
     EmployeeModel employeeModel = new EmployeeModel();
     SupplierModel supplierModel = new SupplierModel();
+
+    OwnerModel ownerModel = new OwnerModel();
 
     public static void setId(String id) {
         ConfirmationPopUpController.id = id;
@@ -35,6 +39,9 @@ public class ConfirmationPopUpController {
         } else if (id.startsWith("S")) {
             boolean delete = supplierModel.delete(id);
             SupplierManageFormController.getInstance().allSupplierId();
+        } else if (id.startsWith("O")) {
+            boolean delete = ownerModel.delete(id);
+            OwnerManageFormController.getInstance().allOwnerId();
         }
         Navigation.closePane();
     }
@@ -52,6 +59,7 @@ public class ConfirmationPopUpController {
         txtCancel.setVisible(true);
         txtBlueCancel.setVisible(false);
     }
+
 
     public void closeOnMouseEntered(MouseEvent mouseEvent) {
         closeImg.setImage(new Image("img/PropertyHover.jpg"));

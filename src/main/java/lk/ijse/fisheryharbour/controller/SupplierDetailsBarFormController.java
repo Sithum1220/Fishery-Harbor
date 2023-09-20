@@ -48,6 +48,7 @@ public class SupplierDetailsBarFormController {
     }
 
     public void detailsOnMouseClick(MouseEvent mouseEvent) throws IOException {
+        SupplierDetailsViewFormController.setId(id.getText());
         Navigation.popupPane("SupplierDetailsViewForm.fxml");
     }
 

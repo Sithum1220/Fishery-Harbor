@@ -13,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="495.0" prefWidth="627.0" style="-fx-background-color: white;" stylesheets="@../style/EmployeeFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.SupplierDetailsViewFormController">
+<AnchorPane prefHeight="438.0" prefWidth="627.0" style="-fx-background-color: white;" stylesheets="@../style/EmployeeFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.TaxDetailsViewFormController">
    <children>
-      <Text layoutX="136.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Details" wrappingWidth="168.91357421875">
+      <Text layoutX="136.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Details" wrappingWidth="168.91357421875">
          <font>
             <Font name="SansSerif Bold" size="20.0" />
          </font>
@@ -31,10 +31,10 @@
          </image>
       </ImageView>
       <Line endX="400.0" layoutX="173.0" layoutY="123.0" startX="-118.0" stroke="#e8e8e8" />
-      <JFXTextField fx:id="txtCompanyName" focusColor="WHITE" layoutX="154.0" layoutY="144.0" prefHeight="46.0" prefWidth="418.0" promptText="Company name" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtCompanyMobile" focusColor="WHITE" layoutX="155.0" layoutY="204.0" prefHeight="46.0" prefWidth="418.0" promptText="Mobile" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtCompanyEmail" focusColor="WHITE" layoutX="155.0" layoutY="265.0" prefHeight="46.0" prefWidth="418.0" promptText="Email" styleClass="addtext-field" unFocusColor="WHITE" />
-      <JFXButton layoutX="53.0" layoutY="393.0" onAction="#btnCancelOnAction" onMouseEntered="#btnCancelOnMouseEnterd" onMouseExited="#btnCancelOnMouseExit" prefHeight="54.0" prefWidth="519.0" styleClass="btn-cancel" text=" " textFill="#3d3e3e">
+      <JFXTextField fx:id="txtBoatID" focusColor="WHITE" layoutX="154.0" layoutY="144.0" prefHeight="46.0" prefWidth="418.0" promptText="Boat ID" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtTaxType" focusColor="WHITE" layoutX="155.0" layoutY="204.0" prefHeight="46.0" prefWidth="418.0" promptText="Tax Type" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtTaxFee" focusColor="WHITE" layoutX="155.0" layoutY="265.0" prefHeight="46.0" prefWidth="418.0" promptText="Tax Fee" styleClass="addtext-field" unFocusColor="WHITE" />
+      <JFXButton layoutX="55.0" layoutY="338.0" onAction="#btnCancelOnAction" onMouseEntered="#btnCancelOnMouseEnterd" onMouseExited="#btnCancelOnMouseExit" prefHeight="54.0" prefWidth="519.0" styleClass="btn-cancel" text=" " textFill="#3d3e3e">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
@@ -67,23 +67,17 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Text fill="#727374" layoutX="56.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company">
+      <Text fill="#727374" layoutX="56.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat ID">
          <font>
             <Font name="SansSerif Bold" size="19.0" />
          </font>
       </Text>
-      <Text fill="#727374" layoutX="56.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile">
+      <Text fill="#727374" layoutX="56.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Type">
          <font>
             <Font name="SansSerif Bold" size="19.0" />
          </font>
       </Text>
-      <Text fill="#727374" layoutX="56.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
-         <font>
-            <Font name="SansSerif Bold" size="19.0" />
-         </font>
-      </Text>
-      <JFXTextField fx:id="txtCompanyAddress" focusColor="WHITE" layoutX="155.0" layoutY="327.0" prefHeight="46.0" prefWidth="418.0" promptText="Address" styleClass="addtext-field" unFocusColor="WHITE" />
-      <Text fill="#727374" layoutX="57.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+      <Text fill="#727374" layoutX="56.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Fee">
          <font>
             <Font name="SansSerif Bold" size="19.0" />
          </font>
