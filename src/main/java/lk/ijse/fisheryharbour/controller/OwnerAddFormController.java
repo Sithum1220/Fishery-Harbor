@@ -81,6 +81,8 @@ public class OwnerAddFormController implements Initializable {
     public void setdataInComboBox() {
         ArrayList<String> roles = new ArrayList<>();
         roles.add("Boat Owner");
+        roles.add("Canteen Owner");
+        roles.add("Market Owner");
         cmbRole.getItems().addAll(roles);
     }
 

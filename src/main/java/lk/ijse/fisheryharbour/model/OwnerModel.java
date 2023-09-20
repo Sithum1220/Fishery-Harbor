@@ -57,4 +57,32 @@ public class OwnerModel {
         }
         return ownerDTO;
     }
+    public boolean update(OwnerDTO ownerDTO) throws SQLException, ClassNotFoundException {
+        return SQLUtill.execute("UPDATE  owner SET " +
+                        "email=?," +
+                        "first_Name=?," +
+                        "last_Name=? ," +
+                        "owner_Role=? ," +
+                        "contact_No=? ," +
+                        "nic=?," +
+                        "House_No=?," +
+                        "street=?," +
+                        "city=?," +
+                        "time=?," +
+                        "date=?" +
+                        "WHERE owner_Id=?",
+                ownerDTO.getEmail(),
+                ownerDTO.getFirst_Name(),
+                ownerDTO.getLast_Name(),
+                ownerDTO.getContact_No(),
+                ownerDTO.getNic(),
+                ownerDTO.getOwner_Role(),
+                ownerDTO.getHouse_No(),
+                ownerDTO.getStreet(),
+                ownerDTO.getCity(),
+                ownerDTO.getTime(),
+                ownerDTO.getDate(),
+                ownerDTO.getOwner_Id()
+        );
+    }
 }
