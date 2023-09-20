@@ -21,4 +21,6 @@ public class OwnerDTO {
     private String House_No;
     private String street;
     private String city;
+    private String time;
+    private String date;
 }

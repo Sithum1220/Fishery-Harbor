@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.dto.OwnerDTO;
 import lk.ijse.fisheryharbour.model.OwnerModel;
+import lk.ijse.fisheryharbour.utill.DateTimeUtil;
 import lk.ijse.fisheryharbour.utill.Navigation;
 import lk.ijse.fisheryharbour.utill.NewId;
 
@@ -61,6 +62,8 @@ public class OwnerAddFormController implements Initializable {
         ownerDTO.setHouse_No(txtHouseNo.getText());
         ownerDTO.setStreet(txtStreet.getText());
         ownerDTO.setCity(txtCity.getText());
+        ownerDTO.setTime(DateTimeUtil.timeNow());
+        ownerDTO.setDate(DateTimeUtil.dateNow());
 
         boolean save = ownerModel.save(ownerDTO);
         OwnerManageFormController.getInstance().allOwnerId();
