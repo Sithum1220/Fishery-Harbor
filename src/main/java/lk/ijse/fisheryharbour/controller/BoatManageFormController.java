@@ -34,17 +34,17 @@ public class BoatManageFormController {
         }
     }
 
-//    private void loadDataTable(String id) {
-//        try {
-//            FXMLLoader loader = new FXMLLoader(SupplierManageFormController.class.getResource("/view/SupplierDetailsBarForm.fxml"));
-//            Parent root = loader.load();
-//            SupplierDetailsBarFormController controller = loader.getController();
-//            controller.setData(id);
-//            vBox.getChildren().add(root);
-//        } catch (IOException | SQLException | ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    private void loadDataTable(String id) {
+        try {
+            FXMLLoader loader = new FXMLLoader(SupplierManageFormController.class.getResource("/view/OwnerBoatDetailsBarForm.fxml"));
+            Parent root = loader.load();
+            OwnerBoatDetailsBarFormController controller = loader.getController();
+            controller.setData(id);
+            vBox.getChildren().add(root);
+        } catch (IOException | SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static BoatManageFormController getInstance() {
         return controller;
