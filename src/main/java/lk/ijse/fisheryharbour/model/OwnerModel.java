@@ -31,5 +31,6 @@ public class OwnerModel {
                 ownerDTO.getHouse_No(),
                 ownerDTO.getStreet(),
                 ownerDTO.getCity());
+
     }
 }
