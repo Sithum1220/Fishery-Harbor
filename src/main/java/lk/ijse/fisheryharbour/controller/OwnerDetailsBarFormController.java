@@ -3,6 +3,10 @@ package lk.ijse.fisheryharbour.controller;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import lk.ijse.fisheryharbour.dto.OwnerDTO;
+import lk.ijse.fisheryharbour.model.OwnerModel;
+
+import java.sql.SQLException;
 
 public class OwnerDetailsBarFormController {
     public ImageView viewImg;
@@ -39,5 +43,15 @@ public class OwnerDetailsBarFormController {
     }
 
     public void updateOnMouseClick(MouseEvent mouseEvent) {
+    }
+
+    public void setData(String id) throws SQLException, ClassNotFoundException {
+        OwnerModel ownerModel = new OwnerModel();
+        OwnerDTO ownerDTO =  ownerModel.getData(id);
+        role.setText(ownerDTO.getOwner_Role());
+        email.setText(ownerDTO.getEmail());
+        mobile.setText(ownerDTO.getContact_No());
+        ownerName.setText(ownerDTO.getFirst_Name()+ " "+ownerDTO.getLast_Name() );
+        this.id.setText(ownerDTO.getOwner_Id());
     }
 }
