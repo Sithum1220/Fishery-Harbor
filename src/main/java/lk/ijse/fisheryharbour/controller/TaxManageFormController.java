@@ -17,11 +17,10 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class TaxManageFormController implements Initializable {
+    public static String innovativeBoatId;
     private static TaxManageFormController controller;
     public VBox vBox;
-
-    public static String innovativeBoatId;
-    public static Pane innovativePopupPane;
+    public Pane innovativePopupPane;
 
     public TaxManageFormController() {
         controller = this;
@@ -70,8 +69,8 @@ public class TaxManageFormController implements Initializable {
         }
     }
 
-    public static void setInnovativeBoatId(String id){
-        TaxManageFormController.innovativeBoatId =id;
+    public void setInnovativeBoatId(String id) {
+        TaxManageFormController.innovativeBoatId = id;
         try {
             innovativePopup();
         } catch (SQLException e) {
@@ -81,11 +80,11 @@ public class TaxManageFormController implements Initializable {
         }
     }
 
-    private static void innovativePopup() throws SQLException, ClassNotFoundException {
+    private void innovativePopup() throws SQLException, ClassNotFoundException {
         QueryModel queryModel = new QueryModel();
         boolean isPay = queryModel.checkTaxPay(innovativeBoatId);
-
-        if (isPay){
+        innovativePopupPane.setVisible(true);
+        if (isPay) {
             try {
                 FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/PaidPopupForm.fxml"));
                 Parent root = loader.load();
@@ -93,7 +92,7 @@ public class TaxManageFormController implements Initializable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }else {
+        } else {
             try {
                 FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/NotPaidPopupForm.fxml"));
                 Parent root = loader.load();

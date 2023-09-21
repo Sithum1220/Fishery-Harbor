@@ -118,7 +118,7 @@ public class AppInitializer extends Application{
             String decodedText = result.getText();
             System.out.println(decodedText);
 
-            TaxManageFormController.setInnovativeBoatId(decodedText);
+            TaxManageFormController.getInstance().setInnovativeBoatId(decodedText);
 
         } catch (IOException | NotFoundException e) {
             e.printStackTrace();
