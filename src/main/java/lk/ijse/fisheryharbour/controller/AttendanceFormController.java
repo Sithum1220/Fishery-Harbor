@@ -3,19 +3,31 @@ package lk.ijse.fisheryharbour.controller;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import lk.ijse.fisheryharbour.model.EmployeeAttendanceModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class AttendanceFormController {
+public class AttendanceFormController implements Initializable {
     public JFXButton btnEnterID;
     public VBox vBox;
 
+    private static AttendanceFormController controller;
+
+    public AttendanceFormController(){
+        controller = this;
+    }
+
+    public static AttendanceFormController getInstance(){
+        return controller;
+    }
     public void btnEnterIdAddOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.AdminPopupPane("AttendanceAddForm.fxml");
     }
@@ -37,14 +49,18 @@ public class AttendanceFormController {
 
     private void loadDataTable(String id) {
         try {
-            FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/"));
+            FXMLLoader loader = new FXMLLoader(AttendanceFormController.class.getResource("/view/AttendanceBarForm.fxml"));
             Parent root = loader.load();
-            EmployeeDetailsBarFormController controller = loader.getController();
+            AttendanceBarFormController controller = loader.getController();
             controller.setData(id);
             vBox.getChildren().add(root);
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        getAllId();
+    }
 }

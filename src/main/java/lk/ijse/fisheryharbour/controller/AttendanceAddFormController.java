@@ -31,7 +31,7 @@ public class AttendanceAddFormController {
                 employeeAttendanceDTO.setDate(DateTimeUtil.dateNow());
                 employeeAttendanceDTO.setTime(DateTimeUtil.timeNow());
                 boolean save = employeeAttendanceModel.save(employeeAttendanceDTO);
-
+                AttendanceFormController.getInstance().getAllId();
                 Navigation.adminClosePane();
 
             } else {
