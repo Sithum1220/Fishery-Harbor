@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import lk.ijse.fisheryharbour.model.BoatModel;
+import lk.ijse.fisheryharbour.model.SupplierModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
 import java.io.IOException;
@@ -15,14 +16,12 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class BoatManageFormController implements Initializable {
-    private static BoatManageFormController controller;
     public VBox vBox;
+    BoatModel boatModel = new BoatModel();
+    private static BoatManageFormController controller;
 
-    public BoatManageFormController (){
+    public BoatManageFormController() {
         controller = this;
-    }
-    public static BoatManageFormController getInstance() {
-        return controller;
     }
 
     public void btnOwnerDetailsOnAction(ActionEvent actionEvent) throws IOException {
@@ -55,14 +54,26 @@ public class BoatManageFormController implements Initializable {
         }
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public static BoatManageFormController getInstance() {
+        return controller;
+    }
+
+    public void getAllId() {
+        ArrayList<String> list = null;
         try {
-            allBoatId();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+            list = boatModel.getAllBoatId();
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+
+        vBox.getChildren().clear();
+        for (int i = 0; i < list.size(); i++) {
+            loadDataTable(list.get(i));
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        getAllId();
     }
 }

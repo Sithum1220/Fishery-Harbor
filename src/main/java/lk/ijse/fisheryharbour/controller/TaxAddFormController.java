@@ -1,7 +1,9 @@
 package lk.ijse.fisheryharbour.controller;
 
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -14,17 +16,19 @@ import lk.ijse.fisheryharbour.utill.DateTimeUtil;
 import lk.ijse.fisheryharbour.utill.Navigation;
 import lk.ijse.fisheryharbour.utill.NewId;
 
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class TaxAddFormController {
+public class TaxAddFormController implements Initializable {
     public ImageView closeImg;
     public JFXTextField txtBoatID;
-    public JFXTextField txtTaxType;
     public JFXTextField txtTaxFee;
     public Text txtCancel;
     public Text txtBlueCancel;
     public GridPane txtAdd;
+    public JFXComboBox cmbTaxType;
 
     TaxModel taxModel = new TaxModel();
 
@@ -60,7 +64,7 @@ public class TaxAddFormController {
 
         taxDTO.setTax_Id(NewId.newId(list, NewId.GetType.TAX));
         taxDTO.setFee(txtTaxFee.getText());
-        taxDTO.setTax_Type(txtTaxType.getText());
+        taxDTO.setTax_Type(getRole());
         taxDTO.setBoat_Id(txtBoatID.getText());
         taxDTO.setDate(DateTimeUtil.dateNow());
         taxDTO.setTime(DateTimeUtil.timeNow());
@@ -68,5 +72,21 @@ public class TaxAddFormController {
         boolean save = taxModel.save(taxDTO);
         TaxManageFormController.getInstance().allTaxId();
         Navigation.adminClosePane();
+    }
+
+    public String getRole() {
+        return String.valueOf(cmbTaxType.getSelectionModel().getSelectedItem());
+    }
+
+    public void setdataInComboBox() {
+        ArrayList<String> roles = new ArrayList<>();
+        roles.add("Pierre Fee");
+        roles.add("Repair Fee");
+        cmbTaxType.getItems().addAll(roles);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setdataInComboBox();    
     }
 }

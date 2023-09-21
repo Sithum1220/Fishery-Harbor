@@ -80,6 +80,16 @@ public class NewId {
                     return "B-01";
                 }
 
+            case BOAT:
+                try {
+                    String[] split = lastId.split("B-0");
+                    int idNum = Integer.parseInt(split[1]);
+                    idNum++;
+                    return "B-0" + idNum;
+                } catch (Exception e) {
+                    return "B-01";
+                }
+
             default:
                 return null;
         }
