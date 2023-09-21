@@ -18,6 +18,7 @@ public class TaxDetailsBarFormController {
     public ImageView updateImg;
     public ImageView deleteImg;
     public ImageView viewImg;
+    public Text txtDate;
 
     public void updateOnMouseClick(MouseEvent mouseEvent) {
     }
