@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import lk.ijse.fisheryharbour.model.QueryModel;
@@ -30,7 +31,7 @@ public class TaxManageFormController implements Initializable {
     public String innovativeBoatId;
     private static TaxManageFormController controller;
     public VBox vBox;
-    public Pane innovativePopupPane;
+    public AnchorPane innovativePopupPane;
 
     public TaxManageFormController() {
         controller = this;
@@ -107,15 +108,7 @@ public class TaxManageFormController implements Initializable {
         innovativePopupPane.setVisible(true);
 
         if (isPay) {
-            try {
-                FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/PaidPopupForm.fxml"));
-                Parent root = loader.load();
-                innovativePopupPane.getChildren().add(root);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            System.out.println("Popup");
-//            Navigation.switchPaging(innovativePopupPane, "PaidPopupForm.fxml");
+          innovativePopupPane.setVisible(true);
         } else {
             try {
                 FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/NotPaidPopupForm.fxml"));
