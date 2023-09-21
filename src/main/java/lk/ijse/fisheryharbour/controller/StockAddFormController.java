@@ -57,7 +57,7 @@ StockAddFormController {
         StockDTO stockDTO = new StockDTO();
         ArrayList<String> list =stockModel.getAllStockId();
 
-        stockDTO.setItem_Code(NewId.newId(list, NewId.GetType.Stock));
+        stockDTO.setItem_Code(NewId.newId(list, NewId.GetType.STOCK));
         stockDTO.setDescription(txtProductName.getText());
         stockDTO.setUnit_Price(txtUnitPrice.getText());
         stockDTO.setQty(txtQuantityOnHand.getText());
