@@ -8,25 +8,35 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import lk.ijse.fisheryharbour.dto.BoatDTO;
 import lk.ijse.fisheryharbour.model.BoatModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 import lk.ijse.fisheryharbour.utill.NewId;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class BoatAddFormController implements Initializable {
+    private static BoatAddFormController controller;
     public ImageView closeImg;
     public Text txtCancel;
     public Text txtBlueCancel;
     public JFXTextField txtOwnerId;
     public JFXTextField txtBoatName;
     public JFXComboBox cmbBoatType;
-
     BoatModel boatModel = new BoatModel();
+    String id;
+
+    public BoatAddFormController() {
+        controller = this;
+    }
+
+    public static BoatAddFormController getInstance() {
+        return controller;
+    }
+
 
     public void btnCancelOnAction(ActionEvent actionEvent) {
         Navigation.closePane();
@@ -42,18 +52,10 @@ public class BoatAddFormController implements Initializable {
         txtBlueCancel.setVisible(false);
     }
 
-    public void btnBoatAddOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        BoatDTO boatDTO = new BoatDTO();
-        ArrayList<String> list = boatModel.getAllBoatId();
-
-        boatDTO.setBoat_Id(NewId.newId(list, NewId.GetType.BOAT));
-        boatDTO.setBoat_name(txtBoatName.getText());
-        boatDTO.setOwner_Id(txtOwnerId.getText());
-        boatDTO.setBoat_Type(getRole());
-
-        boolean save = boatModel.save(boatDTO);
-        BoatManageFormController.getInstance().allBoatId();
+    public void btnBoatAddOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException, IOException {
         Navigation.closePane();
+        Navigation.popupPane("FileChooserPopupForm.fxml");
+
     }
 
     public String getRole() {
@@ -82,5 +84,13 @@ public class BoatAddFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setdataInComboBox();
+        ArrayList<String> list = null;
+        try {
+            list = boatModel.getAllBoatId();
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        id = NewId.newId(list, NewId.GetType.BOAT);
+        FileChooserPopupFormController.setId(id);
     }
 }
