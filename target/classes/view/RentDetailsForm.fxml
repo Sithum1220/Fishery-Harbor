@@ -24,14 +24,14 @@
          <children>
             <AnchorPane layoutX="46.0" layoutY="147.0" prefHeight="572.0" prefWidth="1213.0" styleClass="table-view">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="29.0" layoutY="12.0" prefHeight="48.0" prefWidth="1141.0" spacing="175.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="54.0" layoutY="12.0" prefHeight="48.0" prefWidth="1134.0" spacing="140.0">
                      <children>
-                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="20.234375">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
                         </Text>
-                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner ID">
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner ID" wrappingWidth="85.3203125">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
@@ -46,7 +46,7 @@
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
                         </Text>
-                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="78.578125">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
