@@ -45,8 +45,8 @@ public class NotPaidPopupFormController implements Initializable {
 
             new Thread(()->{
                 sendEmail(ownerDTO.getEmail());
-
             }).start();
+
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -86,7 +86,7 @@ public class NotPaidPopupFormController implements Initializable {
                     InternetAddress.parse(to));
 
             // Set Subject: header field
-            message.setSubject("Your Monthly Salary Statment");
+            message.setSubject("Pay Your Monthly pierrer fee");
 
             // This mail has 2 part, the BODY and the embedded image
             MimeMultipart multipart = new MimeMultipart("related");
@@ -98,7 +98,7 @@ public class NotPaidPopupFormController implements Initializable {
                     "<h1 style=\"font-size: 20px;text-align: center\">Thank you for Working with us ! </h1>";
             messageBodyPart.setContent(htmlText, "text/html");
             // add it
-//            multipart.addBodyPart(messageBodyPart);
+            multipart.addBodyPart(messageBodyPart);
 
            /* // second part (the image)
             messageBodyPart = new MimeBodyPart();
@@ -116,10 +116,8 @@ public class NotPaidPopupFormController implements Initializable {
 //            messageBodyPart2.setFileName(filename);
 
             // add image to the multipart
-//            multipart.addBodyPart(messageBodyPart);
-//            multipart.addBodyPart(messageBodyPart2);
-
-            // put everything together
+            multipart.addBodyPart(messageBodyPart);
+//
             message.setContent(multipart);
             // Send message
             Transport.send(message);
