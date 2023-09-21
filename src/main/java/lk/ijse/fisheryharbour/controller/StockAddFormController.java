@@ -63,7 +63,7 @@ StockAddFormController {
         stockDTO.setQty(txtQuantityOnHand.getText());
 
         boolean save = stockModel.save(stockDTO);
-//        StockManageFormController.getInstance().allSupplierId();
+        StockManageFormController.getInstance().allStockId();
         Navigation.closePane();
     }
 }

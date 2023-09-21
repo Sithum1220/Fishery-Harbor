@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import lk.ijse.fisheryharbour.model.StockModel;
 import lk.ijse.fisheryharbour.model.SupplierModel;
+import lk.ijse.fisheryharbour.utill.Navigation;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -48,6 +49,7 @@ public class StockManageFormController {
         }
     }
 
-    public void btnStockAddOnAction(ActionEvent actionEvent) {
+    public void btnStockAddOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.popupPane("StockAddForm.fxml");
     }
 }
