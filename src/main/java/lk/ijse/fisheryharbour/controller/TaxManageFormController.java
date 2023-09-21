@@ -31,7 +31,7 @@ public class TaxManageFormController implements Initializable {
     public String innovativeBoatId;
     public VBox vBox;
     public Pane innovativePopupPane;
-
+    Thread thread;
     public TaxManageFormController() {
         controller = this;
     }
@@ -146,7 +146,7 @@ public class TaxManageFormController implements Initializable {
         try {
             allTaxId();
 
-            Thread thread = new Thread(() -> {
+            thread = new Thread(() -> {
                 while (true) {
                     renameImgPhone();
                     imgTranfer();
@@ -156,10 +156,7 @@ public class TaxManageFormController implements Initializable {
                 }
             });
             thread.start();
-            innovativePopup();
         } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -210,6 +207,8 @@ public class TaxManageFormController implements Initializable {
 
             innovativeBoatId = decodedText;
 
+            thread.join();
+            innovativePopup();
         } catch (IOException | NotFoundException e) {
             e.printStackTrace();
         } catch (Exception e) {
