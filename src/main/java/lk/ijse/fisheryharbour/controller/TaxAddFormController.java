@@ -62,9 +62,11 @@ public class TaxAddFormController {
         taxDTO.setFee(txtTaxFee.getText());
         taxDTO.setTax_Type(txtTaxType.getText());
         taxDTO.setBoat_Id(txtBoatID.getText());
+        taxDTO.setDate(DateTimeUtil.dateNow());
+        taxDTO.setTime(DateTimeUtil.timeNow());
 
         boolean save = taxModel.save(taxDTO);
         TaxManageFormController.getInstance().allTaxId();
-        Navigation.closePane();
+        Navigation.adminClosePane();
     }
 }
