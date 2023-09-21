@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class TaxManageFormController implements Initializable {
-    public static String innovativeBoatId;
+    public String innovativeBoatId;
     private static TaxManageFormController controller;
     public VBox vBox;
     public Pane innovativePopupPane;
@@ -89,18 +89,18 @@ public class TaxManageFormController implements Initializable {
         }
     }
 
-    public void setInnovativeBoatId(String id) {
-        TaxManageFormController.innovativeBoatId = id;
-        try {
-            innovativePopup();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    public void setInnovativeBoatId(String id) {
+//        TaxManageFormController.innovativeBoatId = id;
+//        try {
+//            innovativePopup();
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        } catch (ClassNotFoundException e) {
+//            throw new RuntimeException(e);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
     private void innovativePopup() throws SQLException, ClassNotFoundException, IOException {
         QueryModel queryModel = new QueryModel();
@@ -171,7 +171,7 @@ public class TaxManageFormController implements Initializable {
         }
     }
 
-    public static void imgTranfer() {
+    public  void imgTranfer() {
 
         String adbCommand = "adb pull /storage/30A6-324B/DCIM/Camera/B001.jpg D:\\Solution99";
         boolean imageFound = false;
@@ -194,7 +194,7 @@ public class TaxManageFormController implements Initializable {
         }
     }
 
-    public static void qrDecode(){
+    public  void qrDecode(){
         try {
             File qrCodeImage = new File("D:\\Solution99\\B001.jpg");
             BufferedImage bufferedImage = ImageIO.read(qrCodeImage);
@@ -206,14 +206,19 @@ public class TaxManageFormController implements Initializable {
             String decodedText = result.getText();
             System.out.println(decodedText);
 
-            TaxManageFormController.getInstance().setInnovativeBoatId(decodedText);
+            innovativeBoatId = decodedText;
+            innovativePopup();
 
         } catch (IOException | NotFoundException e) {
             e.printStackTrace();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 
-    public static void deleteImgPhone() {
+    public  void deleteImgPhone() {
         String adbCommand = "adb shell rm /storage/30A6-324B/DCIM/Camera/B001.jpg";
 
         try {
