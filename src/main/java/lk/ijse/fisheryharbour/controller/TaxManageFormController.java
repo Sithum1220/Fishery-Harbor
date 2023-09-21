@@ -15,7 +15,15 @@ import lk.ijse.fisheryharbour.model.QueryModel;
 import lk.ijse.fisheryharbour.model.TaxModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
 import javax.imageio.ImageIO;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,6 +33,7 @@ import java.net.URL;
 import java.nio.file.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class TaxManageFormController implements Initializable {
@@ -183,6 +192,7 @@ public class TaxManageFormController implements Initializable {
         } else {
             innovativePopupPane.setVisible(true);
             Navigation.switchPaging(innovativePopupPane, "NotPaidPopupForm.fxml");
+
         }
     }
 
@@ -247,11 +257,9 @@ public class TaxManageFormController implements Initializable {
         }
     }
 
-    public void closeOnMouseClicked(MouseEvent event) {
-        innovativePopupPane.setVisible(false);
-    }
-
     public void paneOnMouseClicked(MouseEvent mouseEvent) throws SQLException, IOException, ClassNotFoundException {
         innovativePopup();
     }
+
+
 }
