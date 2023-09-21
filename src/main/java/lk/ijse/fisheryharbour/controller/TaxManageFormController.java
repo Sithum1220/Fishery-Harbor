@@ -84,22 +84,27 @@ public class TaxManageFormController implements Initializable {
         QueryModel queryModel = new QueryModel();
         boolean isPay = queryModel.checkTaxPay(innovativeBoatId);
         innovativePopupPane.setVisible(true);
-        if (isPay) {
-            try {
-                FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/PaidPopupForm.fxml"));
-                Parent root = loader.load();
-                innovativePopupPane.getChildren().add(root);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+
+        Thread thread = new Thread(() -> {
+            if (isPay) {
+                try {
+                    FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/PaidPopupForm.fxml"));
+                    Parent root = loader.load();
+                    innovativePopupPane.getChildren().add(root);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            } else {
+                try {
+                    FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/NotPaidPopupForm.fxml"));
+                    Parent root = loader.load();
+                    innovativePopupPane.getChildren().add(root);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
-        } else {
-            try {
-                FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/NotPaidPopupForm.fxml"));
-                Parent root = loader.load();
-                innovativePopupPane.getChildren().add(root);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
+        });
+        thread.start();
+
     }
 }
