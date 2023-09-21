@@ -52,7 +52,7 @@ public class BoatAddFormController implements Initializable {
         boatDTO.setBoat_Type(getRole());
 
         boolean save = boatModel.save(boatDTO);
-//        BoatManageFormController.getInstance().allBoatId();
+        BoatManageFormController.getInstance().allBoatId();
         Navigation.closePane();
     }
 

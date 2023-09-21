@@ -46,14 +46,14 @@ public class OwnerBoatDetailsBarFormController {
 
     public void viewOnMouseExited(MouseEvent mouseEvent) {
     }
-//    public void setData(String id) throws SQLException, ClassNotFoundException {
-//        BoatModel boatModel = new BoatModel();
-//        BoatDTO supplierDTO = boatModel.getData(id);
-//
-//        this.txtID.setText(supplierDTO.getBoat_Id());
-//        t.setText(supplierDTO.getCompany_name());
-//        email.setText(supplierDTO.getCompany_email());
-//        mobile.setText(supplierDTO.getCompany_no());
-//        Location.setText(supplierDTO.getCompany_location());
-//    }
+    public void setData(String id) throws SQLException, ClassNotFoundException {
+        BoatModel boatModel = new BoatModel();
+        BoatDTO boatDTO = boatModel.getData(id);
+
+        this.txtID.setText(boatDTO.getBoat_Id());
+        txtOwnerID.setText(boatDTO.getOwner_Id());
+        txtBoatType.setText(boatDTO.getBoat_Type());
+//        txtEmail.setText(boatDTO.ge());
+//        txtOwnerName.setText(boatDTO.);
+    }
 }

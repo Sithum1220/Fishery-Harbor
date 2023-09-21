@@ -20,31 +20,31 @@ public class BoatManageFormController {
         Navigation.switchPaging(ManagerGlobalFormController.getInstance().pagingPane, "OwnerManageForm.fxml");
     }
 
-    public void btnBoatAddOnAction(ActionEvent actionEvent) {
-
+    public void btnBoatAddOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.popupPane("BoatAddForm.fxml");
     }
 
-//    public void allBoatId() throws SQLException, ClassNotFoundException {
-//        vBox.getChildren().clear();
-//        BoatModel boatModel = new BoatModel();
-//        ArrayList<String> list = boatModel.getAllBoatId();
-//
-//        for (int i = 0; i < list.size(); i++) {
-//            loadDataTable(list.get(i));
-//        }
-//    }
+    public void allBoatId() throws SQLException, ClassNotFoundException {
+        vBox.getChildren().clear();
+        BoatModel boatModel = new BoatModel();
+        ArrayList<String> list = boatModel.getAllBoatId();
 
-//    private void loadDataTable(String id) {
-//        try {
-//            FXMLLoader loader = new FXMLLoader(SupplierManageFormController.class.getResource("/view/OwnerBoatDetailsBarForm.fxml"));
-//            Parent root = loader.load();
-//            OwnerBoatDetailsBarFormController controller = loader.getController();
-//            controller.setData(id);
-//            vBox.getChildren().add(root);
-//        } catch (IOException | SQLException | ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+        for (int i = 0; i < list.size(); i++) {
+            loadDataTable(list.get(i));
+        }
+    }
+
+    private void loadDataTable(String id) {
+        try {
+            FXMLLoader loader = new FXMLLoader(SupplierManageFormController.class.getResource("/view/OwnerBoatDetailsBarForm.fxml"));
+            Parent root = loader.load();
+            OwnerBoatDetailsBarFormController controller = loader.getController();
+            controller.setData(id);
+            vBox.getChildren().add(root);
+        } catch (IOException | SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static BoatManageFormController getInstance() {
         return controller;
