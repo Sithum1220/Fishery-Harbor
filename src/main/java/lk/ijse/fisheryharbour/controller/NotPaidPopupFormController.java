@@ -11,5 +11,7 @@ public class NotPaidPopupFormController {
     public Text txtDate;
 
     public void closeOnMouseClicked(MouseEvent mouseEvent) {
+        TaxManageFormController.getInstance().innovativePopupPane.getChildren().clear();
+        TaxManageFormController.getInstance().innovativePopupPane.setVisible(false);
     }
 }

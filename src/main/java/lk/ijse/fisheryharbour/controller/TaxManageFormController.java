@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.model.QueryModel;
 import lk.ijse.fisheryharbour.model.TaxModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
@@ -31,6 +32,10 @@ public class TaxManageFormController implements Initializable {
     public String innovativeBoatId;
     public VBox vBox;
     public Pane innovativePopupPane;
+    public Text txtDate;
+    public Text txtOwnerName;
+    public Text txtBoatName;
+    public Text txtBoatId;
     Thread thread;
     public TaxManageFormController() {
         controller = this;
