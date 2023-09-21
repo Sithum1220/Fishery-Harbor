@@ -15,7 +15,6 @@ public class PaidPopupFormController implements Initializable {
     public Text txtDate;
 
     public void closeOnMouseClicked(MouseEvent mouseEvent) {
-        Navigation.adminClosePane();
     }
 
     @Override

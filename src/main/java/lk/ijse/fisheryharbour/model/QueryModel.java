@@ -29,14 +29,14 @@ public class QueryModel {
 
     }
 
-    public boolean checkTaxPay(String id) throws SQLException, ClassNotFoundException {
-
+    public ArrayList<String> checkTaxPay() throws SQLException, ClassNotFoundException {
+        ArrayList<String> list = new ArrayList<>();
         String date = DateTimeUtil.dateNow();
         String[] arDate = date.split("-");
-        ResultSet set = SQLUtill.execute("SELECT tax_Id FROM tax WHERE boat_Id = ? LIKE ?",id, arDate[0] + "-" + arDate[1] + "%");
+        ResultSet set = SQLUtill.execute("SELECT boat_Id FROM tax WHERE date LIKE ?", arDate[0] + "-" + arDate[1] + "%");
         while (set.next()) {
-            return true;
+            list.add(set.getString(1));
         }
-        return false;
+        return list;
     }
 }

@@ -146,8 +146,8 @@ public class TaxManageFormController implements Initializable {
         try {
             allTaxId();
 
-            thread = new Thread(() -> {
-                while (true) {
+           Thread thread = new Thread(() -> {
+                while(true) {
                     renameImgPhone();
                     imgTranfer();
                     qrDecode();
@@ -163,10 +163,21 @@ public class TaxManageFormController implements Initializable {
 
     private void innovativePopup() throws SQLException, ClassNotFoundException, IOException {
         QueryModel queryModel = new QueryModel();
-        boolean isPay = queryModel.checkTaxPay(innovativeBoatId);
+        ArrayList<String> list = queryModel.checkTaxPay();
+        boolean isPay = false;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(innovativeBoatId)){
+                isPay = true;
+            }else {
+                isPay = false;
+            }
+        }
         if (isPay) {
             innovativePopupPane.setVisible(true);
+            Navigation.switchPaging(innovativePopupPane, "PaidPopupForm.fxml");
         } else {
+            innovativePopupPane.setVisible(true);
+            Navigation.switchPaging(innovativePopupPane, "NotPaidPopupForm.fxml");
         }
     }
 
@@ -207,8 +218,6 @@ public class TaxManageFormController implements Initializable {
 
             innovativeBoatId = decodedText;
 
-            thread.join();
-            innovativePopup();
         } catch (IOException | NotFoundException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -234,6 +243,10 @@ public class TaxManageFormController implements Initializable {
     }
 
     public void closeOnMouseClicked(MouseEvent event) {
+        innovativePopupPane.setVisible(false);
+    }
 
+    public void paneOnMouseClicked(MouseEvent mouseEvent) throws SQLException, IOException, ClassNotFoundException {
+        innovativePopup();
     }
 }

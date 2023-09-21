@@ -170,45 +170,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Pane fx:id="innovativePopupPane" layoutX="873.0" layoutY="20.0" prefHeight="260.0" prefWidth="419.0" style="-fx-background-color: gray;" visible="false">
-               <children>
-                  <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="47.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/icon/paid.png" />
-                     </image>
-                  </ImageView>
-                  <Line endX="100.0" endY="95.5" layoutX="-73.0" layoutY="139.0" startX="100.0" startY="-115.0" stroke="#72ff6e" strokeWidth="4.0" />
-                  <Text fill="#04bb00" layoutX="114.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#a3a3a3" layoutX="47.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat Name :" />
-                  <Text fill="#a3a3a3" layoutX="47.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner Name :" />
-                  <Text fill="#a3a3a3" layoutX="47.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" />
-                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="373.0" layoutY="117.0" onMouseClicked="#closeOnMouseClicked" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/icon/popup-cancel.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-                  <ImageView fitHeight="219.0" fitWidth="5.0" layoutX="356.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/icon/Line-2.png" />
-                     </image>
-                  </ImageView>
-                  <Text fx:id="txtBoatId" fill="#151619" layoutX="47.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat Id">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="txtBoatName" fill="#151619" layoutX="148.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="boat name" />
-                  <Text fx:id="txtOwnerName" fill="#151619" layoutX="154.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="owner name" />
-                  <Text fx:id="txtDate" fill="#151619" layoutX="98.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date" />
-               </children>
-            </Pane>
+            <Pane fx:id="innovativePopupPane" layoutX="873.0" layoutY="20.0" prefHeight="260.0" prefWidth="419.0" />
+            <Pane layoutX="416.0" layoutY="8.0" onMouseClicked="#paneOnMouseClicked" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </Pane>
    </children>

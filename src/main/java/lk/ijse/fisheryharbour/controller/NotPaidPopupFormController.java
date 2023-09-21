@@ -11,6 +11,5 @@ public class NotPaidPopupFormController {
     public Text txtDate;
 
     public void closeOnMouseClicked(MouseEvent mouseEvent) {
-        Navigation.adminClosePane();
     }
 }
