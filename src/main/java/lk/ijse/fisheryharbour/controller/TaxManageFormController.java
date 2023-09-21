@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -240,5 +241,9 @@ public class TaxManageFormController implements Initializable {
             System.out.println("An I/O error occurred.");
             e.printStackTrace();
         }
+    }
+
+    public void closeOnMouseClicked(MouseEvent event) {
+
     }
 }
