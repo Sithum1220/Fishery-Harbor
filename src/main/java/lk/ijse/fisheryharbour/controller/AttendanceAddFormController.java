@@ -3,6 +3,7 @@ package lk.ijse.fisheryharbour.controller;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -58,12 +59,13 @@ public class AttendanceAddFormController {
 
     public void closeOnMouseClick(MouseEvent mouseEvent) {
         Navigation.adminClosePane();
-
     }
 
     public void closeOnMouseEnterd(MouseEvent mouseEvent) {
+        closeImg.setImage(new Image("img/PropertyHover.jpg"));
     }
 
     public void closeOnMouseExit(MouseEvent mouseEvent) {
+        closeImg.setImage(new Image("img/close-btn.png"));
     }
 }

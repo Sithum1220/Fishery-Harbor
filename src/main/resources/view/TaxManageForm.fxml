@@ -18,13 +18,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="764.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.TaxDetailsFormController">
+<AnchorPane prefHeight="764.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.fisheryharbour.controller.TaxManageFormController">
    <children>
       <Pane prefHeight="764.0" prefWidth="1314.0" stylesheets="@../style/EmployeeFormStyle.css">
          <children>
             <AnchorPane layoutX="46.0" layoutY="147.0" prefHeight="572.0" prefWidth="1213.0" styleClass="table-view">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="23.0" layoutY="14.0" prefHeight="48.0" prefWidth="1086.0" spacing="215.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="23.0" layoutY="14.0" prefHeight="48.0" prefWidth="1086.0" spacing="225.0">
                      <children>
                         <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                            <font>
@@ -76,7 +76,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <JFXButton layoutX="754.0" layoutY="46.0" onAction="#btnBoatEmployeeAddOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
+            <JFXButton layoutX="754.0" layoutY="46.0" onAction="#btnTaxAddOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
                <graphic>
                   <GridPane prefHeight="46.0" prefWidth="179.0">
                      <columnConstraints>
@@ -109,7 +109,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton layoutX="46.0" layoutY="46.0" onAction="#btnBoatJourneyOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
+            <JFXButton layoutX="46.0" layoutY="46.0" onAction="#btnRentDetailsOnAction" prefHeight="46.0" prefWidth="179.0" styleClass="add-btn" text=" ">
                <graphic>
                   <GridPane prefHeight="46.0" prefWidth="179.0">
                      <columnConstraints>
