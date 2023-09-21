@@ -61,9 +61,7 @@ public class TaxManageFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             allTaxId();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }

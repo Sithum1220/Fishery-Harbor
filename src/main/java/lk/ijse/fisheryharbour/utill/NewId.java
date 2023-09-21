@@ -70,7 +70,6 @@ public class NewId {
                 } catch (Exception e) {
                     return "T-01";
                 }
-
             case BOAT:
                 try {
                     String[] split = lastId.split("B-0");
