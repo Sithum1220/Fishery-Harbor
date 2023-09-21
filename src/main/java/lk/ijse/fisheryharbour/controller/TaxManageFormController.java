@@ -31,7 +31,7 @@ public class TaxManageFormController implements Initializable {
     public String innovativeBoatId;
     private static TaxManageFormController controller;
     public VBox vBox;
-    public AnchorPane innovativePopupPane;
+    public Pane innovativePopupPane;
 
     public TaxManageFormController() {
         controller = this;
