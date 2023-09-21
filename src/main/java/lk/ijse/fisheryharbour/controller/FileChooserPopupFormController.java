@@ -15,7 +15,9 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import lk.ijse.fisheryharbour.dto.BoatDTO;
 import lk.ijse.fisheryharbour.dto.EmployeeDTO;
+import lk.ijse.fisheryharbour.model.BoatModel;
 import lk.ijse.fisheryharbour.model.EmployeeModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 import lk.ijse.fisheryharbour.utill.NewId;
@@ -41,7 +43,7 @@ public class FileChooserPopupFormController implements Initializable {
     EmployeeModel employeeModel = new EmployeeModel();
 
     private String path;
-    private String id;
+    private static String id;
 
     public FileChooserPopupFormController() {
         controller = this;
@@ -63,20 +65,32 @@ public class FileChooserPopupFormController implements Initializable {
 
     public void btnConfirmOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException, WriterException, IOException {
         EmployeeDTO employeeDTO = new EmployeeDTO();
-        employeeDTO.setEmployee_Id(id);
-        employeeDTO.setCity(EmployeeAddFormController.getInstance().txtCity.getText());
-        employeeDTO.setContact_No(EmployeeAddFormController.getInstance().txtMobile.getText());
-        employeeDTO.setEmail(EmployeeAddFormController.getInstance().txtEmail.getText());
-        employeeDTO.setNic(EmployeeAddFormController.getInstance().txtNic.getText());
-        employeeDTO.setFirst_Name(EmployeeAddFormController.getInstance().txtFirstName.getText());
-        employeeDTO.setLast_Name(EmployeeAddFormController.getInstance().txtLastName.getText());
-        employeeDTO.setHouse_No(EmployeeAddFormController.getInstance().txtHouseNo.getText());
-        employeeDTO.setRole(EmployeeAddFormController.getInstance().getRole());
-        employeeDTO.setStreet(EmployeeAddFormController.getInstance().txtStreet.getText());
+        if (id.startsWith("E")){
+            employeeDTO.setEmployee_Id(id);
+            employeeDTO.setCity(EmployeeAddFormController.getInstance().txtCity.getText());
+            employeeDTO.setContact_No(EmployeeAddFormController.getInstance().txtMobile.getText());
+            employeeDTO.setEmail(EmployeeAddFormController.getInstance().txtEmail.getText());
+            employeeDTO.setNic(EmployeeAddFormController.getInstance().txtNic.getText());
+            employeeDTO.setFirst_Name(EmployeeAddFormController.getInstance().txtFirstName.getText());
+            employeeDTO.setLast_Name(EmployeeAddFormController.getInstance().txtLastName.getText());
+            employeeDTO.setHouse_No(EmployeeAddFormController.getInstance().txtHouseNo.getText());
+            employeeDTO.setRole(EmployeeAddFormController.getInstance().getRole());
+            employeeDTO.setStreet(EmployeeAddFormController.getInstance().txtStreet.getText());
 
-        boolean save = employeeModel.save(employeeDTO);
+            boolean save = employeeModel.save(employeeDTO);
 
-        EmployeeManageFormController.getInstance().getAllId();
+            EmployeeManageFormController.getInstance().getAllId();
+        }else if (id.startsWith("B")){
+            BoatModel boatModel = new BoatModel();
+            BoatDTO boatDTO = new BoatDTO();
+            boatDTO.setBoat_Id(id);
+            boatDTO.setBoat_name(BoatAddFormController.getInstance().txtBoatName.getText());
+            boatDTO.setOwner_Id(BoatAddFormController.getInstance().txtOwnerId.getText());
+            boatDTO.setBoat_Type(BoatAddFormController.getInstance().getRole());
+
+            boolean save = boatModel.save(boatDTO);
+            BoatManageFormController.getInstance().allBoatId();
+        }
 
         BitMatrix bitMatrix = new MultiFormatWriter().encode(id, BarcodeFormat.QR_CODE, 500, 500);
         MatrixToImageWriter.writeToPath(bitMatrix, "jpg", Paths.get(path));
@@ -135,13 +149,7 @@ public class FileChooserPopupFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ArrayList<String> list = null;
-        try {
-            list = employeeModel.getAllEmployeeId();
-        } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        id = NewId.newId(list, NewId.GetType.EMPLOYEE);
+
 
         btnSave.setDisable(true);
         adminAddPane.setDisable(true);
@@ -182,5 +190,9 @@ public class FileChooserPopupFormController implements Initializable {
     public void adminAddPaneMouseExit(MouseEvent event) {
         btnSave.setStyle("-fx-background-color: #1351CB;");
 
+    }
+
+    public static void setId(String id){
+        FileChooserPopupFormController.id = id;
     }
 }

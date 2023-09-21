@@ -8,10 +8,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import lk.ijse.fisheryharbour.model.EmployeeModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
+import lk.ijse.fisheryharbour.utill.NewId;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -32,6 +35,8 @@ public class EmployeeAddFormController implements Initializable {
     public Text txtBlueCancel;
     public Text txtasAdmin;
     public Text txtasBlueAdmin;
+    private String id;
+    EmployeeModel employeeModel = new EmployeeModel();
 
     public EmployeeAddFormController() {
         controller = this;
@@ -72,6 +77,14 @@ public class EmployeeAddFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setdataInComboBox();
+        ArrayList<String> list = null;
+        try {
+            list = employeeModel.getAllEmployeeId();
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        id = NewId.newId(list, NewId.GetType.EMPLOYEE);
+        FileChooserPopupFormController.setId(id);
     }
 
     public void btnCancelOnMouseEnterd(MouseEvent event) {

@@ -2,19 +2,28 @@ package lk.ijse.fisheryharbour.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import lk.ijse.fisheryharbour.model.BoatModel;
-import lk.ijse.fisheryharbour.model.SupplierModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class BoatManageFormController {
-    public VBox vBox;
+public class BoatManageFormController implements Initializable {
     private static BoatManageFormController controller;
+    public VBox vBox;
+
+    public BoatManageFormController (){
+        controller = this;
+    }
+    public static BoatManageFormController getInstance() {
+        return controller;
+    }
 
     public void btnOwnerDetailsOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.switchPaging(ManagerGlobalFormController.getInstance().pagingPane, "OwnerManageForm.fxml");
@@ -46,7 +55,14 @@ public class BoatManageFormController {
         }
     }
 
-    public static BoatManageFormController getInstance() {
-        return controller;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            allBoatId();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
