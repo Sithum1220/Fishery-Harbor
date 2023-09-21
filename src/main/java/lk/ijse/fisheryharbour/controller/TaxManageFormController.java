@@ -3,6 +3,7 @@ package lk.ijse.fisheryharbour.controller;
 import com.google.zxing.*;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -73,7 +74,7 @@ public class TaxManageFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             allTaxId();
-
+            Platform.runLater(() -> {
                 while (true){
                     renameImgPhone();
                     imgTranfer();
@@ -81,6 +82,7 @@ public class TaxManageFormController implements Initializable {
                     deleteImgPhone();
                     deleteImgLap();
                 }
+            });
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -105,15 +107,15 @@ public class TaxManageFormController implements Initializable {
         innovativePopupPane.setVisible(true);
 
         if (isPay) {
-//            try {
-//                FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/PaidPopupForm.fxml"));
-//                Parent root = loader.load();
-//                innovativePopupPane.getChildren().add(root);
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-
-            Navigation.switchPaging(innovativePopupPane, "PaidPopupForm.fxml");
+            try {
+                FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/PaidPopupForm.fxml"));
+                Parent root = loader.load();
+                innovativePopupPane.getChildren().add(root);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println("Popup");
+//            Navigation.switchPaging(innovativePopupPane, "PaidPopupForm.fxml");
         } else {
             try {
                 FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/NotPaidPopupForm.fxml"));
