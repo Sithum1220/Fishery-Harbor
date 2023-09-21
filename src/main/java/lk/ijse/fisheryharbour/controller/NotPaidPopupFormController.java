@@ -42,7 +42,11 @@ public class NotPaidPopupFormController implements Initializable {
             txtBoatName.setText(boatDTO.getBoat_name());
             txtOwnerName.setText(ownerDTO.getFirst_Name()+" "+ownerDTO.getLast_Name());
             txtDate.setText(DateTimeUtil.dateNow());
-            sendEmail(ownerDTO.getEmail());
+
+            new Thread(()->{
+                sendEmail(ownerDTO.getEmail());
+
+            }).start();
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -94,7 +98,7 @@ public class NotPaidPopupFormController implements Initializable {
                     "<h1 style=\"font-size: 20px;text-align: center\">Thank you for Working with us ! </h1>";
             messageBodyPart.setContent(htmlText, "text/html");
             // add it
-            multipart.addBodyPart(messageBodyPart);
+//            multipart.addBodyPart(messageBodyPart);
 
            /* // second part (the image)
             messageBodyPart = new MimeBodyPart();
@@ -112,7 +116,7 @@ public class NotPaidPopupFormController implements Initializable {
 //            messageBodyPart2.setFileName(filename);
 
             // add image to the multipart
-            multipart.addBodyPart(messageBodyPart);
+//            multipart.addBodyPart(messageBodyPart);
 //            multipart.addBodyPart(messageBodyPart2);
 
             // put everything together
