@@ -17,7 +17,6 @@ public class OwnerDetailsBarFormController {
     public ImageView deleteImg;
     public ImageView updateImg;
     public Text role;
-    public Text email;
     public Text mobile;
     public Text ownerName;
     public Text id;
@@ -67,7 +66,6 @@ public class OwnerDetailsBarFormController {
         OwnerModel ownerModel = new OwnerModel();
         OwnerDTO ownerDTO =  ownerModel.getData(id);
         role.setText(ownerDTO.getOwner_Role());
-        email.setText(ownerDTO.getEmail());
         mobile.setText(ownerDTO.getContact_No());
         ownerName.setText(ownerDTO.getFirst_Name()+ " "+ownerDTO.getLast_Name() );
         this.id.setText(ownerDTO.getOwner_Id());
