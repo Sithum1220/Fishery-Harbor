@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 import lk.ijse.fisheryharbour.dto.BoatDTO;
 import lk.ijse.fisheryharbour.model.BoatModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
+import lk.ijse.fisheryharbour.utill.NewId;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -45,6 +46,7 @@ public class BoatAddFormController implements Initializable {
         BoatDTO boatDTO = new BoatDTO();
         ArrayList<String> list = boatModel.getAllBoatId();
 
+        boatDTO.setBoat_Id(NewId.newId(list, NewId.GetType.BOAT));
         boatDTO.setBoat_name(txtBoatName.getText());
         boatDTO.setOwner_Id(txtOwnerId.getText());
         boatDTO.setBoat_Type(getRole());
