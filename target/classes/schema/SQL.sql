@@ -1,4 +1,4 @@
-
+DROP DATABASE fishery_Harbour_Management;
 CREATE DATABASE fishery_Harbour_Management;
 
 USE fishery_Harbour_Management;

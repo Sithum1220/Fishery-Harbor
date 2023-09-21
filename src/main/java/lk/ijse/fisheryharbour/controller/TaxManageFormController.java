@@ -96,7 +96,7 @@ public class TaxManageFormController implements Initializable {
     }
 
     public static void deleteImgLap() {
-        String imagePath = "D:\\Solution99\\B001.jpg"; // Replace with the actual path of your image
+        String imagePath = "D:\\QR\\Boat\\B001.jpg"; // Replace with the actual path of your image
 
         try {
             Path path = Paths.get(imagePath);
@@ -198,7 +198,7 @@ public class TaxManageFormController implements Initializable {
 
     public void imgTranfer() {
 
-        String adbCommand = "adb pull /storage/30A6-324B/DCIM/Camera/B001.jpg D:\\Solution99";
+        String adbCommand = "adb pull /storage/30A6-324B/DCIM/Camera/B001.jpg D:\\QR\\Boat";
         boolean imageFound = false;
 
         try {
@@ -221,7 +221,7 @@ public class TaxManageFormController implements Initializable {
 
     public void qrDecode() {
         try {
-            File qrCodeImage = new File("D:\\Solution99\\B001.jpg");
+            File qrCodeImage = new File("D:\\QR\\Boat\\B001.jpg");
             BufferedImage bufferedImage = ImageIO.read(qrCodeImage);
 
             LuminanceSource source = new BufferedImageLuminanceSource(bufferedImage);
