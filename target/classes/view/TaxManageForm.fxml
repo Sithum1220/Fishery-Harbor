@@ -170,8 +170,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Pane fx:id="innovativePopupPane" layoutX="873.0" layoutY="20.0" prefHeight="260.0" prefWidth="419.0" style="-fx-background-color: white;" styleClass="text" stylesheets="@../style/PopupStyle.css" visible="false" />
-            <Pane layoutX="416.0" layoutY="8.0" onMouseClicked="#paneOnMouseClicked" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="innovativePopupPane" layoutX="893.0" layoutY="2.0" prefHeight="260.0" prefWidth="419.0" style="-fx-background-color: white;" styleClass="text" stylesheets="@../style/PopupStyle.css" visible="false" />
+            <Pane layoutX="1113.0" layoutY="263.0" onMouseClicked="#paneOnMouseClicked" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </Pane>
    </children>

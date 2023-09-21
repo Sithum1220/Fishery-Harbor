@@ -24,7 +24,7 @@
          <children>
             <AnchorPane layoutX="46.0" layoutY="147.0" prefHeight="572.0" prefWidth="1213.0" styleClass="table-view">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="65.0" layoutY="14.0" prefHeight="48.0" prefWidth="1128.0" spacing="150.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="32.0" layoutY="14.0" prefHeight="48.0" prefWidth="1086.0" spacing="160.0">
                      <children>
                         <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                            <font>
@@ -170,8 +170,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Pane fx:id="innovativePopupPane" layoutX="873.0" layoutY="20.0" prefHeight="260.0" prefWidth="419.0" style="-fx-background-color: white;" styleClass="text" stylesheets="@../style/PopupStyle.css" visible="false" />
-            <Pane layoutX="416.0" layoutY="8.0" onMouseClicked="#paneOnMouseClicked" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="innovativePopupPane" layoutX="893.0" layoutY="2.0" prefHeight="260.0" prefWidth="419.0" style="-fx-background-color: white;" styleClass="text" stylesheets="@../style/PopupStyle.css" visible="false" />
+            <Pane layoutX="1113.0" layoutY="263.0" onMouseClicked="#paneOnMouseClicked" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </Pane>
    </children>
