@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import lk.ijse.fisheryharbour.controller.AdminGlobalFormController;
 import lk.ijse.fisheryharbour.controller.ManagerGlobalFormController;
 
 import java.io.IOException;
@@ -82,5 +83,17 @@ public class Navigation {
         ManagerGlobalFormController.getInstance().popupPane.setVisible(true);
         ManagerGlobalFormController.getInstance().crudPane.setVisible(true);
         switchPaging(ManagerGlobalFormController.getInstance().crudPane, path);
+    }
+
+    public static void adminClosePane(){
+        AdminGlobalFormController.getInstance().crudPane.getChildren().clear();
+        AdminGlobalFormController.getInstance().crudPane.setVisible(false);
+        AdminGlobalFormController.getInstance().popupPane.setVisible(false);
+    }
+
+    public static void AdminPopupPane(String path) throws IOException {
+        AdminGlobalFormController.getInstance().popupPane.setVisible(true);
+        AdminGlobalFormController.getInstance().crudPane.setVisible(true);
+        switchPaging(AdminGlobalFormController.getInstance().crudPane, path);
     }
 }

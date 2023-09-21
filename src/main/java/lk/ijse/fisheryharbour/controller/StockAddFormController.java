@@ -14,6 +14,7 @@ import lk.ijse.fisheryharbour.utill.NewId;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import lk.ijse.fisheryharbour.utill.Navigation;
 
 public class
 StockAddFormController {
@@ -22,7 +23,7 @@ StockAddFormController {
     public JFXTextField txtQuantityOnHand;
     public JFXTextField txtUnitPrice;
     public Text txtCancel;
-    public Text txtCancel1;
+    public Text txtBlueCancel;
 
     StockModel stockModel = new StockModel();
 
@@ -36,12 +37,12 @@ StockAddFormController {
 
     public void btnCancelOnMouseEnterd(MouseEvent mouseEvent) {
         txtCancel.setVisible(false);
-        txtCancel1.setVisible(true);
+        txtBlueCancel.setVisible(true);
     }
 
     public void btnCancelOnMouseExit(MouseEvent mouseEvent) {
         txtCancel.setVisible(true);
-        txtCancel1.setVisible(false);
+        txtBlueCancel.setVisible(false);
     }
 
     public void closeOnMouseEnterd(MouseEvent mouseEvent) {
@@ -62,7 +63,7 @@ StockAddFormController {
         stockDTO.setQty(txtQuantityOnHand.getText());
 
         boolean save = stockModel.save(stockDTO);
-        StockManageFormController.getInstance().allSupplierId();
+//        StockManageFormController.getInstance().allSupplierId();
         Navigation.closePane();
     }
 }
