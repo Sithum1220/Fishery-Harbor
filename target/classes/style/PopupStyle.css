@@ -1,0 +1,3 @@
+.text {
+    -fx-effect: dropshadow( gaussian ,#A6A5A5,2,5,0,0);
+}
