@@ -10,11 +10,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 
-public class BoatDTO {
-    private String boat_Id;
-    private String boat_name;
-    private String boat_Type;
-    private String owner_Id;
-    private String owner_Name;
-    private String owner_Email;
+public class StockDTO {
+    private String item_Code;
+    private String description;
+    private String qty;
+    private String unit_Price;
 }

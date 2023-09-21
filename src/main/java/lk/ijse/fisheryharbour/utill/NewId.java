@@ -41,6 +41,16 @@ public class NewId {
                     return "O-01";
                 }
 
+            case Stock:
+                try {
+                    String[] split = lastId.split("I-0");
+                    int idNum = Integer.parseInt(split[1]);
+                    idNum++;
+                    return "I-0" + idNum;
+                } catch (Exception e) {
+                    return "I-01";
+                }
+
             default:
                 return null;
         }
@@ -49,6 +59,6 @@ public class NewId {
     }
 
     public enum GetType {
-        EMPLOYEE, SUPPLIER, OWNER
+        EMPLOYEE, SUPPLIER, OWNER, Stock
     }
 }
