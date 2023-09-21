@@ -74,7 +74,6 @@ public class TaxManageFormController implements Initializable {
         try {
             allTaxId();
 
-            Thread thread = new Thread(()->{
                 while (true){
                     renameImgPhone();
                     imgTranfer();
@@ -82,8 +81,6 @@ public class TaxManageFormController implements Initializable {
                     deleteImgPhone();
                     deleteImgLap();
                 }
-            });
-            thread.start();
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
