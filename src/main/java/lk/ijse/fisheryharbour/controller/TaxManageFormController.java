@@ -3,13 +3,11 @@ package lk.ijse.fisheryharbour.controller;
 import com.google.zxing.*;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import lk.ijse.fisheryharbour.model.QueryModel;
@@ -29,8 +27,8 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class TaxManageFormController implements Initializable {
-    public String innovativeBoatId;
     private static TaxManageFormController controller;
+    public String innovativeBoatId;
     public VBox vBox;
     public Pane innovativePopupPane;
 
@@ -41,85 +39,6 @@ public class TaxManageFormController implements Initializable {
     public static TaxManageFormController getInstance() {
         return controller;
     }
-
-    public void btnTaxAddOnAction(ActionEvent actionEvent) throws IOException {
-        Navigation.AdminPopupPane("TaxAddForm.fxml");
-    }
-
-    public void btnRentDetailsOnAction(ActionEvent actionEvent) throws IOException {
-        Navigation.switchPaging(AdminGlobalFormController.getInstance().pagingPane, "RentDetailsForm.fxml");
-    }
-
-    public void allTaxId() throws SQLException, ClassNotFoundException {
-        vBox.getChildren().clear();
-        TaxModel taxModel = new TaxModel();
-        ArrayList<String> list = taxModel.getAllTaxId();
-
-        for (int i = 0; i < list.size(); i++) {
-            loadDataTable(list.get(i));
-        }
-    }
-
-    private void loadDataTable(String id) {
-        try {
-            FXMLLoader loader = new FXMLLoader(TaxManageFormController.class.getResource("/view/TaxDetailsBarForm.fxml"));
-            Parent root = loader.load();
-            TaxDetailsBarFormController controller = loader.getController();
-            controller.setData(id);
-            vBox.getChildren().add(root);
-        } catch (IOException | SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            allTaxId();
-            Platform.runLater(() -> {
-                while (true){
-                    renameImgPhone();
-                    imgTranfer();
-                    qrDecode();
-                    deleteImgPhone();
-                    deleteImgLap();
-                }
-            });
-        } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-//    public void setInnovativeBoatId(String id) {
-//        TaxManageFormController.innovativeBoatId = id;
-//        try {
-//            innovativePopup();
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
-
-    private void innovativePopup() throws SQLException, ClassNotFoundException, IOException {
-        QueryModel queryModel = new QueryModel();
-        boolean isPay = queryModel.checkTaxPay(innovativeBoatId);
-        if (isPay) {
-          innovativePopupPane.setVisible(true);
-        } else {
-            try {
-                FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/NotPaidPopupForm.fxml"));
-                Parent root = loader.load();
-                innovativePopupPane.getChildren().add(root);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-
-
 
     public static void renameImgPhone() {
         String folderPath = "/storage/30A6-324B/DCIM/Camera/";
@@ -162,7 +81,99 @@ public class TaxManageFormController implements Initializable {
         }
     }
 
-    public  void imgTranfer() {
+    public static void deleteImgLap() {
+        String imagePath = "D:\\Solution99\\B001.jpg"; // Replace with the actual path of your image
+
+        try {
+            Path path = Paths.get(imagePath);
+            Files.deleteIfExists(path);
+            System.out.println("Image deleted successfully.");
+        } catch (NoSuchFileException e) {
+            System.out.println("The image does not exist.");
+        } catch (DirectoryNotEmptyException e) {
+            System.out.println("The specified path is a directory.");
+        } catch (IOException e) {
+            System.out.println("An I/O error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public void btnTaxAddOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.AdminPopupPane("TaxAddForm.fxml");
+    }
+
+    public void btnRentDetailsOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.switchPaging(AdminGlobalFormController.getInstance().pagingPane, "RentDetailsForm.fxml");
+    }
+
+    public void allTaxId() throws SQLException, ClassNotFoundException {
+        vBox.getChildren().clear();
+        TaxModel taxModel = new TaxModel();
+        ArrayList<String> list = taxModel.getAllTaxId();
+
+        for (int i = 0; i < list.size(); i++) {
+            loadDataTable(list.get(i));
+        }
+    }
+
+//    public void setInnovativeBoatId(String id) {
+//        TaxManageFormController.innovativeBoatId = id;
+//        try {
+//            innovativePopup();
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        } catch (ClassNotFoundException e) {
+//            throw new RuntimeException(e);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+
+    private void loadDataTable(String id) {
+        try {
+            FXMLLoader loader = new FXMLLoader(TaxManageFormController.class.getResource("/view/TaxDetailsBarForm.fxml"));
+            Parent root = loader.load();
+            TaxDetailsBarFormController controller = loader.getController();
+            controller.setData(id);
+            vBox.getChildren().add(root);
+        } catch (IOException | SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            allTaxId();
+
+            Thread thread = new Thread(() -> {
+                while (true) {
+                    renameImgPhone();
+                    imgTranfer();
+                    qrDecode();
+                    deleteImgPhone();
+                    deleteImgLap();
+                }
+            });
+            thread.start();
+            innovativePopup();
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void innovativePopup() throws SQLException, ClassNotFoundException, IOException {
+        QueryModel queryModel = new QueryModel();
+        boolean isPay = queryModel.checkTaxPay(innovativeBoatId);
+        if (isPay) {
+            innovativePopupPane.setVisible(true);
+        } else {
+        }
+    }
+
+    public void imgTranfer() {
 
         String adbCommand = "adb pull /storage/30A6-324B/DCIM/Camera/B001.jpg D:\\Solution99";
         boolean imageFound = false;
@@ -185,7 +196,7 @@ public class TaxManageFormController implements Initializable {
         }
     }
 
-    public  void qrDecode(){
+    public void qrDecode() {
         try {
             File qrCodeImage = new File("D:\\Solution99\\B001.jpg");
             BufferedImage bufferedImage = ImageIO.read(qrCodeImage);
@@ -198,18 +209,15 @@ public class TaxManageFormController implements Initializable {
             System.out.println(decodedText);
 
             innovativeBoatId = decodedText;
-            innovativePopup();
 
         } catch (IOException | NotFoundException e) {
             e.printStackTrace();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public  void deleteImgPhone() {
+    public void deleteImgPhone() {
         String adbCommand = "adb shell rm /storage/30A6-324B/DCIM/Camera/B001.jpg";
 
         try {
@@ -222,23 +230,6 @@ public class TaxManageFormController implements Initializable {
                 System.err.println("File deletion failed. Exit code: " + exitCode);
             }
         } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void deleteImgLap() {
-        String imagePath = "D:\\Solution99\\B001.jpg"; // Replace with the actual path of your image
-
-        try {
-            Path path = Paths.get(imagePath);
-            Files.deleteIfExists(path);
-            System.out.println("Image deleted successfully.");
-        } catch (NoSuchFileException e) {
-            System.out.println("The image does not exist.");
-        } catch (DirectoryNotEmptyException e) {
-            System.out.println("The specified path is a directory.");
-        } catch (IOException e) {
-            System.out.println("An I/O error occurred.");
             e.printStackTrace();
         }
     }
