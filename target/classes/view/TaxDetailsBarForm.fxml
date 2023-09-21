@@ -11,32 +11,32 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1115.0" spacing="30.0" style="-fx-background-color: white;">
          <children>
-            <Text fx:id="txtID" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="155.8519287109375">
+            <Text fx:id="txtID" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="145.8519287109375">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="txtBoatID" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat Id" wrappingWidth="262.8190002441406">
+            <Text fx:id="txtBoatID" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat Id" wrappingWidth="229.81900024414062">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="txtTaxType" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Type" wrappingWidth="217.9127197265625">
+            <Text fx:id="txtTaxType" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Type" wrappingWidth="203.9127197265625">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="txtTaxFee" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Fee" wrappingWidth="182.00238037109375">
+            <Text fx:id="txtTaxFee" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Fee" wrappingWidth="173.00238037109375">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="txtDate" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="217.9127197265625">
+            <Text fx:id="txtDate" opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="109.9127197265625">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
-            <ImageView fx:id="updateImg" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#updateOnMouseClick" onMouseEntered="#updateOnMouseEntered" onMouseExited="#updateOnMouseExited" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="updateImg" fitHeight="25.0" fitWidth="45.0" onMouseClicked="#updateOnMouseClick" onMouseEntered="#updateOnMouseEntered" onMouseExited="#updateOnMouseExited" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icon/action-btn.png" />
                </image>

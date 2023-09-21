@@ -94,7 +94,7 @@ public class NotPaidPopupFormController implements Initializable {
             // first part (the html)
             BodyPart messageBodyPart = new MimeBodyPart();
             String htmlText = "<h1 style=\"color: deepskyblue;text-align: center;font-weight: bold\">FISHERY HARBOR GALLE</h1>\n" +
-                    "<p style=\"text-align: center\">BDear Boat Owner ; It's noted that you haven't paid this month's Pierrer fee ... So please PAY your pierrer Fee as soon as possible to Galle fishery harbour office.\n" +
+                    "<p style=\"text-align: center\">Dear Boat Owner, It's noted that you haven't paid this month's Pierrer fee ... So please PAY your pierrer Fee as soon as possible to Galle fishery harbour office.\n" +
                     "<h1 style=\"font-size: 20px;text-align: center\">Thank you for Working with us ! </h1>";
             messageBodyPart.setContent(htmlText, "text/html");
             // add it

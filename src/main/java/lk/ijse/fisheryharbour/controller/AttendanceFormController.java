@@ -1,16 +1,28 @@
 package lk.ijse.fisheryharbour.controller;
 
+import com.google.zxing.*;
+import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
+import com.google.zxing.common.HybridBinarizer;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import lk.ijse.fisheryharbour.model.EmployeeAttendanceModel;
+import lk.ijse.fisheryharbour.model.QueryModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.file.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -19,7 +31,10 @@ public class AttendanceFormController implements Initializable {
     public JFXButton btnEnterID;
     public VBox vBox;
 
+
     private static AttendanceFormController controller;
+
+
 
     public AttendanceFormController(){
         controller = this;
