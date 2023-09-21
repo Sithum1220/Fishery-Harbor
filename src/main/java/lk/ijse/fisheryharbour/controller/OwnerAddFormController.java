@@ -83,6 +83,7 @@ public class OwnerAddFormController implements Initializable {
         roles.add("Boat Owner");
         roles.add("Canteen Owner");
         roles.add("Market Owner");
+        roles.add("Ice_Mill Owner");
         cmbRole.getItems().addAll(roles);
     }
 
