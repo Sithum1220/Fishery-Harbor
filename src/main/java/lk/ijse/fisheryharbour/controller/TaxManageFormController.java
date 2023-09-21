@@ -4,8 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import lk.ijse.fisheryharbour.model.SupplierModel;
+import lk.ijse.fisheryharbour.model.QueryModel;
 import lk.ijse.fisheryharbour.model.TaxModel;
 import lk.ijse.fisheryharbour.utill.Navigation;
 
@@ -16,13 +17,16 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class TaxManageFormController implements Initializable {
+    private static TaxManageFormController controller;
     public VBox vBox;
 
-    private static TaxManageFormController controller;
+    public static String innovativeBoatId;
+    public static Pane innovativePopupPane;
 
-    public TaxManageFormController(){
+    public TaxManageFormController() {
         controller = this;
     }
+
     public static TaxManageFormController getInstance() {
         return controller;
     }
@@ -63,6 +67,40 @@ public class TaxManageFormController implements Initializable {
             allTaxId();
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public static void setInnovativeBoatId(String id){
+        TaxManageFormController.innovativeBoatId =id;
+        try {
+            innovativePopup();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void innovativePopup() throws SQLException, ClassNotFoundException {
+        QueryModel queryModel = new QueryModel();
+        boolean isPay = queryModel.checkTaxPay(innovativeBoatId);
+
+        if (isPay){
+            try {
+                FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/PaidPopupForm.fxml"));
+                Parent root = loader.load();
+                innovativePopupPane.getChildren().add(root);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }else {
+            try {
+                FXMLLoader loader = new FXMLLoader(EmployeeManageFormController.class.getResource("/view/NotPaidPopupForm.fxml"));
+                Parent root = loader.load();
+                innovativePopupPane.getChildren().add(root);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
