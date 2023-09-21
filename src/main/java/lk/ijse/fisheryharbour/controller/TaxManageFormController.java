@@ -105,8 +105,6 @@ public class TaxManageFormController implements Initializable {
     private void innovativePopup() throws SQLException, ClassNotFoundException, IOException {
         QueryModel queryModel = new QueryModel();
         boolean isPay = queryModel.checkTaxPay(innovativeBoatId);
-        innovativePopupPane.setVisible(true);
-
         if (isPay) {
           innovativePopupPane.setVisible(true);
         } else {
