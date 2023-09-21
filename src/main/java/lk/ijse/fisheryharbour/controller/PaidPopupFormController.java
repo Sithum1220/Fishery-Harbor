@@ -15,10 +15,11 @@ public class PaidPopupFormController implements Initializable {
     public Text txtDate;
 
     public void closeOnMouseClicked(MouseEvent mouseEvent) {
+        TaxManageFormController.getInstance().innovativePopupPane.getChildren().clear();
+        TaxManageFormController.getInstance().innovativePopupPane.setVisible(false);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("qqqqqqq");
     }
 }
