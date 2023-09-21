@@ -20,6 +20,9 @@ public class TaxManageFormController implements Initializable {
 
     private static TaxManageFormController controller;
 
+    public TaxManageFormController(){
+        controller = this;
+    }
     public static TaxManageFormController getInstance() {
         return controller;
     }

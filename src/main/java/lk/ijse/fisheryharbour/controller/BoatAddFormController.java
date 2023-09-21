@@ -22,7 +22,6 @@ public class BoatAddFormController implements Initializable {
     public Text txtCancel;
     public Text txtBlueCancel;
     public JFXTextField txtOwnerId;
-    public JFXTextField txtBoatId;
     public JFXTextField txtBoatName;
     public JFXComboBox cmbBoatType;
 
@@ -46,7 +45,6 @@ public class BoatAddFormController implements Initializable {
         BoatDTO boatDTO = new BoatDTO();
         ArrayList<String> list = boatModel.getAllBoatId();
 
-        boatDTO.setBoat_Id(txtBoatId.getText());
         boatDTO.setBoat_name(txtBoatName.getText());
         boatDTO.setOwner_Id(txtOwnerId.getText());
         boatDTO.setBoat_Type(getRole());

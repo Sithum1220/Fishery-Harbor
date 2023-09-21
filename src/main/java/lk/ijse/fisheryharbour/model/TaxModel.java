@@ -20,7 +20,7 @@ public class TaxModel {
     }
 
     public boolean save(TaxDTO taxDTO) throws SQLException, ClassNotFoundException {
-        return SQLUtill.execute("insert into owner VALUES (?,?,?,?,?,?)",
+        return SQLUtill.execute("insert into tax VALUES (?,?,?,?,?,?)",
                 taxDTO.getTax_Id(),
                 taxDTO.getDate(),
                 taxDTO.getFee(),
