@@ -40,8 +40,7 @@ public class LoginFormController implements Initializable {
             if (employeeModel.checkUsernameAndPassword(txtUserName.getText(), txtPassword.getText()).equals("Manager")) {
                 Navigation.switchNavigation("ManagerGlobalForm.fxml", actionEvent);
             } else if (employeeModel.checkUsernameAndPassword(txtUserName.getText(), txtPassword.getText()).equals("Admin")) {
-//                Navigation.switchNavigation("CashierDashBordForm.fxml", actionEvent);
-                new Alert(Alert.AlertType.ERROR, "Wrong User Name Or Password!!").show();
+                Navigation.switchNavigation("AdminGlobalForm.fxml", actionEvent);
             } else {
                 new Alert(Alert.AlertType.ERROR, "Wrong User Name Or Password!!").show();
             }
