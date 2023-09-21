@@ -28,14 +28,14 @@
             </Text>
             <AnchorPane layoutX="50.0" layoutY="147.0" prefHeight="572.0" prefWidth="1213.0" styleClass="table-view">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="32.0" layoutY="12.0" prefHeight="48.0" prefWidth="1113.0" spacing="180.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="31.0" layoutY="12.0" prefHeight="48.0" prefWidth="1170.0" spacing="160.0">
                      <children>
                         <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
                         </Text>
-                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="51.7109375">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
@@ -50,7 +50,7 @@
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
                         </Text>
-                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="82.3671875">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
