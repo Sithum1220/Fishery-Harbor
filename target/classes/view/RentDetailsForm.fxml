@@ -114,7 +114,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton layoutX="46.0" layoutY="46.0" prefHeight="46.0" prefWidth="179.0" styleClass="employee-add-btn" text=" ">
+            <JFXButton layoutX="46.0" layoutY="46.0" prefHeight="46.0" prefWidth="179.0" style="-fx-background-color: #1351CB; -fx-background-radius: 12;" text=" ">
                <graphic>
                   <GridPane prefHeight="46.0" prefWidth="179.0">
                      <columnConstraints>

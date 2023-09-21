@@ -102,7 +102,7 @@ public class AdminGlobalFormController implements Initializable {
         btnUnselected(btnRent, btnOwnerText, btnOwnerImg, "user.png");
         btnUnselected(btnStock, btnStockText, btnStockImg, "box.png");
 
-        Navigation.switchPaging(pagingPane,"BoatManageForm.fxml");
+        Navigation.switchPaging(pagingPane,"BoatJourneyForm.fxml");
     }
 
     public void btnRentAddOnAction(ActionEvent actionEvent) throws IOException {
