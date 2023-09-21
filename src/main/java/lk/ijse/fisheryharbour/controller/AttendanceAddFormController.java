@@ -8,14 +8,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 public class AttendanceAddFormController {
-    public JFXTextField NIC;
     public ImageView closeImg;
     public Text txtBlueCancel;
     public Text txtCancel;
-    public JFXComboBox cmbRole;
-
-    public JFXTextField txtLastName;
-    public JFXTextField txtFirstName;
+    public JFXTextField EmployeeID;
 
     public void btnMarkAttendenceOnAction(ActionEvent actionEvent) {
     }
