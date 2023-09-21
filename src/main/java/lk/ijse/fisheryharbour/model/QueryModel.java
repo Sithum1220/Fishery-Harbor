@@ -22,4 +22,8 @@ public class QueryModel {
         }
         return boatDTO;
     }
+
+    public void updatePassword() {
+
+    }
 }

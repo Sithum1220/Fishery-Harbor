@@ -47,10 +47,13 @@ public class AttendanceAddFormController {
     }
 
     public void btnCancelOnMouseEnterd(MouseEvent mouseEvent) {
-
+        txtCancel.setVisible(false);
+        txtBlueCancel.setVisible(true);
     }
 
     public void btnCancelOnMouseExit(MouseEvent mouseEvent) {
+        txtCancel.setVisible(true);
+        txtBlueCancel.setVisible(false);
     }
 
     public void closeOnMouseClick(MouseEvent mouseEvent) {
