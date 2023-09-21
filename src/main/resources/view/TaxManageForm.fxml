@@ -24,7 +24,7 @@
          <children>
             <AnchorPane layoutX="46.0" layoutY="147.0" prefHeight="572.0" prefWidth="1213.0" styleClass="table-view">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="23.0" layoutY="14.0" prefHeight="48.0" prefWidth="1086.0" spacing="225.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="32.0" layoutY="14.0" prefHeight="48.0" prefWidth="1086.0" spacing="160.0">
                      <children>
                         <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                            <font>
@@ -42,6 +42,11 @@
                            </font>
                         </Text>
                         <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Fee">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text opacity="0.68" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
                            <font>
                               <Font name="SansSerif Bold" size="16.0" />
                            </font>
